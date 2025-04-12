@@ -3,7 +3,7 @@ import images1 from '../public/images/bg.png';
 import Concepts from '../public/images/concepts.svg';
 import { words } from '../constants/index.js';
 import Button from '../components/Button.jsx';
-
+import HeroExperience from '../components/Heromodels/HeroExperience.jsx';
 
 const Hero = () => {
     return (
@@ -18,7 +18,7 @@ const Hero = () => {
                     <div className="flex flex-col gap-7">
                         <div className="hero-text">
                             <h1>
-                                Creating
+                                Developing
                                 <span className="slide">
                                     <span className="wrapper">
                                         {words.map((word) => (
@@ -38,7 +38,7 @@ const Hero = () => {
                             <h1>that Deliver Results</h1>
                         </div>
                         <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                            My name is Luke, a developer with a passion for using the latest tech to code!
+                            My name is Luke, passionate about creating websites using the latest technology!
                         </p>
                         <p>
                             <Button
@@ -49,6 +49,15 @@ const Hero = () => {
                         </p>
                     </div>
                 </header>
+
+                {/* right side 3d model */}
+                <figure>
+                <div className="hero-3d-layout">
+                <HeroExperience />
+                  
+                </div>
+            </figure> 
+
             </div>
         </section>
     )

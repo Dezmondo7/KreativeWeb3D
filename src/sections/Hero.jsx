@@ -37,16 +37,18 @@ const Hero = () => {
                             <h1>into Beautiful Websites</h1>
                             <h1>that Deliver Results</h1>
                         </div>
+                        <div>
                         <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
                             My name is Luke, passionate about creating websites using the latest technology!
-                        </p>
+                        </p> 
                         <p>
                             <Button
                             className="md:w-80 md:h-16 w-60 h-12"
                             id="button"
                             text="See my work"
                             />
-                        </p>
+                        </p> 
+                        </div>
                     </div>
                 </header>
 

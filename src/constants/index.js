@@ -33,10 +33,10 @@ const navLinks = [
     { text: "Concepts", imgPath: "/images/concepts.svg" },
     { text: "Designs", imgPath: "/images/designs.svg" },
     { text: "Code", imgPath: "/images/code.svg" },
-    { text: "Ideas", imgPath: "/images/ideas.svg" },
-    { text: "Concepts", imgPath: "/images/concepts.svg" },
-    { text: "Designs", imgPath: "/images/designs.svg" },
-    { text: "Code", imgPath: "/images/code.svg" },
+    { text: "Life", imgPath: "/images/ideas.svg" },
+    { text: "Something", imgPath: "/images/concepts.svg" },
+    { text: "Else", imgPath: "/images/designs.svg" },
+    { text: "Here", imgPath: "/images/code.svg" },
   ];
   
   const counterItems = [

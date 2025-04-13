@@ -11,12 +11,24 @@ const HeroExperience = () => {
     return (
         <>
         <div>
-        <Canvas>
-            <ambientLight />
-            <OrbitControls />
-            <Suspense fllback={null}>
+        <Canvas camera={{ position: [0, 0, 15], fov: 10 }}>
+            <ambientLight intensity={10} color="silver" />
+            <directionalLight position={[5, 5, 5]} intensity={2} />
+
+            <OrbitControls
+            />
+            
+            <group
+                position={[0, -0.5, 1]}
+                
+                rotation={[0.35, -Math.PI /-1, 0]} >
+                
+
                 <Macbook />
-            </Suspense>
+
+            </group>
+
+          
         </Canvas>
         </div>
         </>

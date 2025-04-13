@@ -207,7 +207,7 @@ section {
   }
 
   .cta-button {
-    @apply md:w-80 md:h-16 w-60 h-12 px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+    @apply md:w-80 md:h-16 w-60 h-12 px-4 py-4 mt-6 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
 
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
@@ -473,10 +473,4 @@ section {
 
 canvas {
   height: 100vh;
-}
-
-#c {
-  width: 100%;
-  height: 100%;
-  display: block;
 }

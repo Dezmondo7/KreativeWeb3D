@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import { useMediaQuery } from 'react-responsive'
 import { OrbitControls } from '@react-three/drei'
 import Macbook from '../../public/Macbook.jsx'
+import HeroLights from '../Heromodels/HeroLights.jsx'
 
 
 
@@ -10,18 +11,19 @@ const HeroExperience = () => {
 
     return (
         <>
-        <div>
+        <div className="">
         <Canvas camera={{ position: [0, 0, 15], fov: 10 }}>
-            <ambientLight intensity={10} color="silver" />
-            <directionalLight position={[5, 5, 5]} intensity={2} />
+        
+        
 
-            <OrbitControls
-            />
+            <OrbitControls />
+
+            <HeroLights />
             
             <group
-                position={[0, -0.5, 1]}
+                position={[0, -0.525, 0]}
                 
-                rotation={[0.35, -Math.PI /-1, 0]} >
+                rotation={[0.2, -Math.PI /-1.06, 0]} >
                 
 
                 <Macbook />

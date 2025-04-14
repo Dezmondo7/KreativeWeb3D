@@ -4,8 +4,19 @@ import Concepts from '../public/images/concepts.svg';
 import { words } from '../constants/index.js';
 import Button from '../components/Button.jsx';
 import HeroExperience from '../components/Heromodels/HeroExperience.jsx';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const Hero = () => {
+
+    useGSAP(() => {
+        gsap.fromTo(
+          ".hero-text h1",
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1.5, ease: "sine" }
+        );
+      });
+
     return (
         <section id="hero" className="relative overflow-hidden">
             <div className="absolute top-0 left-0 z-10">
@@ -38,27 +49,30 @@ const Hero = () => {
                             <h1>that Deliver Results</h1>
                         </div>
                         <div>
-                        <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                            My name is Luke, passionate about creating websites using the latest technology!
-                        </p> 
-                        <p>
-                            <Button
-                            className="md:w-80 md:h-16 w-60 h-12"
-                            id="button"
-                            text="See my work"
-                            />
-                        </p> 
+                            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+                                Hi I'm Luke a freelance Web Developer who is<span> </span> < br />
+                                Passionate about Creating Immersive Websites <br />
+                                using the latest Technology including
+                                Interactive 3D Models
+                            </p>
+                            <p>
+                                <Button
+                                    className="md:w-80 md:h-16 w-60 h-12"
+                                    id="button"
+                                    text="See my work"
+                                />
+                            </p>
                         </div>
                     </div>
                 </header>
 
                 {/* right side 3d model */}
                 <figure>
-                <div className="hero-3d-layout">
-                <HeroExperience />
-                  
-                </div>
-            </figure> 
+                    <div className="hero-3d-layout">
+                        <HeroExperience />
+
+                    </div>
+                </figure>
 
             </div>
         </section>

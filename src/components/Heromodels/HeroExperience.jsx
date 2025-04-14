@@ -7,41 +7,34 @@ import HeroLights from '../Heromodels/HeroLights.jsx'
 
 
 
+
 const HeroExperience = () => {
 
     return (
         <>
-        <div className="">
-        <Canvas camera={{ position: [0, 0, 15], fov: 10 }}>
+
+
+            <div className="">
+                <Canvas camera={{ position: [0, 0, 15], fov: 10 }}>
+                    <OrbitControls />
+                    <HeroLights />
         
-        
-
-            <OrbitControls />
-
-            <HeroLights />
-            
-            <group
-                position={[0, -0.525, 0]}
-                
-                rotation={[0.2, -Math.PI /-1.06, 0]} >
-                
-
-                <Macbook />
-
-            </group>
-
-          
-        </Canvas>
-        </div>
+                    <group
+                        position={[0, -0.525, 0]}
+                        rotation={[0.2, -Math.PI / -1.06, 0]} >
+                        <Macbook />
+                    </group>
+                </Canvas>
+            </div>
         </>
-  
+
     )
 }
 
 export default HeroExperience
 
 
-        {/*} <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+{/*} <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
             <ambientLight intensity={0.2} color='#1a1a40' />
             <directionalLight position={[5, 5, 5]} intensity={1} />
 
@@ -57,10 +50,10 @@ export default HeroExperience
         
         </Canvas> */}
 
-           {/*} const isTablet = useMediaQuery({ query: '(max-width: 1024)' });
+{/*} const isTablet = useMediaQuery({ query: '(max-width: 1024)' });
     const isMobile = useMediaQuery({ query: '(max-width: 768px) '}); */}
 
-       {/*}   <Canvas>
+{/*}   <Canvas>
             <Suspense fllback={null}>
                 <Macbook />
             </Suspense>

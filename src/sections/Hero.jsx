@@ -68,7 +68,7 @@ const Hero = () => {
 
                 {/* right side 3d model */}
                 <figure>
-                    <div className="hero-3d-layout">
+                    <div className="hero-3d-layout flex items-center justify-center">
                         <HeroExperience />
 
                     </div>

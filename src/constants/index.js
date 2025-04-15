@@ -33,17 +33,17 @@ const navLinks = [
     { text: "Concepts", imgPath: "/images/concepts.svg" },
     { text: "Designs", imgPath: "/images/designs.svg" },
     { text: "Code", imgPath: "/images/code.svg" },
-    { text: "Life", imgPath: "/images/ideas.svg" },
-    { text: "Something", imgPath: "/images/concepts.svg" },
-    { text: "Else", imgPath: "/images/designs.svg" },
-    { text: "Here", imgPath: "/images/code.svg" },
+    { text: "Projects", imgPath: "/images/ideas.svg" },
+    { text: "Visions", imgPath: "/images/concepts.svg" },
+    { text: "Sketches", imgPath: "/images/designs.svg" },
+    { text: "Templates", imgPath: "/images/code.svg" },
   ];
   
   const counterItems = [
-    { value: 15, suffix: "+", label: "Years of Experience" },
+    { value: 10, suffix: "+", label: "Years in Technology" },
     { value: 200, suffix: "+", label: "Satisfied Clients" },
     { value: 108, suffix: "+", label: "Completed Projects" },
-    { value: 90, suffix: "%", label: "Client Retention Rate" },
+    { value: 99, suffix: "%", label: "Client Retention Rate" },
   ];
   
   const logoIconsList = [

@@ -11,10 +11,9 @@ import HeroLights from '../Heromodels/HeroLights.jsx'
 const HeroExperience = () => {
 
     return (
-        <>
-
-
+        <> 
             <div className="">
+                {/* fov positions how close the image is to the screen */}
                 <Canvas camera={{ position: [0, 0, 15], fov: 10 }}>
                     <OrbitControls />
                     <HeroLights />
@@ -27,7 +26,6 @@ const HeroExperience = () => {
                 </Canvas>
             </div>
         </>
-
     )
 }
 

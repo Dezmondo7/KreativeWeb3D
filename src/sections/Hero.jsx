@@ -6,9 +6,11 @@ import Button from '../components/Button.jsx';
 import HeroExperience from '../components/Heromodels/HeroExperience.jsx';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import AnimatedCounter from '../components/AnimatedCounter.jsx';
 
 const Hero = () => {
-
+    
+    {/*Animation for the hero text*/}
     useGSAP(() => {
         gsap.fromTo(
           ".hero-text h1",
@@ -50,7 +52,7 @@ const Hero = () => {
                         </div>
                         <div>
                             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                                Hi I'm Luke a freelance Web Developer who is<span> </span> < br />
+                                Hi I'm Luke a freelance Web Developer who is < br />
                                 Passionate about Creating Immersive Websites <br />
                                 using the latest Technology including
                                 Interactive 3D Models
@@ -72,10 +74,12 @@ const Hero = () => {
                         <HeroExperience />
 
                     </div>
-                </figure>
-
+                </figure>             
+                
+               
             </div>
         </section>
+        
     )
 }
 

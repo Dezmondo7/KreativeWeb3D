@@ -40,10 +40,10 @@ const navLinks = [
   ];
   
   const counterItems = [
-    { value: 15, suffix: "+", label: "Years of Experience" },
+    { value: 10, suffix: "+", label: "Years in Technology" },
     { value: 200, suffix: "+", label: "Satisfied Clients" },
     { value: 108, suffix: "+", label: "Completed Projects" },
-    { value: 90, suffix: "%", label: "Client Retention Rate" },
+    { value: 99, suffix: "%", label: "Client Retention Rate" },
   ];
   
   const logoIconsList = [

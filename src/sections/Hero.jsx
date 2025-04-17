@@ -47,15 +47,15 @@ const Hero = () => {
                                     </span>
                                 </span>
                             </h1>
-                            <h1>into Beautiful Websites</h1>
+                            <h1>into Cool Websites</h1>
                             <h1>that Deliver Results</h1>
                         </div>
                         <div>
                             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
                                 Hi I'm Luke a freelance Web Developer who is < br />
                                 Passionate about Creating Immersive Websites <br />
-                                using the latest Technology including
-                                Interactive 3D Models
+                                across Desktop, Tablet & Mobile using the latest <br />
+                                Technology including Interactive 3D Models
                             </p>
                             <p>
                                 <Button
@@ -70,7 +70,7 @@ const Hero = () => {
 
                 {/* right side 3d model */}
                 <figure>
-                    <div className="hero-3d-layout flex items-center justify-center">
+                    <div className="container hero-3d-layout flex items-center justify-center">
                         <HeroExperience />
 
                     </div>

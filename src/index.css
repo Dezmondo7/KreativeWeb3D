@@ -478,3 +478,11 @@ canvas {
 .particles {
   color: white;
 }
+
+@media screen and (max-width: 800px) {
+
+  .camera, fov {
+    fov: 30;   
+  }
+      
+  }

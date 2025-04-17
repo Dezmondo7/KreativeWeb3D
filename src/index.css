@@ -179,9 +179,7 @@ section {
           @apply flex gap-2 mb-4;
         }
 
-        h2 {
-          @apply text-2xl md:text-3xl lg:text-4xl font-bold;
-        }
+     
       }
     }
 
@@ -479,10 +477,19 @@ canvas {
   color: white;
 }
 
-@media screen and (max-width: 800px) {
+/*Display for Tablet 3d Image */
+@media screen and (min-width: 600px) and (max-width: 800px) {
 
   .camera, fov {
-    fov: 30;   
+    fov: 30;    
+    
   }
+  }
+
+  @media screen and (max-width: 599px) {
+
+    .camera, fov {
+      fov: 50;    
       
-  }
+    }
+    }

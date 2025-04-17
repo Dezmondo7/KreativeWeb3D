@@ -8,12 +8,10 @@ import HeroLights from '../Heromodels/HeroLights.jsx'
 
 
 
-
-
-
     const HeroExperience = () => {
         const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
         const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+
 
     return (
         <> 
@@ -22,7 +20,8 @@ import HeroLights from '../Heromodels/HeroLights.jsx'
                 <Canvas camera={{ position: [0, 0, 15], fov: 10 }}>
                     <OrbitControls
                         enablePan={false} // Prevents panning of the scene
-                        enableZoom={!isTablet} // Disables zoom on tablets
+                        enableZoom={!isTablet} 
+                        diableZoom={isMobile}// Disables zoom on tablets
                         maxDistance={20} // Maximum distance for zooming out
                         minDistance={5} // Minimum distance for zooming in
                         minPolarAngle={Math.PI / 5} // Minimum angle for vertical rotation
@@ -31,7 +30,7 @@ import HeroLights from '../Heromodels/HeroLights.jsx'
                     <HeroLights />
 
                        
-                    <group
+                    <group className="groups"
                         position={[0, -0.525, 0]}
                         rotation={[0.2, -Math.PI / -1.06, 0]} >
                         <Macbook />

@@ -47,15 +47,15 @@ const Hero = () => {
                                     </span>
                                 </span>
                             </h1>
-                            <h1>into Beautiful Websites</h1>
+                            <h1>into Modern Websites</h1>
                             <h1>that Deliver Results</h1>
                         </div>
                         <div>
                             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                                Hi I'm Luke a freelance Web Developer who is < br />
-                                Passionate about Creating Immersive Websites <br />
-                                across Desktop, Tablet & Mobile using the latest <br />
-                                Technology including Interactive 3D Models
+                                Hi I'm Luke a Creative freelance Web Developer who is < br />
+                                Passionate about helping start-ups Create Cool looking Websites <br />
+                                across Desktop, Tablet & Mobile using the Latest Technology
+                                
                             </p>
                             <p>
                                 <Button

@@ -29,11 +29,11 @@ const navLinks = [
   ];
   
   const words = [
-    { text: "Ideas", imgPath: "/images/ideas.svg" },
-    { text: "Concepts", imgPath: "/images/concepts.svg" },
-    { text: "Designs", imgPath: "/images/designs.svg" },
-    { text: "Code", imgPath: "/images/code.svg" },
-    { text: "Projects", imgPath: "/images/ideas.svg" },
+    { text: "Ideas", imgPath: "src/public/images/ideas.svg" },
+    { text: "Concepts", imgPath: "src/public/images/concepts.svg" },
+    { text: "Designs", imgPath: "src/public/images/designs.svg" },
+    { text: "Code", imgPath: "src/public/images/code.svg" },
+    { text: "Projects", imgPath: "src/images/ideas.svg" },
     { text: "Visions", imgPath: "/images/concepts.svg" },
     { text: "Sketches", imgPath: "/images/designs.svg" },
     { text: "Templates", imgPath: "/images/code.svg" },

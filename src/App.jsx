@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import Showcase from './sections/Showcase.jsx';
 import NavBar from './components/NavBar.jsx'
+import FeatureCards from './components/Featurecards.jsx'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
     <Hero />
     <AnimatedCounter />
     <Showcase />
+    <FeatureCards />
     </>
   )
 }

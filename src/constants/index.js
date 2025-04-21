@@ -91,33 +91,38 @@ const navLinks = [
     {    
       imgPath: "src/public/images/earth.png",
       title: "Discovery Call",
-      desc: "Setting up a friendly discovery call is key to understanding which tailored package covers everything you require to develop your website. I like to understand the people behind the brands and create good relationships, It's the best way to be. Once everyone is aligned, it's time for the xciting bit, THE DESIGNS.",
+      desc: "Setting up a friendly discovery call is key to understanding which tailored package covers everything required to develop your website. I like to understand the people behind the brands and create good relationships, It's the best way to be. Once everyone is aligned, it's time for the exciting bit, Website Design....",
     },  
     {    
       imgPath: "src/public/images/coffee.png",
       title: "Bespoke Web Design",
-      desc: "Using the latest design tools allows you to turn idea's into reality right in-front of your eyes whether that be over a Coffee in person or in a Virtual Call. Every element of your website will be custom built to look exactly the way you want and be indistinguishable from any other website. Service's include Web Design & Development, Website Domain Name, hosting & Email. SSL Webiste Security."
+      desc: "Using the latest design tools allows me to turn idea's into reality right in-front of your eyes whether that be over a Coffee in person or in a Virtual Call. Every element of your website will be custom built to look exactly the way you want and be indistinguishable from any other website. Service's include New Web Design & Development, Website Re-fresh, Website Domain Name, Hosting & Email. SSL Website Security."
     },
       {
       imgPath: "src/public/images/react.png",
       title: "Latest Technology",
-      desc: "Your website will be coded using leading web development technology React which increases the speed and efficiency of your webiste, React is modern and enables me to bring the most elegant designs to life. React Technology is used by the worlds most famous brands including Facebook, NASA, Netflix and YOUR WEBSITE!",
+      desc: "Want the latest technology, we got it covered! Your website will be coded using leading Web Development Technology which will make your website faster and more efficient than the rest. I code in React which is a modern technology that enables me to bring the most elegant designs to life. React was developed by Facebook and is used by leading brands such as NASA, Netflix and YOUR WEBSITE!",
     },
     {
       imgPath: "src/public/images/time.png",
       title: "Logo Design",
       imgPath: "src/public/images/design.png",
-      desc: "Top quality logo's design service with Logo's that you can keep",
+      desc: "Top quality Logo Design Service with Logo's that you can keep forever!",
     },
     {
       imgPath: "src/public/images/pen.png",
-      title: "Proffessional Content",
-      desc: "Want your content put together by a proffessional copywritter? I hold a BA Honours Degree in Journalism, have been published in Newspapers and across Websites garunteing your content is written to the highest standard.",
+      title: "Professional Content",
+      desc: "Imagine your content put together by a professional copywriter? It's done. I hold a BA Honours Degree in Journalism to go alongside my Web Development qualifications, have been published in Newspapers and across Websites guaranteeing your content is written to the highest standard.",
     },
     {
       imgPath: "src/public/images/quality.png",
       title: "Quality Control",
-      desc: "Each element of the design is tested across all devices to make sure the final webiste delivers against all the original requirements.",
+      desc: "Each element of the design is tested across all devices to make sure the final website delivers against all of the original requirements.",
+    },
+    {
+      imgPath: "src/public/images/seo1.png",
+      title: "SEO",
+      desc: "Search Engine Optimisation is what brings a website up when people use search engines. The React Web Technology keeps your site appearing ahead of the competition when associated search terms are used.",
     },
     {
       imgPath: "src/public/images/bubble.png",
@@ -129,11 +134,7 @@ const navLinks = [
       title: "Delivered on Time",
       desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
     },
-    {
-      imgPath: "src/public/images/pen.png",
-      title: "Proffessional Content",
-      desc: "Want your content put together by a proffessional copywritter? I hold a BA Honours Degree in Journalism, have been published in Newspapers and across Websites garunteing your content is written to the highest standard.",
-    },
+    
   ];
   
   const techStackImgs = [

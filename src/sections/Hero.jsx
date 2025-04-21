@@ -54,7 +54,7 @@ const Hero = () => {
                             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
                                 Hi I'm Luke a Creative freelance Web Developer who is < br />
                                 Passionate about Creating Proffessional & Cool <br />
-                                Websites using the latest and greatest Technology!
+                                Websites using the latest Web Development Technology!
                                 
                             </p>
                             <p>

@@ -31,6 +31,7 @@ import HeroLights from '../Heromodels/HeroLights.jsx'
 
                        
                     <group className="groups"
+                        scale={isMobile ? 0.7 : 1}
                         position={[0, -0.525, 0]}
                         rotation={[0.075, -Math.PI / -1.00, 0]} >
                         <Macbook />

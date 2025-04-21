@@ -84,18 +84,33 @@ const navLinks = [
   
   const abilities = [
     {
-      imgPath: "/images/seo.png",
-      title: "Quality Focus",
-      desc: "Delivering high-quality results while maintaining attention to every detail.",
+      imgPath: "src/public/images/time.png",
+      title: "Bespoke Web Design",
+      desc: "Designed with all the Modern Tools. Every element of your website will be made to look exactly the way you want and be indistiguishable from any other website. This will be coded from the ground-up making your site unique to your business.",
     },
     {
-      imgPath: "/images/chat.png",
-      title: "Reliable Communication",
-      desc: "Keeping you updated at every step to ensure transparency and clarity.",
+      imgPath: "src/public/images/seo.png",
+      title: "Quality Control",
+      desc: "Each element of the design is tested across all devices to make sure the final webiste delivers against all the original requirements.",
     },
     {
-      imgPath: "/images/time.png",
-      title: "On-Time Delivery",
+      imgPath: "src/public/images/chat.png",
+      title: "Daily Communication",
+      desc: "I'm always available for a phone call or to swap messages in-case of any urgent changes that may need to be made.",
+    },
+    {
+      imgPath: "src/public/images/time.png",
+      title: "Delivered on Time",
+      desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+    },
+    {
+      imgPath: "src/public/images/time.png",
+      title: "Latest Technology",
+      desc: "Your website will be coded using leading web development technology React, it increases the speeed of your webiste, has the most elegant designs and is used by the worlds most famous companies including Facebook, NASA, Netflix and YOUR WEBSITE!  .",
+    },
+    {
+      imgPath: "src/public/images/time.png",
+      title: "Responsive across all Devices",
       desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
     },
   ];

@@ -489,8 +489,20 @@ canvas {
   @media screen and (max-width: 599px) {
 
     .camera, fov {
-      fov: 50;    
-      
+      fov: 50;         
     }
+
     }
+
+    /*Size of Services headline across multiple devices */
+    .services-1 {
+      font-size: 200px
+    }
+
+    @media screen and (max-width: 1040px) {
+      .services-1 {
+        font-size: 75px
+      }
+    }
+
 

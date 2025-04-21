@@ -83,12 +83,11 @@ const navLinks = [
   ];
   
   const abilities = [
-    {
-<<<<<<< HEAD
+    {    
       imgPath: "src/public/images/time.png",
       title: "Bespoke Web Design",
       desc: "Designed with all the Modern Tools. Every element of your website will be made to look exactly the way you want and be indistiguishable from any other website. This will be coded from the ground-up making your site unique to your business.",
-    },
+    },  
     {
       imgPath: "src/public/images/seo.png",
       title: "Quality Control",
@@ -112,7 +111,6 @@ const navLinks = [
     {
       imgPath: "src/public/images/time.png",
       title: "Responsive across all Devices",
-=======
       imgPath: "src/public/images/seo.png",
       title: "Quality Focus",
       desc: "Delivering high-quality results while maintaining attention to every detail.",
@@ -125,7 +123,6 @@ const navLinks = [
     {
       imgPath: "src/public/images/time.png",
       title: "On-Time Delivery",
->>>>>>> 819831068dd3faac2f6cefaf8e8d224977a18838
       desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
     },
   ];

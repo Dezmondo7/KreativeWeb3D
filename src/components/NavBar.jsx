@@ -40,7 +40,7 @@ const NavBar = () => {
 
                     </nav>
 
-                    <a href="#contact" className="contatc-btn group">
+                    <a href="#contact" className="contact-btn group">
                         <div className="inner">
                             <span>contact me</span>
                         </div>

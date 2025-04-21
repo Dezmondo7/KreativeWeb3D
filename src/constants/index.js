@@ -89,14 +89,30 @@ const navLinks = [
   
   const abilities = [
     {    
+      imgPath: "src/public/images/earth.png",
+      title: "Discovery Call",
+      desc: "Setting up a friendly discovery call is key to understanding which tailored package covers everything you require to develop your website. I like to understand the people behind the brands and create good relationships, It's the best way to be. Once everyone is aligned, it's time for the xciting bit, THE DESIGNS.",
+    },  
+    {    
       imgPath: "src/public/images/coffee.png",
       title: "Bespoke Web Design",
-      desc: "Let's brainstorm over a coffee and get to know each other, I like to understand the people behind the brands, whether that be over a Coffee or virtual call its the best place to start. Once everyone is aligned, its on with the design. Every element of your website will custome built to look exactly the way you want and be indistiguishable from any other website. .",
-    },  
-    {
+      desc: "Using the latest design tools allows you to turn idea's into reality right in-front of your eyes whether that be over a Coffee in person or in a Virtual Call. Every element of your website will be custom built to look exactly the way you want and be indistinguishable from any other website. Service's include Web Design & Development, Website Domain Name, hosting & Email. SSL Webiste Security."
+    },
+      {
       imgPath: "src/public/images/react.png",
       title: "Latest Technology",
-      desc: "Your website will be coded using leading web development technology React, it increases the speeed of your webiste, has the most elegant designs and is used by the worlds most famous companies including Facebook, NASA, Netflix and YOUR WEBSITE!  .",
+      desc: "Your website will be coded using leading web development technology React which increases the speed and efficiency of your webiste, React is modern and enables me to bring the most elegant designs to life. React Technology is used by the worlds most famous brands including Facebook, NASA, Netflix and YOUR WEBSITE!",
+    },
+    {
+      imgPath: "src/public/images/time.png",
+      title: "Logo Design",
+      imgPath: "src/public/images/design.png",
+      desc: "Top quality logo's design service with Logo's that you can keep",
+    },
+    {
+      imgPath: "src/public/images/pen.png",
+      title: "Proffessional Content",
+      desc: "Want your content put together by a proffessional copywritter? I hold a BA Honours Degree in Journalism, have been published in Newspapers and across Websites garunteing your content is written to the highest standard.",
     },
     {
       imgPath: "src/public/images/quality.png",
@@ -114,20 +130,9 @@ const navLinks = [
       desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
     },
     {
-      imgPath: "src/public/images/time.png",
-      title: "Logo Design",
-      imgPath: "src/public/images/seo.png",
-      desc: "Top quality logo's design service with Logo's that you can keep",
-    },
-    {
-      imgPath: "src/public/images/chat.png",
-      title: "Reliable Communication",
-      desc: "Keeping you updated at every step to ensure transparency and clarity.",
-    },
-    {
-      imgPath: "src/public/images/time.png",
-      title: "On-Time Delivery",
-      desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+      imgPath: "src/public/images/pen.png",
+      title: "Proffessional Content",
+      desc: "Want your content put together by a proffessional copywritter? I hold a BA Honours Degree in Journalism, have been published in Newspapers and across Websites garunteing your content is written to the highest standard.",
     },
   ];
   

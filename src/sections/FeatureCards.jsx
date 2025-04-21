@@ -5,7 +5,7 @@ const FeatureCards = () => {
     return(
 
             
-        <div className="w-full padding-x-lg">
+        <div className="w-full padding-x-lg" id="services">
             <div><h1 className="hero-text flex flex-center p-8 items center">SERVICES</h1></div>
         <div className="mx-auto grid-3-cols">
           {abilities.map(({ imgPath, title, desc }) => (

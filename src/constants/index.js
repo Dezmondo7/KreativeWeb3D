@@ -197,7 +197,7 @@ const navLinks = [
     {
       review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
       imgPath: "src/public/images/exp1.png",
-      logoPath: "images/logo1.png",
+      logoPath: "src/public/images/logo1.png",
       title: "Frontend Developer",
       date: "January 2023 - Present",
       responsibilities: [
@@ -239,11 +239,11 @@ const navLinks = [
     },
     {
       name: "logo2",
-      imgPath: "/images/logo2.png",
+      imgPath: "src/public/images/logo2.png",
     },
     {
       name: "logo3",
-      imgPath: "/images/logo3.png",
+      imgPath: "src/public/images/logo3.png",
     },
   ];
   

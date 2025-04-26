@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import Showcase from './sections/Showcase.jsx';
 import NavBar from './components/NavBar.jsx';
 import FeatureCards from './sections/FeatureCards.jsx';
+import Experience from './components/Experience.jsx'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
     <AnimatedCounter />
     <Showcase />
     <FeatureCards />
+    <Experience />
     </>
   )
 }

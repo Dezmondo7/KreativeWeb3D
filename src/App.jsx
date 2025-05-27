@@ -8,7 +8,8 @@ import NavBar from './components/NavBar.jsx';
 import FeatureCards from './sections/FeatureCards.jsx';
 import Experience from './components/Experience.jsx';
 import Techstack from './sections/Techstack.jsx';
-import Testimonials from './sections/Testimonials.jsx'
+import Testimonials from './sections/Testimonials.jsx';
+import Contact from './sections/Contact.jsx';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
     <Experience />
     <Techstack />
     <Testimonials />
+    <Contact />
     </>
   )
 }

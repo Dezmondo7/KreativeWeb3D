@@ -5,12 +5,12 @@ import GlowCard from '../components/GlowCard'
 
 const Testimonials = () => {
     return(
-        <section id="testimonails" className="flex-center section-padding">
+        <section id="testimonials" className="flex-center section-padding">
             <div className="w-full h-full md:px-10 px-5">
-                <TitleHeader title ="Testimonials"
-                sub=" Client Feedback Highlights"
+                <TitleHeader title="Testimonials"
+                sub="Client Feedback Highlights"
                 />
-                <div className="large:columns-3 md-columns-2 columns-1 mt-16">
+                <div className="lg:columns-3 md:columns-2 columns-1 mt-16">
                     {testimonials.map(( {imgPath, name, mentions, review }) => (
                         <GlowCard card={{ review }}>
                             <div className="flex items-center gap-3">

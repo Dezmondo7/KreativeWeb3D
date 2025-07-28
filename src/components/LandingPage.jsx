@@ -1,23 +1,65 @@
 import React from 'react'
+"use client"
+import { useState, useEffect } from "react"
+
+const ZapIcon = () => (
+  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+    <path
+      fillRule="evenodd"
+      d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+      clipRule="evenodd"
+    />
+  </svg>
+)
+
 
 const LandingPage = () => {
+
+
+
+    const [displayedText, setDisplayedText] = useState("")
+    const [showCursor, setShowCursor] = useState(true)
+    const fullText = "Web Design Studio"
+
+    useEffect(() => {
+        let currentIndex = 0
+        const typingInterval = setInterval(() => {
+            if (currentIndex <= fullText.length) {
+                setDisplayedText(fullText.slice(0, currentIndex))
+                currentIndex++
+            } else {
+                clearInterval(typingInterval)
+                // Hide cursor after typing is complete
+                setTimeout(() => setShowCursor(false), 500)
+            }
+        }, 200) // Adjust speed here (lower = faster)
+
+        return () => clearInterval(typingInterval)
+    }, [])
+
     return (
         <>
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto text-center">
                     <div className="space-y-8">
+
                         {/* Main Heading */}
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan-500 to-purple-600">Welcome to AI </span>
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan-500">
-                                Web Design Studio
+                         <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
+              <ZapIcon />
+              <span className="text-sm text-purple-300 ml-2">Next-Gen Web Design Agency</span>
+            </div>
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
+                            <span>Welcome to Our</span>
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
+                                {displayedText}
+                                {showCursor && <span className="animate-pulse text-purple-600">|</span>}
                             </span>
                         </h1>
 
                         {/* Subtitle */}
                         <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                             <span className="">Discover the power of modern web development with our cutting-edge tools and services. Build faster, scale
-                            better, and create amazing experiences.</span>
+                                better, and create amazing experiences.</span>
                         </p>
 
                         {/* Call to Action Buttons */}

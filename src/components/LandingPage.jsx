@@ -16,7 +16,63 @@ const ZapIcon = () => (
 )
 
 
+// Falling Particles Component
+const FallingParticles = () => {
+  const [particles, setParticles] = useState([])
+
+  useEffect(() => {
+    const createParticle = () => ({
+      id: Math.random(),
+      x: Math.random() * window.innerWidth,
+      y: -10,
+      size: Math.random() * 4 + 2,
+      speed: Math.random() * 3 + 1,
+      opacity: Math.random() * 0.3 + 0.1,
+    })
+
+    const initialParticles = Array.from({ length: 50 }, createParticle)
+    setParticles(initialParticles)
+
+    const animateParticles = () => {
+      setParticles((prevParticles) =>
+        prevParticles.map((particle) => {
+          const newY = particle.y + particle.speed
+          if (newY > window.innerHeight + 10) {
+            return createParticle()
+          }
+          return { ...particle, y: newY }
+        }),
+      )
+    }
+
+    const interval = setInterval(animateParticles, 50)
+    return () => clearInterval(interval)
+  }, [])
+
+
+
+  return (
+    <div className="fixed inset-0 pointer-events-none z-0">
+      {particles.map((particle) => (
+        <div
+          key={particle.id}
+          className="absolute rounded-full bg-white"
+          style={{
+            left: `${particle.x}px`,
+            top: `${particle.y}px`,
+            width: `${particle.size}px`,
+            height: `${particle.size}px`,
+            opacity: particle.opacity,
+          }}
+        />
+      ))}
+    </div>
+  )
+}
+
+
 const LandingPage = () => {
+
     
     {/* Typewrite effect */}
     const [displayedText, setDisplayedText] = useState("")
@@ -41,6 +97,10 @@ const LandingPage = () => {
 
     return (
         <>
+
+        {/* Falling Particles Background */}
+      <FallingParticles />
+      
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black px-4 sm:px-6 lg:px-8">
     
                

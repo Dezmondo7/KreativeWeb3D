@@ -2,21 +2,23 @@ import React from 'react'
 "use client"
 import { useState, useEffect } from "react"
 
+
+
+{/* SVG */}
 const ZapIcon = () => (
-  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-    <path
-      fillRule="evenodd"
-      d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-      clipRule="evenodd"
-    />
-  </svg>
+    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path
+            fillRule="evenodd"
+            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+            clipRule="evenodd"
+        />
+    </svg>
 )
 
 
 const LandingPage = () => {
-
-
-
+    
+    {/* Typewrite effect */}
     const [displayedText, setDisplayedText] = useState("")
     const [showCursor, setShowCursor] = useState(true)
     const fullText = "Web Design Studio"
@@ -40,14 +42,17 @@ const LandingPage = () => {
     return (
         <>
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black px-4 sm:px-6 lg:px-8">
+    
+               
                 <div className="max-w-4xl mx-auto text-center">
                     <div className="space-y-8">
 
                         {/* Main Heading */}
-                         <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
-              <ZapIcon />
-              <span className="text-sm text-purple-300 ml-2">Next-Gen Web Design Agency</span>
-            </div>
+                        <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
+                            <ZapIcon />
+                            <span className="text-sm text-purple-300 ml-2">Next-Gen Web Design Agency</span>
+                        </div>
+
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
                             <span>Welcome to Our</span>
                             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
@@ -87,9 +92,14 @@ const LandingPage = () => {
                                 🚀 Modern
                             </span>
                         </div>
+
+
+
                     </div>
                 </div>
             </div>
+
+            
 
         </>
     )

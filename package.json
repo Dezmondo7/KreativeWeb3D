@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^7.0.0",
+    "@fortawesome/free-regular-svg-icons": "^7.0.0",
+    "@fortawesome/free-solid-svg-icons": "^7.0.0",
     "@gsap/react": "^2.1.2",
     "@react-three/drei": "^10.0.6",
     "@react-three/fiber": "^9.1.2",

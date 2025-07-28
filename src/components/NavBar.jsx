@@ -22,17 +22,21 @@ const NavBar = () => {
     return(
         <header className={`navbar ${scrolled ? 'scrolled' : 'not-scrolled'}`}>
             <div className="inner">
-                <a className="logo" href="#hero">
+               {/* } <a className="logo " href="#hero">
                 Reakt Web | RKT
-                </a>
+                </a> */}
+                 <span className="logo cursor-pointer font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+               Reakt Web Design
+            </span>
 
                 <nav className="desktop">
                     <ul>
                      {navLinks.map(({ link, name }) => (
                             <li key={name} className="group">
                                 <a href={link} >
-                                    <span>{name}</span>
-                                    <span className="underline" />
+                                    
+                                   <span>{name}</span>
+                                   <span className="underline" />
                                 </a>
                             </li>
                         ))} 

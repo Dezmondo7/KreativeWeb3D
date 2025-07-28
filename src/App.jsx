@@ -10,11 +10,13 @@ import Experience from './components/Experience.jsx';
 import Techstack from './sections/Techstack.jsx';
 import Testimonials from './sections/Testimonials.jsx';
 import Contact from './sections/Contact.jsx';
+import LandingPage from './components/LandingPage.jsx';
 
 const App = () => {
   return (
     <>
     <NavBar />
+    <LandingPage />
     <Hero />
     <AnimatedCounter />
     <Showcase />

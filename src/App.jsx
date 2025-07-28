@@ -17,7 +17,7 @@ const App = () => {
     <>
     <NavBar />
     <LandingPage />
-    <Hero />
+    {/*<Hero />*/}
     <AnimatedCounter />
     <Showcase />
     <FeatureCards />

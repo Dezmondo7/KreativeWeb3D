@@ -86,7 +86,7 @@ const CounterSection = () => {
     <div id="counter" className="px-4 sm:px-6 lg:px-8 py-16 xl:mt-0 mt-20 bg-black relative overflow-hidden">
       {/* Futuristic background effects */}
       {/*<div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>*/}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]"></div>
+      {/*<div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_100%)]"></div>*/}
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Main Title */}

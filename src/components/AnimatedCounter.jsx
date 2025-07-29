@@ -95,7 +95,7 @@ const CounterSection = () => {
             className="text-white text-3xl font-medium tracking-wide"
             style={{ fontFamily: "Mona Sans, system-ui, sans-serif" }}
           >
-            Reakt Websites are Future-Proof
+            Built for the future
           </h2>
         </div>
 

@@ -29,7 +29,7 @@ const FeatureCards = () => {
                 </h1>
             </div>
             
-            <div className="mx-auto grid-3-cols ">
+            <div className="mx-auto grid-3-cols mt-[40] ">
                 {abilities.map(({ imgPath, title, desc }) => (
                     <div
                         key={title}

@@ -17,14 +17,14 @@ const Experience = () => {
                 xPercent: -100,
                 opacity: 0,
                 transformOrigin: 'left left',
-                duration: 1, 
+                duration: 1,
                 ease: 'Power2.inOut',
                 scrollTrigger: {
                     trigger: card,
                     start: 'top 80%',
                 }
             })
-    })
+        })
         gsap.to('.timeline', {
             transformOrigin: 'bottom bottom',
             ease: 'power1.inOut',
@@ -38,7 +38,7 @@ const Experience = () => {
                     })
                 }
             },
-            
+
         })
 
         gsap.utils.toArray('.expText').forEach((text) => {
@@ -46,23 +46,23 @@ const Experience = () => {
             gsap.from(text, {
                 xPercent: 0,
                 opacity: 0,
-                duration: 1, 
+                duration: 1,
                 ease: 'Power2.inOut',
                 scrollTrigger: {
                     trigger: text,
                     start: 'top 60%',
                 }
             })
-    })
+        })
 
 
-        
+
 
     }, []);
 
     return (
         <section id="experience w-full md:mt-40 mt-20 section-padding xl:px-0">
-            <div className="w-full h-full md:px-20 px-5">
+            <div className="w-full h-full md:px-20 px-5 mt-40 ">
                 <TitleHeader title="Reakt Web Design" sub="About Us" />
 
                 <div className="relative">
@@ -97,7 +97,7 @@ const Experience = () => {
                                                     {card.date}
                                                 </p>
                                                 <p className="text-[#839cb5] italic">
-                                                    Responsibilties
+                                                    <br></br>
                                                 </p>
                                                 <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
                                                     {card.responsibilities.map((responsibilities) => (
@@ -106,8 +106,8 @@ const Experience = () => {
                                                         </li>
 
                                                     ))}
-                                                       
-             
+
+
                                                 </ul>
                                             </div>
 

@@ -117,11 +117,11 @@ const navLinks = [
     {
       imgPath: "src/public/images/quality.png",
       title: "Quality & Security",
-      desc: "We carefully check every part of your website on all devices to ensure it looks amazing and works smoothly. We build websites with security in mind—using best practices to protect",
+      desc: "We carefully check every part of your website on all devices to ensure it looks amazing and works smoothly. We build websites with security in mind—using best practices to protect.",
     },
     {
       imgPath: "src/public/images/seo1.png",
-      title: "Perfomrance Optimization",
+      title: "Performance Optimization",
       desc: "Search Engine Optimization (SEO) helps your website show up when people search online. Using React technology, we build fast, efficient sites that perform better in search results—helping you stay ahead of the competition.",
     },
     {
@@ -197,37 +197,37 @@ const navLinks = [
     {
       review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
       imgPath: "src/public/images/exp1.png",
-      logoPath: "src/public/images/logo1.png",
-      title: "Frontend Developer",
-      date: "January 2023 - Present",
+      logoPath: "src/public/images/react.png",
+      title: "The Creative Agency",
+      date: "",
       responsibilities: [
-        "Developed and maintained user-facing features for the Hostinger website.",
-        "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-        "Optimized web applications for maximum speed and scalability.",
+        "Reakt Web is the alternative high-performance web development agency",
+        "Our creativity is what makes us a great choice to develop ideas into life",
+        "We craft websites that are visually striking and built to perform. It's what drives us",
       ],
     },
     {
       review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
       imgPath: "src/public/images/exp2.png",
       logoPath: "src/public/images/logo2.png",
-      title: "Full Stack Developer",
-      date: "June 2020 - December 2023",
+      title: "The Unique Agency",
+      date: "",
       responsibilities: [
-        "Led the development of Docker's web applications, focusing on scalability.",
-        "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-        "Contributed to open-source projects that were used with the Docker ecosystem.",
+        "We do not settle for boring, our designs are unique and vibrant",
+        "We specialize in custom websites for small businesses and startups looking to stand out online",
+        "Our value for money makes us an ideal partner for new & existing businesses"
       ],
     },
     {
       review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
       imgPath: "src/public/images/exp3.png",
       logoPath: "src/public/images/logo3.png",
-      title: "React Native Developer",
-      date: "March 2019 - May 2020",
+      title: "The Credible Agency",
+      date: "",
       responsibilities: [
-        "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-        "Improved app performance and user experience through code optimization and testing.",
-        "Coordinated with the product team to implement features based on feedback.",
+        "Our Lead Developer has 10+ years experience working in IT",
+        "A certified developer with 98% in React web development",
+        "As-well as being credible we are a friendly team to work with!",
       ],
     },
   ];

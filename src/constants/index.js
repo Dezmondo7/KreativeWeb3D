@@ -90,103 +90,103 @@ const navLinks = [
   const abilities = [
     {    
       imgPath: "src/public/images/earth.png",
-      title: "Discovery Call",
-      desc: "Setting up a friendly discovery call is key to understanding which tailored package covers everything required to develop your website. I like to understand the people behind the brands and create good relationships, It's the best way to be. Once everyone is aligned, it's time for the exciting bit, Website Design....",
+      title: "Web Design",
+      desc: "We stay on top of the latest design trends and always start by getting to know the people behind the brand. For us, it’s all about mixing creativity with technical precision to create standout designs—again and again. ",
     },  
     {    
       imgPath: "src/public/images/coffee.png",
-      title: "Bespoke Web Design",
-      desc: "Using the latest design tools allows me to turn idea's into reality right in-front of your eyes whether that be over a Coffee in person or in a Virtual Call. Every element of your website will be custom built to look exactly the way you want and be indistinguishable from any other website. Service's include New Web Design & Development, Website Re-fresh, Website Domain Name, Hosting & Email. SSL Website Security."
+      title: "Web Development",
+      desc: "We use the latest tech and work with skilled developers to build fast, modern websites that are completely custom—no templates, no copy-paste. Every site is built with clean code so it stands out and runs smoothly."
     },
       {
       imgPath: "src/public/images/react.png",
       title: "Latest Technology",
-      desc: "Want the latest technology, we got it covered! Your website will be coded using leading Web Development Technology which will make your website faster and more efficient than the rest. I code in React which is a modern technology that enables me to bring the most elegant designs to life. React was developed by Facebook and is used by leading brands such as NASA, Netflix and YOUR WEBSITE!",
+      desc: "Your website will be built with React—the same fast, dynamic tech used by Facebook, Instagram, and Netflix. It’s perfect for creating smooth, interactive experiences that load quickly and run seamlessly as your business grows."
     },
     {
       imgPath: "src/public/images/time.png",
       title: "Logo Design",
       imgPath: "src/public/images/design.png",
-      desc: "Top quality Logo Design Service with Logo's that you can keep forever!",
+      desc: "Top-quality logo design that’s yours to keep—forever. You’ll get a custom logo that looks great everywhere, complete with all the file formats you need for any use."
     },
     {
       imgPath: "src/public/images/pen.png",
-      title: "Professional Content",
-      desc: "Imagine your content put together by a professional copywriter? It's done. I hold a BA Honours Degree in Journalism to go alongside my Web Development qualifications, have been published in Newspapers and across Websites guaranteeing your content is written to the highest standard.",
+      title: "Content Creation",
+      desc: "Our copywriters have been published in major newspapers and deliver professional, high-quality content tailored to your needs.",
     },
     {
       imgPath: "src/public/images/quality.png",
-      title: "Quality Control",
-      desc: "Each element of the design is tested across all devices to make sure the final website delivers against all of the original requirements.",
+      title: "Quality & Security",
+      desc: "We carefully check every part of your website on all devices to ensure it looks amazing and works smoothly. We build websites with security in mind—using best practices to protect",
     },
     {
       imgPath: "src/public/images/seo1.png",
-      title: "SEO",
-      desc: "Search Engine Optimisation is what brings a website up when people use search engines. The React Web Technology keeps your site appearing ahead of the competition when associated search terms are used.",
+      title: "Perfomrance Optimization",
+      desc: "Search Engine Optimization (SEO) helps your website show up when people search online. Using React technology, we build fast, efficient sites that perform better in search results—helping you stay ahead of the competition.",
     },
     {
       imgPath: "src/public/images/bubble.png",
-      title: "Daily Communication",
-      desc: "I'm always available for a phone call or to swap messages in-case of any urgent changes that may need to be made.",
+      title: "Web Maintenance & Support",
+      desc: "We offer ongoing support and maintenance to keep your site secure, updated, and performing at its best—even after it’s live.",
     },
     {
       imgPath: "src/public/images/time-clock.png",
       title: "Delivered on Time",
-      desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+      desc: "We deliver projects on time, with a strong focus on quality and attention to detail.",
     },
     
   ];
   
   const techStackImgs = [
     {
-      name: "React Developer",
+      name: "React",
       imgPath: "/images/logos/react.png",
     },
     {
-      name: "Python Developer",
+      name: "Python",
       imgPath: "/images/logos/python.svg",
     },
     {
-      name: "Backend Developer",
+      name: "Node JS",
       imgPath: "/images/logos/node.png",
     },
     {
-      name: "Interactive Developer",
+      name: "Three JS",
       imgPath: "/images/logos/three.png",
     },
     {
-      name: "Project Manager",
+      name: "Agile",
       imgPath: "/images/logos/git.svg",
     },
   ];
   
   const techStackIcons = [
     {
-      name: "React Developer",
+      name: "React Development",
       modelPath: "src/public/models/react_logo-transformed.glb",
       scale: 1,
       rotation: [0, 0, 0],
     },
     {
-      name: "Python Developer",
+      name: "Python Development",
       modelPath: "src/public/models/python-transformed.glb",
       scale: 0.8,
       rotation: [0, 0, 0],
     },
     {
-      name: "Backend Developer",
+      name: "Node JS",
       modelPath: "src/public/models/node-transformed.glb",
       scale: 5,
       rotation: [0, -Math.PI / 2, 0],
     },
     {
-      name: "Interactive Developer",
+      name: "Interactive Three.JS",
       modelPath: "src/public/models/three.js-transformed.glb",
       scale: 0.05,
       rotation: [0, 0, 0],
     },
     {
-      name: "Project Manager",
+      name: "Agile Project Management",
       modelPath: "src/public/models/git-svg-transformed.glb",
       scale: 0.05,
       rotation: [0, -Math.PI / 4, 0],

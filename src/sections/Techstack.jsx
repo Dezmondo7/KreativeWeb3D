@@ -29,13 +29,13 @@ const Techstack = () => {
         <div id="skills" className="flex-centre section-padding">
             <div className="w-full h-full md:px-10">
                 <TitleHeader 
-                title="My preferred Tech stack"
-                sub="What Skills I have" />
+                title="Technology"
+                sub="Web Development" />
 
                 <div className="tech-grid">
                     {techStackIcons.map((icon) => (
-                        <div key={icon.name} className="card-border tech card overflow-hidden group xl:rounded-full rounded-lg">
-                            <div className="tech-card-animated-bg" />
+                        <div key={icon.name} className="bg-transparent tech overflow-hidden group xl:rounded-full rounded-lg">
+                           {/*} <div className="tech-card-animated-bg" />*/}
                             <div className="tech-card-content">
                                 <div className="tech-icon-wrapper">
 

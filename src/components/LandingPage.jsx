@@ -100,7 +100,7 @@ const LandingPage = () => {
 
         {/* Falling Particles Background */}
       <FallingParticles />
-      
+
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black px-4 sm:px-6 lg:px-8">
     
                
@@ -123,8 +123,7 @@ const LandingPage = () => {
 
                         {/* Subtitle */}
                         <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            <span className="">Discover the power of modern web development with our cutting-edge tools and services. Build faster, scale
-                                better, and create amazing experiences.</span>
+                            <span className="">Discover the power of modern web development with our cutting-edge tools and services. Build faster, better, and create amazing website experiences.</span>
                         </p>
 
                         {/* Call to Action Buttons */}

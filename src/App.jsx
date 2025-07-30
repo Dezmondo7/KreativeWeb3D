@@ -9,8 +9,8 @@ import FeatureCards from './sections/FeatureCards.jsx';
 import Experience from './components/Experience.jsx';
 import Techstack from './sections/Techstack.jsx';
 import Testimonials from './sections/Testimonials.jsx';
-import Contact from './sections/Contact.jsx';
 import LandingPage from './components/LandingPage.jsx';
+import Footer from './components/Footer.jsx';
 
 const App = () => {
   return (
@@ -19,12 +19,13 @@ const App = () => {
     <LandingPage />
     {/*<Hero />*/}
     <AnimatedCounter />
-    <Showcase />
+    {/*<Showcase />*/}
     <FeatureCards />
     <Experience />
     <Techstack />
     <Testimonials />
-    <Contact />
+    <Footer />
+   
     </>
   )
 }

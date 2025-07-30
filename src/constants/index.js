@@ -195,39 +195,39 @@ const navLinks = [
   
   const expCards = [
     {
-      review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-      imgPath: "src/public/images/exp1.png",
+      review: "New technology helps shape what we deliver. We take a patient methodical approach to our work, this forward thinking mindset opens the space of necessary calmness to let our creativity flow.",
+      imgPath: "",
       logoPath: "src/public/images/letter-r.png",
       title: "The Creative Agency",
       date: "",
       responsibilities: [
-        "Reakt Web is the alternative high-performance web development agency",
-        "We bring creativity to the table to bring your ideas to life",
-        "Our websites are visually striking and built to perform. It's what drives us",
+        "Reakt Web Design is the alternative high-performance web development agency",
+        "We like to do things differently, we are a fan of first thinking principles",
+        "We’re constantly unboxing shiny new web tech, it’s what powers the websites we build",
       ],
     },
     {
-      review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-      imgPath: "src/public/images/exp2.png",
+      review: "Your brands image is critical, we feel you. Our client centric approach is part of the key to the success of each project.",
       logoPath: "src/public/images/horn.png",
-      title: "The Unique Agency",
+      title: "The Unique Brand Agency",
       date: "",
       responsibilities: [
-        "We do not settle for boring, our designs are unique and vibrant",
-        "Specialists at building custom websites for small businesses and startups looking to stand out online",
-        "Our value for money makes us an ideal partner for new & existing businesses"
+        "Trusting an agency to build your online brand can be a nervous thing to do",
+        "It is an awesome responsibilty for us to bridge the gap between your company and its audience",
+        "That is why the client is considered every step of the way",
+        
       ],
     },
     {
-      review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-      imgPath: "src/public/images/exp3.png",
+      review: "We got in this to do someting we love. We are dedicated to developing the most creative websites whilst enjoying every step of the journey.",
+      imgPath: "",
       logoPath: "src/public/images/react.png",
-      title: "The Credible Agency",
+      title: "Our Philosophy",
       date: "",
       responsibilities: [
-        "Our Lead Developer brings over a decade of IT expertise and a sharp eye for quality",
-        "A certified developer with a 98% score in React Web Development",
-        "We have the skills and keep things simple and enjoyable for you",
+        "We are in this to have a blast and create some pretty cool stuff",
+        "Our talented React development team are encouraged to showcase their creative flair in every project",
+        "We know our stuff and we want you to enjoy the journey just as much as we enjoy creating it",
       ],
     },
   ];

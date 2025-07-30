@@ -25,6 +25,7 @@ const NavBar = () => {
                 {/* } <a className="logo " href="#hero">
                 Reakt Web | RKT
                 </a> */}
+                
                 <span className="logo cursor-pointer font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
                     Reakt Web Design
                 </span>

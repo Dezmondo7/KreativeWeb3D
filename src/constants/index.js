@@ -94,7 +94,7 @@ const navLinks = [
       desc: "We use the latest design trends and always start by getting to know the people behind the brand. For us, it’s all about mixing creativity with technical precision to create standout designs—again and again. ",
     },  
     {    
-      imgPath: "src/public/images/coffee.png",
+      imgPath: "src/public/images/programming.png",
       title: "Web Development",
       desc: "Our skilled developers work with the latest tech to build fast, modern websites that are completely custom—no templates, no copy-paste. Every site is built with clean code so it stands out and runs smoothly."
     },

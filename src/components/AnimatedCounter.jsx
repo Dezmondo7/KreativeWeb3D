@@ -68,12 +68,12 @@ const CounterSection = () => {
     {
       value: 100,
       suffix: "+",
-      subtitle: "SEO",
+      subtitle: "User-friendly",
     },
     {
       value: 100,
       suffix: "+",
-      subtitle: "Responsive",
+      subtitle: "SEO",
     },
     {
       value: 150,

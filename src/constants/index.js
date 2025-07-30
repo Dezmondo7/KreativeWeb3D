@@ -91,12 +91,12 @@ const navLinks = [
     {    
       imgPath: "src/public/images/earth.png",
       title: "Web Design",
-      desc: "We stay on top of the latest design trends and always start by getting to know the people behind the brand. For us, it’s all about mixing creativity with technical precision to create standout designs—again and again. ",
+      desc: "We use the latest design trends and always start by getting to know the people behind the brand. For us, it’s all about mixing creativity with technical precision to create standout designs—again and again. ",
     },  
     {    
       imgPath: "src/public/images/coffee.png",
       title: "Web Development",
-      desc: "We use the latest tech and work with skilled developers to build fast, modern websites that are completely custom—no templates, no copy-paste. Every site is built with clean code so it stands out and runs smoothly."
+      desc: "Our skilled developers work with the latest tech to build fast, modern websites that are completely custom—no templates, no copy-paste. Every site is built with clean code so it stands out and runs smoothly."
     },
       {
       imgPath: "src/public/images/react.png",
@@ -127,12 +127,12 @@ const navLinks = [
     {
       imgPath: "src/public/images/bubble.png",
       title: "Web Maintenance & Support",
-      desc: "We offer ongoing support and maintenance to keep your site secure, updated, and performing at its best—even after it’s live.",
+      desc: "By offering ongoing support and maintenance your site is secure, updated, and performing at its best—even after it’s live.",
     },
     {
       imgPath: "src/public/images/time-clock.png",
       title: "Delivered on Time",
-      desc: "We deliver projects on time, with a strong focus on quality and attention to detail.",
+      desc: "100% of projects are delivered on time, with a strong focus on quality and attention to detail.",
     },
     
   ];
@@ -202,8 +202,8 @@ const navLinks = [
       date: "",
       responsibilities: [
         "Reakt Web is the alternative high-performance web development agency",
-        "Our creativity is what makes us a great choice to develop ideas into life",
-        "We craft websites that are visually striking and built to perform. It's what drives us",
+        "We bring creativity to the table to bring your ideas to life",
+        "Our websites are visually striking and built to perform. It's what drives us",
       ],
     },
     {
@@ -214,20 +214,20 @@ const navLinks = [
       date: "",
       responsibilities: [
         "We do not settle for boring, our designs are unique and vibrant",
-        "We specialize in custom websites for small businesses and startups looking to stand out online",
+        "Specialists at building custom websites for small businesses and startups looking to stand out online",
         "Our value for money makes us an ideal partner for new & existing businesses"
       ],
     },
     {
       review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
       imgPath: "src/public/images/exp3.png",
-      logoPath: "src/public/images/logo3.png",
+      logoPath: "src/public/images/react.png",
       title: "The Credible Agency",
       date: "",
       responsibilities: [
-        "Our Lead Developer has 10+ years experience working in IT",
-        "A certified developer with 98% in React web development",
-        "As-well as being credible we are a friendly team to work with!",
+        "Our Lead Developer brings over a decade of IT expertise and a sharp eye for quality",
+        "A certified developer with a 98% score in React Web Development",
+        "We have the skills and keep things simple and enjoyable for you",
       ],
     },
   ];

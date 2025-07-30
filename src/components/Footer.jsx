@@ -126,7 +126,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="hidden md:block">
             <h3 className="text-white font-semibold mb-6 text-lg">Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
@@ -144,7 +144,7 @@ const Footer = () => {
           </div>
 
           {/* Contact & Resources */}
-          <div>
+          <div className="hidden md:block">
             <h3 className="text-white font-semibold mb-6 text-lg">Get In Touch</h3>
             <div className="space-y-4 mb-8">
               <div className="flex items-center text-gray-400">

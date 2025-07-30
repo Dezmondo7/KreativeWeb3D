@@ -209,7 +209,7 @@ const navLinks = [
     {
       review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
       imgPath: "src/public/images/exp2.png",
-      logoPath: "src/public/images/logo2.png",
+      logoPath: "src/public/images/horn.png",
       title: "The Unique Agency",
       date: "",
       responsibilities: [

@@ -197,7 +197,7 @@ const navLinks = [
     {
       review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
       imgPath: "src/public/images/exp1.png",
-      logoPath: "src/public/images/react.png",
+      logoPath: "src/public/images/letter-r.png",
       title: "The Creative Agency",
       date: "",
       responsibilities: [

@@ -26,7 +26,7 @@ const Techstack = () => {
 
    return(
     <div>
-        <div id="skills" className="flex-centre section-padding">
+        <div id="tech" className="flex-centre section-padding">
             <div className="w-full h-full md:px-10">
                 <TitleHeader 
                 title="Technology"

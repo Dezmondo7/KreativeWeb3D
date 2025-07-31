@@ -11,6 +11,7 @@ import Techstack from './sections/Techstack.jsx';
 import Testimonials from './sections/Testimonials.jsx';
 import LandingPage from './components/LandingPage.jsx';
 import Footer from './components/Footer.jsx';
+import ContactForm from './components/ContactForm.jsx';
 
 const App = () => {
   return (
@@ -19,11 +20,12 @@ const App = () => {
     <LandingPage />
     {/*<Hero />*/}
     <AnimatedCounter />
+     <Experience />
     {/*<Showcase />*/}
     <FeatureCards />
-    <Experience />
     <Techstack />
     <Testimonials />
+    <ContactForm />
     <Footer />
    
     </>

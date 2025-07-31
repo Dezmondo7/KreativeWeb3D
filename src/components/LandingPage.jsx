@@ -101,7 +101,7 @@ const LandingPage = () => {
             {/* Falling Particles Background */}
             <FallingParticles />
 
-            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black px-4 sm:px-6 lg:px-8">
+            <div id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black px-4 sm:px-6 lg:px-8">
 
 
                 <div className="max-w-4xl mx-auto text-center">

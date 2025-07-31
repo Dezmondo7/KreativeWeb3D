@@ -11,21 +11,21 @@
 
 const navLinks = [
     {
-      name: "Work",
-      link: "#work",
+
+      name: "Home",
+      link: "#home"
+    },
+      {
+      name: "About",
+      link: "#about",
     },
     {
       name: "Services",
       link: "#services",
-    },
+    },   
     {
-      name: "Experience",
-      link: "#experience",
-    },
-   
-    {
-      name: "Skills",
-      link: "#skills",
+      name: "Tech",
+      link: "#tech",
     },
     {
       name: "Testimonials",
@@ -110,7 +110,7 @@ const navLinks = [
       desc: "Top-quality branding including logo design and colour palette selections to incorporate into your web build."
     },
     {
-      imgPath: "src/public/images/pen.png",
+      imgPath: "src/public/images/news.png",
       title: "Content Creation",
       desc: "Our copywriters have been published in major newspapers and deliver professional, high-quality content tailored to your needs.",
     },

@@ -112,7 +112,7 @@ const LandingPage = () => {
                         {/* Main Heading */}
                         <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
                             <ZapIcon />
-                            <span className="text-sm text-purple-300 ml-2">Next-Gen Web Design Agency</span>
+                            <span className="text-sm text-purple-300 ml-2 cursor-default">Next-Gen Web Design Agency</span>
                         </div>
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">

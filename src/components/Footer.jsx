@@ -59,7 +59,7 @@ const Footer = () => {
   const resources = ["Blog", "Case Studies", "Documentation", "Support Center", "Privacy Policy", "Terms of Service"]
 
   return (
-    <footer className="relative bg-gradient-to-br from-purple-900/20 via-black to-black border-t border-purple-500/20 mt-100 sm:mt-40">
+    <footer className="relative bg-gradient-to-br from-black to-purple-900/20 border-t border-purple-500/20 mt-40 sm:mt-40">
       {/* Subtle particle effect for footer */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-2 left-1/4 w-2 h-2 bg-purple-400/30 rounded-full animate-pulse"></div>
@@ -112,7 +112,7 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <div>
-            <h3 className="text-white font-semibold mb-6 text-lg">Navigation</h3>
+            <h3 className="text-white font-semibold mb-6 text-lg sm:justify-center">Navigation</h3>
             <ul className="space-y-3">
               {navLinks.map(({ name, link }) => (
                 <li key={name}>
@@ -130,7 +130,7 @@ const Footer = () => {
 
           {/* Services */}
           <div className="hidden md:block">
-            <h3 className="text-white font-semibold mb-6 text-lg">Services</h3>
+            <h3 className="text-white font-semibold mb-6 text-lg justify-centre">Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>

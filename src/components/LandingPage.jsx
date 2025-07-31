@@ -128,26 +128,26 @@ const LandingPage = () => {
 
                         {/* Call to Action Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-                            <button className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-lg">
-                                Get Started
+                            <button className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold cursor-pointer rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-lg">
+                                Get Quote
                             </button>
-                            <button className="w-full sm:w-auto px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 text-lg">
+                            <button className="w-full sm:w-auto px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 text-lg">
                                 Learn More
                             </button>
                         </div>
 
                         {/* Feature Pills */}
                         <div className="flex flex-wrap justify-center gap-3 pt-8">
-                            <span className="px-4 py-2 bg-white/70 backdrop-blur-sm hover rounded-full text-sm font-medium text-gray-700 shadow-sm">
+                            <span className="px-4 py-2 bg-white/70 backdrop-blur-sm hover rounded-full cursor-default text-sm font-medium text-gray-700 shadow-sm">
                                 ⚡ Lightning Fast
                             </span>
-                            <span className="px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full text-sm font-medium text-gray-700 shadow-sm">
+                            <span className="px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full cursor-default text-sm font-medium text-gray-700 shadow-sm">
                                 🔒 Secure
                             </span>
-                            <span className="px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full text-sm font-medium text-gray-700 shadow-sm">
+                            <span className="px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full cursor-default text-sm font-medium text-gray-700 shadow-sm">
                                 📱 Responsive
                             </span>
-                            <span className=" px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full text-sm font-medium text-gray-700 shadow-sm">
+                            <span className=" px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full cursor-default text-sm font-medium text-gray-700 shadow-sm">
                                 🚀 Modern
                             </span>
                         </div>

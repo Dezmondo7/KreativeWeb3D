@@ -89,14 +89,14 @@ const navLinks = [
   
   const abilities = [
     {    
-      imgPath: "src/public/images/earth.png",
+      imgPath: "src/public/images/web.png",
       title: "Web Design",
-      desc: "We use the latest design trends and always start by getting to know the people behind the brand. For us, it’s all about mixing creativity with technical precision to create standout designs—again and again. ",
+      desc: "We use the latest design trends and always start by getting to know the people behind the brand. For us, it’s all about mixing creativity with technical precision to create standout User Interface designs—again and again. ",
     },  
     {    
-      imgPath: "src/public/images/programming.png",
+      imgPath: "src/public/images/code.png",
       title: "Web Development",
-      desc: "Our skilled developers work with the latest tech to build fast, modern websites that are completely custom—no templates, no copy-paste. Every site is built with clean code so it stands out and runs smoothly."
+      desc: "Our skilled developers work with the latest tech to build fast, modern websites that are completely custom. Every site is built with clean code and designed to be fully responsive, ensuring seamless performance on desktop, mobile, and tablet devices.."
     },
       {
       imgPath: "src/public/images/react.png",
@@ -105,9 +105,9 @@ const navLinks = [
     },
     {
       imgPath: "src/public/images/time.png",
-      title: "Logo Design",
-      imgPath: "src/public/images/design.png",
-      desc: "Top-quality logo design that’s yours to keep—forever. You’ll get a custom logo that looks great everywhere, complete with all the file formats you need for any use."
+      title: "Brand Design",
+      imgPath: "src/public/images/layers.png",
+      desc: "Top-quality branding including logo design and colour palette selections to incorporate into your web build."
     },
     {
       imgPath: "src/public/images/pen.png",
@@ -115,17 +115,17 @@ const navLinks = [
       desc: "Our copywriters have been published in major newspapers and deliver professional, high-quality content tailored to your needs.",
     },
     {
-      imgPath: "src/public/images/quality.png",
+      imgPath: "src/public/images/security.png",
       title: "Quality & Security",
       desc: "We carefully check every part of your website on all devices to ensure it looks amazing and works smoothly. We build websites with security in mind—using best practices to protect.",
     },
     {
-      imgPath: "src/public/images/seo1.png",
+      imgPath: "src/public/images/google.png",
       title: "Performance Optimization",
-      desc: "Search Engine Optimization (SEO) helps your website show up when people search online. Using React technology, we build fast, efficient sites that perform better in search results—helping you stay ahead of the competition.",
+      desc: "Search Engine Optimization (SEO) helps your website show up when people search online. Using React technology, we build fast, efficient sites that perform better in Google search results—helping you stay ahead of the competition.",
     },
     {
-      imgPath: "src/public/images/bubble.png",
+      imgPath: "src/public/images/service.png",
       title: "Web Maintenance & Support",
       desc: "By offering ongoing support and maintenance your site is secure, updated, and performing at its best—even after it’s live.",
     },

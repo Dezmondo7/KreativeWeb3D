@@ -48,9 +48,9 @@ const Footer = () => {
   // Navigation links (matches your existing navLinks structure)
   const navLinks = [
     { name: "Home", link: "#home" },
-    { name: "Services", link: "#services" },
     { name: "About", link: "#about" },
-    { name: "Portfolio", link: "#portfolio" },
+    { name: "Services", link: "#services" },
+    { name: "Tech", link: "#tech" },
     { name: "Contact", link: "#contact" },
   ]
 
@@ -72,7 +72,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent cursor-default">
                 Reakt Web Design
               </span>
             </div>
@@ -112,7 +112,7 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <div>
-            <h3 className="text-white font-semibold mb-6 text-lg sm:justify-center">Navigation</h3>
+            <h3 className="text-white font-semibold mb-6 text-lg sm:justify-center cursor-default">Navigation</h3>
             <ul className="space-y-3">
               {navLinks.map(({ name, link }) => (
                 <li key={name}>
@@ -130,7 +130,7 @@ const Footer = () => {
 
           {/* Services */}
           <div className="hidden md:block">
-            <h3 className="text-white font-semibold mb-6 text-lg justify-centre">Services</h3>
+            <h3 className="text-white font-semibold mb-6 text-lg justify-centre cursor-default">Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
@@ -148,7 +148,7 @@ const Footer = () => {
 
           {/* Contact & Resources */}
           <div className="hidden md:block">
-            <h3 className="text-white font-semibold mb-6 text-lg">Get In Touch</h3>
+            <h3 className="text-white font-semibold mb-6 text-lg cursor-default">Get In Touch</h3>
             <div className="space-y-4 mb-8">
               <div className="flex items-center text-gray-400">
                 <EmailIcon />

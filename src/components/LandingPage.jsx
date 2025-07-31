@@ -101,6 +101,8 @@ const LandingPage = () => {
             {/* Falling Particles Background */}
             <FallingParticles />
 
+
+
             <div id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black px-4 sm:px-6 lg:px-8">
 
 
@@ -128,12 +130,17 @@ const LandingPage = () => {
 
                         {/* Call to Action Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-                            <button className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold cursor-pointer rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-lg">
+                            <a
+                                href="#contact"
+                                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold cursor-pointer rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-lg inline-block text-center no-underline"
+                            >
                                 Get Quote
-                            </button>
-                            <button className="w-full sm:w-auto px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 text-lg">
+                            </a>
+                            <a
+                                href="#about"
+                                 className="w-full sm:w-auto px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 text-lg">
                                 Learn More
-                            </button>
+                            </a>
                         </div>
 
                         {/* Feature Pills */}

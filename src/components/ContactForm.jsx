@@ -57,7 +57,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 mt-40 sm:mt-40">
+    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 mt-40 sm:mt-40" id="contact">
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -127,18 +127,18 @@ const ContactForm = () => {
 
               {/* Subject */}
               <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-300 block">Subject *</label>
+                <label className="text-sm font-medium text-gray-300 block">Company *</label>
                 <input
                   type="text"
                   {...register("subject", {
-                    required: { value: true, message: "Please enter a subject" },
+                    required: { value: true, message: "Please enter your Company Name" },
                     maxLength: {
                       value: 75,
                       message: "Subject cannot exceed 75 characters",
                     },
                   })}
                   className="w-full px-4 py-4 bg-black/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-200"
-                  placeholder="What's this about?"
+                  placeholder="Enter full company name"
                 />
                 {errors.subject && <p className="text-red-400 text-sm mt-1">{errors.subject.message}</p>}
               </div>
@@ -152,7 +152,7 @@ const ContactForm = () => {
                     required: { value: true, message: "Please enter a message" },
                   })}
                   className="w-full px-4 py-4 bg-black/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-200 resize-none"
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell us about your idea for this web project..."
                 />
                 {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message.message}</p>}
               </div>

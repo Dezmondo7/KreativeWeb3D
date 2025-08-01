@@ -132,7 +132,7 @@ const LandingPage = () => {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
                             <a
                                 href="#contact"
-                                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold cursor-pointer rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-lg inline-block text-center no-underline"
+                                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-white to-white text-black font-semibold cursor-pointer rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-lg inline-block text-center no-underline"
                             >
                                 Get Quote
                             </a> 

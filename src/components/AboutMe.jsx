@@ -33,9 +33,9 @@ const AboutMe = () => {
       <div className="max-w-4xl mx-auto text-center">
         <div className="space-y-12">
           {/* Section Header */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
-            <span className="text-sm text-purple-300 cursor-default">👋 Get to Know Me</span>
-          </div>
+         {/*} <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
+            <span className="text-sm text-purple-300 cursor-default">👋 Get to Know Me</span> 
+          </div> */}
 
           {/* Profile Image */}
           <div className="flex justify-center mb-12">
@@ -50,9 +50,9 @@ const AboutMe = () => {
                   />
                 </div>
               </div>
-              {/* Decorative elements */}
-              <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-gradient-to-r from-purple-600 to-cyan-400 rounded-full animate-pulse delay-1000"></div>
+              {/* Decorative elements *
+              <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-transparent to-white rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-gradient-to-r from-purple-600 to-cyan-400 rounded-full animate-pulse delay-1000"></div> */}
             </div>
           </div>
 

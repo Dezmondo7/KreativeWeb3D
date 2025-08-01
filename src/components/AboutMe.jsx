@@ -44,7 +44,7 @@ const AboutMe = () => {
                 <div className="w-full h-full rounded-full bg-transparent overflow-hidden">
                   {/* Replace this with your actual image */}
                   <img
-                    src="src/public/images/Untitled.png"
+                    src="src/public/images/av2.png"
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />

@@ -112,11 +112,11 @@ const LandingPage = () => {
                         {/* Main Heading */}
                         <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
                             <ZapIcon />
-                            <span className="text-sm text-purple-300 ml-2 cursor-default">Next-Gen Web Design Agency</span>
+                            <span className="text-sm text-purple-300 ml-2 cursor-default">Next-Gen Freelance Web Design</span>
                         </div>
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
-                            <span>Welcome to Our</span>
+                            <span>Welcome to My</span>
                             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
                                 {displayedText}
                                 {showCursor && <span className="animate-pulse text-purple-600">|</span>}
@@ -125,7 +125,8 @@ const LandingPage = () => {
 
                         {/* Subtitle */}
                         <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            <span className="">Discover the power of modern web development with our cutting-edge tools and services. We build faster, better, and create amazing website experiences.</span>
+                            <span className="">Launching or leveling up? Discover the power of modern web design & development. We craft interactive, React-powered websites that look sharp, move fast, and leave a lasting impression.
+                            </span>
                         </p>
 
                         {/* Call to Action Buttons */}

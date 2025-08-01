@@ -12,6 +12,7 @@ import Testimonials from './sections/Testimonials.jsx';
 import LandingPage from './components/LandingPage.jsx';
 import Footer from './components/Footer.jsx';
 import ContactForm from './components/ContactForm.jsx';
+import AboutMe from './components/AboutMe.jsx';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
     <LandingPage />
     {/*<Hero />*/}
     <AnimatedCounter />
+    <AboutMe />
      <Experience />
     {/*<Showcase />*/}
     <FeatureCards />

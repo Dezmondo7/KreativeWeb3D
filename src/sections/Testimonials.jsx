@@ -10,7 +10,7 @@ const Testimonials = () => {
                 <TitleHeader title="Testimonials"
                 sub="Client Feedback Highlights"
                 />
-                <div className="lg:columns-3 md:columns-2 columns-1 mt-16">
+                <div className="lg:columns-3 md:columns-2 columns-1 mt-16 mt-[40]">
                     {testimonials.map(( {imgPath, name, mentions, review }) => (
                         <GlowCard card={{ review }}>
                             <div className="flex items-center gap-3">

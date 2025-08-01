@@ -50,13 +50,12 @@ const Footer = () => {
     { name: "Home", link: "#home" },
     { name: "About", link: "#about" },
     { name: "Services", link: "#services" },
-    { name: "Tech", link: "#tech" },
     { name: "Contact", link: "#contact" },
   ]
 
-  const services = ["Web Design", "Web Development", "E-commerce", "SEO Optimization", "Brand Identity", "UI/UX Design"]
+  const services = ["Web Design", "Web Development", "SEO Optimization", "Brand Identity", "UI/UX Design"]
 
-  const resources = ["Blog", "Case Studies", "Documentation", "Support Center", "Privacy Policy", "Terms of Service"]
+  const resources = [ "Privacy Policy", "Terms of Service"]
 
   return (
     <footer className="relative bg-gradient-to-br from-black to-purple-900/20 border-t border-purple-500/20 mt-40 sm:mt-40">
@@ -84,25 +83,25 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://x.com/" target="_blank"
                 className="p-2 bg-white/5 backdrop-blur-sm rounded-lg border border-purple-500/20 text-gray-400 hover:text-cyan-400 hover:border-cyan-400/50 transition-all duration-300 group"
               >
                 <TwitterIcon />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/" target="_blank"
                 className="p-2 bg-white/5 backdrop-blur-sm rounded-lg border border-purple-500/20 text-gray-400 hover:text-cyan-400 hover:border-cyan-400/50 transition-all duration-300 group"
               >
                 <LinkedInIcon />
               </a>
               <a
-                href="#"
+                href="https://github.com/" target="_blank"
                 className="p-2 bg-white/5 backdrop-blur-sm rounded-lg border border-purple-500/20 text-gray-400 hover:text-cyan-400 hover:border-cyan-400/50 transition-all duration-300 group"
               >
                 <GitHubIcon />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/" target="_blank"
                 className="p-2 bg-white/5 backdrop-blur-sm rounded-lg border border-purple-500/20 text-gray-400 hover:text-cyan-400 hover:border-cyan-400/50 transition-all duration-300 group"
               >
                 <InstagramIcon />

@@ -2,7 +2,7 @@ import React from 'react'
 
 const TitleHeader = ({title, sub }) => {
     return(
-        <div className="flex flex-col items-center gap-5">
+        <div className="flex flex-col items-center gap-5 sm:mt-40">
             <div className="inline-flex text-purple-300 items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
                 <p className="">{sub}</p>
                 <div className="font-semi-bold md:text-5xl text-center">

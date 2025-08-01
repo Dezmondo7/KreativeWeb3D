@@ -65,14 +65,13 @@ const AboutMe = () => {
             <div className="max-w-3xl mx-auto space-y-6">
               <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                 “Hi - I’m Dale — a front-end web developer and designer who blends creativity and code to build beautiful, engaging digital experiences. With a keen eye for design and a strong technical background, I specialize in building
-                modern, responsive websites that not only look great but perform exceptionally.  I earned a 98% in Front-End Engineering through EdX (formerly MIT-owned), and also bring professional experience as an IT consultant.”
+                modern, responsive websites that not only look great but perform exceptionally.  I earned a 98% in Front-End Engineering through EdX (formerly MIT-owned), and also bring professional experience as an IT consultant.
               </p>
 
               <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                When I'm not coding, you'll find me exploring the latest web technologies, contributing to open-source
-                projects, or enjoying a good cup of coffee while coding with the latest frontend tool. I believe in the power
+                "When I'm not working on client projects, you'll find me exploring the latest web technologies, contributing to open-source projects, or enjoying a good cup of coffee while experimenting with new front-end tools. I believe in the power
                 of clean code, intuitive user interfaces, and the magic that happens when creativity meets
-                functionality.
+                functionality."
               </p>
             </div>
 

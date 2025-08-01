@@ -22,10 +22,10 @@ const App = () => {
     {/*<Hero />*/}
     <AnimatedCounter />
     <AboutMe />
-     <Experience />
+    <Experience />
     {/*<Showcase />*/}
     <FeatureCards />
-    <Techstack />
+    {/*<Techstack /> */}
     <Testimonials />
     <ContactForm />
     <Footer />

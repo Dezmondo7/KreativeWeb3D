@@ -24,10 +24,6 @@ const navLinks = [
       link: "#services",
     },   
     {
-      name: "Tech",
-      link: "#tech",
-    },
-    {
       name: "Testimonials",
       link: "#testimonials",
     },
@@ -112,7 +108,7 @@ const navLinks = [
     {
       imgPath: "src/public/images/news.png",
       title: "Content Creation",
-      desc: "Our copywriters have been published in major newspapers and deliver professional, high-quality content tailored to your needs.",
+      desc: "I bring professional, high-quality writing experience—having been published in major newspapers—and tailor content specifically to your needs.",
     },
     {
       imgPath: "src/public/images/security.png",
@@ -195,7 +191,7 @@ const navLinks = [
   
   const expCards = [
     {
-      review: "New technology helps shape what we deliver. We take a patient methodical approach to our work, this forward thinking mindset opens the space of necessary calmness to let our creativity flow.",
+      review: "New technology helps shape what we deliver. We take a patient methodical approach to our work, this forward thinking mindset opens the space of necessary calmness to let creativity flow.",
       imgPath: "",
       logoPath: "src/public/images/letter-r.png",
       title: "The Creative Studio",
@@ -212,14 +208,14 @@ const navLinks = [
       title: "The Unique Brand Studio",
       date: "",
       responsibilities: [
-        "Trusting a web developer to build your online brand can be a nervous thing to do",
-        "It is an awesome responsibilty for me to bridge the gap between your company and its audience",
-        "We are able to offer the services of a web design agency at a fraction of the price ",
+        "We understand that trusting a developer with your brand is a big decision",
+        "It is an awesome responsibility for me to bridge the gap between your company and its audience",
+        "You get agency-level web design without the agency-sized price tag",
         
       ],
     },
     {
-      review: "I got into this to do what I love. We’re dedicated to developing the most creative websites while enjoying every step of the journey.",
+      review: "I got into this to do what I love. I'm dedicated to developing the most creative websites while enjoying every step of the journey.",
       imgPath: "",
       logoPath: "src/public/images/react.png",
       title: "Our Philosophy",
@@ -227,7 +223,7 @@ const navLinks = [
       responsibilities: [
         "We’re here to have a blast and create some pretty cool stuff",
         "Every project is an opportunity to showcase creative flair and deliver exceptional React development",
-        "We know our craft and we want you to enjoy the journey just as much as we enjoy creating it",
+        "I’m passionate about my work, and I want you to enjoy the process as much as I enjoy bringing your project to life",
       ],
     },
   ];

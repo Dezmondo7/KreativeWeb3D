@@ -125,8 +125,7 @@ const LandingPage = () => {
 
                         {/* Subtitle */}
                         <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            <span className="">Launching or leveling up? Discover the power of modern web design & development. We craft interactive, React-powered websites that look sharp, move fast, and leave a lasting impression.
-                            </span>
+                            <span className="">Launching or leveling up? Discover the power of modern web design & development. We craft interactive, React-powered websites that look sharp, move fast, and leave a lasting impression.</span>
                         </p>
 
                         {/* Call to Action Buttons */}
@@ -136,7 +135,7 @@ const LandingPage = () => {
                                 className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold cursor-pointer rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-lg inline-block text-center no-underline"
                             >
                                 Get Quote
-                            </a>
+                            </a> 
                             <a
                                 href="#about"
                                  className="w-full sm:w-auto px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 text-lg">

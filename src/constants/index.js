@@ -96,7 +96,7 @@ const navLinks = [
     {    
       imgPath: "src/public/images/code.png",
       title: "Web Development",
-      desc: "Our skilled developers work with the latest tech to build fast, modern websites that are completely custom. Every site is built with clean code and designed to be fully responsive, ensuring seamless performance on desktop, mobile, and tablet devices.."
+      desc: "Every website is built from the ground up using the latest tools to create a fully custom design tailored to your brand and goals. With clean, modern code and fully responsive layouts, each site performs seamlessly across desktop, mobile, and tablet devices"
     },
       {
       imgPath: "src/public/images/react.png",
@@ -212,9 +212,9 @@ const navLinks = [
       title: "The Unique Brand Studio",
       date: "",
       responsibilities: [
-        "Trusting a Web Developer to build your online brand can be a nervous thing to do",
+        "Trusting a web developer to build your online brand can be a nervous thing to do",
         "It is an awesome responsibilty for me to bridge the gap between your company and its audience",
-        "That is why I consider the client every step of the way",
+        "We are able to offer the services of a web design agency at a fraction of the price ",
         
       ],
     },

@@ -1,3 +1,4 @@
+
 const AboutMe = () => {
   // Sample skills data - you can customize these
   const skills = [
@@ -39,11 +40,11 @@ const AboutMe = () => {
           {/* Profile Image */}
           <div className="flex justify-center mb-12">
             <div className="relative">
-              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 p-1 shadow-2xl">
-                <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden">
+              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full  p-1 shadow-2xl">
+                <div className="w-full h-full rounded-full bg-transparent overflow-hidden">
                   {/* Replace this with your actual image */}
                   <img
-                    src="/placeholder.svg?height=256&width=256"
+                    src="src/public/images/Untitled.png"
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />
@@ -82,8 +83,8 @@ const AboutMe = () => {
                 <span className="text-gray-300 ml-2">Projects Completed</span>
               </div>
               <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                <span className="text-purple-400 font-bold text-lg">3+</span>
-                <span className="text-gray-300 ml-2">Years Experience</span>
+                <span className="text-purple-400 font-bold text-lg">8+</span>
+                <span className="text-gray-300 ml-2">Years IT Experience</span>
               </div>
               <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
                 <span className="text-cyan-400 font-bold text-lg">24/7</span>

@@ -205,7 +205,7 @@ const navLinks = [
     {
       review: "Your brand’s image is everything — I get that. That's why a client-centric approach is a key part of what makes each project successful.",
       logoPath: "src/public/images/horn.png",
-      title: "The Unique Brand Studio",
+      title: "A Unique Brand",
       date: "",
       responsibilities: [
         "Trusting a developer with your brand is a big decision",

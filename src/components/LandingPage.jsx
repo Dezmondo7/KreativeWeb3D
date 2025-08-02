@@ -125,7 +125,7 @@ const LandingPage = () => {
 
                         {/* Subtitle */}
                         <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            <span className="">Launching or leveling up? Discover the power of modern web design & development. We craft interactive, React-powered websites that look sharp, move fast, and leave a lasting impression.</span>
+                            <span className="">Launching or leveling up? Discover the power of modern web design & development. Freelance-crafted, interactive React websites that look sharp, run fast, and leave a lasting impression.</span>
                         </p>
 
                         {/* Call to Action Buttons */}

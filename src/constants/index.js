@@ -191,24 +191,24 @@ const navLinks = [
   
   const expCards = [
     {
-      review: "New technology helps shape what we deliver. We take a patient methodical approach to our work, this forward thinking mindset opens the space of necessary calmness to let creativity flow.",
+      review: "New technology helps shape what we deliver. By taking a patient methodical approach to our work, this forward thinking mindset opens the space of necessary calmness to let creativity flow.",
       imgPath: "",
       logoPath: "src/public/images/letter-r.png",
       title: "The Creative Studio",
       date: "",
       responsibilities: [
         "Reakt Web Design offers a fresh, high-performance approach to building interactive, React-powered websites",
-        "We’re fans of first principles thinking — tackling challenges from the ground up to deliver smarter solutions",
-        "We’re constantly unboxing shiny new tech, it’s what powers the websites we build",
+        "A fan of first principles thinking — tackling challenges from the ground up to deliver smarter solutions",
+        "I'm always exploring the latest tech, It’s the driving force behind websites that stand out",
       ],
     },
     {
-      review: "Your brand’s image is critical — we get that. Our client-centric approach is a key part of what makes each project successful.",
+      review: "Your brand’s image is everything — I get that. That's why a client-centric approach is a key part of what makes each project successful.",
       logoPath: "src/public/images/horn.png",
       title: "The Unique Brand Studio",
       date: "",
       responsibilities: [
-        "We understand that trusting a developer with your brand is a big decision",
+        "Trusting a developer with your brand is a big decision",
         "It is an awesome responsibility for me to bridge the gap between your company and its audience",
         "You get agency-level web design without the agency-sized price tag",
         

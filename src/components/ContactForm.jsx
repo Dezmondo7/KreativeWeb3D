@@ -81,7 +81,7 @@ const ContactForm = () => {
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Ready to bring your vision to life? Send us a message and let's create something amazing together.
+            Ready to bring your vision to life? Send me a message and let's create something amazing together.
           </p>
         </div>
 

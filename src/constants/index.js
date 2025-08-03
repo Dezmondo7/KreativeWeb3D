@@ -126,7 +126,7 @@ const navLinks = [
       desc: "By offering ongoing support and maintenance your site is secure, updated, and performing at its best—even after it’s live.",
     },
     {
-      imgPath: "src/public/images/time-clock.png",
+      imgPath: "src/public/images/quick-response.png",
       title: "Delivered on Time",
       desc: "100% of projects are delivered on time, with a strong focus on quality and attention to detail.",
     },

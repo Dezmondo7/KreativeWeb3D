@@ -140,14 +140,8 @@ const AboutMe = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="pt-12">
-            <a
-              href="#contact"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-lg"
-            >
-              Let's Work Together
-            </a>
-          </div>
+          
+          
         </div>
       </div>
     </div>

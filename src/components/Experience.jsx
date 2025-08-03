@@ -66,7 +66,7 @@ const Experience = () => {
     return (
         <section id="experience w-full md:mt-40 mt-20 section-padding xl:px-0">
             <div id="about" className="w-full h-full md:px-20 px-5 mt-40 ">
-                <TitleHeader title="Reakt Web Design" sub="About" />
+                <TitleHeader title="Reakt Web Design" sub="" />
 
 
 

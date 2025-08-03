@@ -8,7 +8,7 @@ const Testimonials = () => {
         <section id="testimonials" className="flex-center section-padding">
             <div className="w-full h-full md:px-10 px-5">
                 <TitleHeader title="Testimonials"
-                sub="Client Feedback Highlights"
+                sub=""
                 />
                 <div className="lg:columns-3 md:columns-2 columns-1 mt-16 mt-[40]">
                     {testimonials.map(( {imgPath, name, mentions, review }) => (

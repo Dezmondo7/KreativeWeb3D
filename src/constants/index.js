@@ -92,7 +92,7 @@ const navLinks = [
     {    
       imgPath: "src/public/images/code.png",
       title: "Web Development",
-      desc: "Every website is uniquely coded, no templates, no copy paste designs. I code everything from scratch to reflect your brand and goals. With clean, modern code and fully responsive layouts, each site performs seamlessly across desktop, mobile, and tablet devices"
+      desc: "Every website is uniquely coded, no templates, no copy paste designs. I code everything from scratch to reflect your brand and goals. With clean, modern code and fully responsive layouts, each site performs seamlessly across desktop, mobile, and tablet devices."
     },
       {
       imgPath: "src/public/images/react.png",

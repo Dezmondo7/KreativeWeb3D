@@ -34,15 +34,16 @@ const ContactForm = () => {
 
   // Function called on submit that uses emailjs to send email of valid contact form
   const onSubmit = async (data) => {
-    const { name, email, subject, budget, message } = data
+    console.log(data)
+    const { name, email, subject, message, budget } = data
     try {
       setDisabled(true)
       const templateParams = {
         name,
         email,
-        budget,
         subject,
         message,
+        budget,
       }
 
       await emailjs.send(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, templateParams, REACT_APP_PUBLIC_KEY)
@@ -145,15 +146,21 @@ const ContactForm = () => {
               </div>
                 
                 {/*Budget */}
-                <div className="space-y-2">
+                 <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-300 block"> Estimated Budget £ *</label>
                 <input
                   type="number"
-                  {...register("budget", {
-                    required: true,
+                  {...register("budget", { // Changed to 'budget'
+                    required: { value: true, message: "Please enter your estimated budget" },
+                    min: {
+                      value: 0,
+                      message: "Budget cannot be negative",
+                    },
+                    valueAsNumber: true,
+                    // You can add max, or specific number validation if needed
                   })}
                   className="w-full px-4 py-4 bg-black/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-200"
-                  placeholder="Enter amount using numbers (e.g., 1500)"
+                  placeholder="Enter your estimated budget"
                 />
                 {errors.budget && <p className="text-red-400 text-sm mt-1">{errors.budget.message}</p>}
               </div>

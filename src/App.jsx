@@ -21,8 +21,8 @@ const App = () => {
     <LandingPage />
     {/*<Hero />*/}
     <AnimatedCounter />
-    <AboutMe />
     <Experience />
+    <AboutMe />
     {/*<Showcase />*/}
     <FeatureCards />
     {/*<Techstack /> */}

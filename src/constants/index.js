@@ -191,13 +191,13 @@ const navLinks = [
   
   const expCards = [
     {
-      review: "New technology helps shape what we deliver. By taking a patient methodical approach to our work, this forward thinking mindset opens the space of necessary calmness to let creativity flow.",
+      review: "New technology helps shape what we deliver. By taking a calm and methodical approach to work, this forward thinking mindset opens the space of necessary calmness to let creativity flow.",
       imgPath: "",
       logoPath: "src/public/images/letter-r.png",
       title: "The Creative Studio",
       date: "",
       responsibilities: [
-        "Reakt Web Design offers a fresh, high-performance approach to building interactive, React-powered websites",
+        "Reakt Web Design offers a fresh approach to building interactive high performance websites powered by React",
         "A fan of first principles thinking — tackling challenges from the ground up to deliver smarter solutions",
         "I'm always exploring the latest tech, It’s the driving force behind websites that stand out",
       ],

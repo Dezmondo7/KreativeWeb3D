@@ -87,12 +87,12 @@ const navLinks = [
     {    
       imgPath: "src/public/images/web.png",
       title: "Web Design",
-      desc: "We use the latest design trends and always start by getting to know the people behind the brand. For us, it’s all about mixing creativity with technical precision to create standout User Interface designs—again and again. ",
+      desc: "I mix creativity with technical precision to craft standout UI designs that are tailored towards delivering an outstanding user journey for your customers. ",
     },  
     {    
       imgPath: "src/public/images/code.png",
       title: "Web Development",
-      desc: "Every website is built from the ground up using the latest tools to create a fully custom design tailored to your brand and goals. With clean, modern code and fully responsive layouts, each site performs seamlessly across desktop, mobile, and tablet devices"
+      desc: "Every website is uniquely coded, no templates, no copy paste designs. I code everything from scratch to reflect your brand and goals. With clean, modern code and fully responsive layouts, each site performs seamlessly across desktop, mobile, and tablet devices"
     },
       {
       imgPath: "src/public/images/react.png",
@@ -113,7 +113,7 @@ const navLinks = [
     {
       imgPath: "src/public/images/security.png",
       title: "Quality & Security",
-      desc: "We carefully check every part of your website on all devices to ensure it looks amazing and works smoothly. We build websites with security in mind—using best practices to protect.",
+      desc: "We carefully check every part of your website on all devices to ensure it looks amazing and works smoothly. All websites are built with security in mind—using best practices to protect.",
     },
     {
       imgPath: "src/public/images/google.png",

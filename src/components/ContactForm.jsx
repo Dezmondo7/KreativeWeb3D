@@ -153,7 +153,7 @@ const ContactForm = () => {
                     required: true,
                   })}
                   className="w-full px-4 py-4 bg-black/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-200"
-                  placeholder="Enter amount using numbers"
+                  placeholder="Enter amount using numbers (e.g., 1500)"
                 />
                 {errors.budget && <p className="text-red-400 text-sm mt-1">{errors.budget.message}</p>}
               </div>

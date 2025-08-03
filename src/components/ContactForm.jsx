@@ -34,12 +34,13 @@ const ContactForm = () => {
 
   // Function called on submit that uses emailjs to send email of valid contact form
   const onSubmit = async (data) => {
-    const { name, email, subject, message } = data
+    const { name, email, subject, budget, message } = data
     try {
       setDisabled(true)
       const templateParams = {
         name,
         email,
+        budget,
         subject,
         message,
       }
@@ -141,6 +142,20 @@ const ContactForm = () => {
                   placeholder="Enter full company name"
                 />
                 {errors.subject && <p className="text-red-400 text-sm mt-1">{errors.subject.message}</p>}
+              </div>
+                
+                {/*Budget */}
+                <div className="space-y-2">
+                <label className="text-sm font-medium text-gray-300 block"> Estimated Budget £ *</label>
+                <input
+                  type="number"
+                  {...register("budget", {
+                    required: true,
+                  })}
+                  className="w-full px-4 py-4 bg-black/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-200"
+                  placeholder="Enter amount using numbers"
+                />
+                {errors.budget && <p className="text-red-400 text-sm mt-1">{errors.budget.message}</p>}
               </div>
 
               {/* Message */}
@@ -253,7 +268,7 @@ const ContactForm = () => {
 
       {/* Alert Message */}
       {alertInfo.display && (
-        <div className="fixed top-4 right-4 z-50 max-w-md">
+        <div className="fixed top-4 right-4 z-100 max-w-md">
           <div
             className={`p-4 rounded-xl shadow-lg backdrop-blur-sm border ${
               alertInfo.type === "success"

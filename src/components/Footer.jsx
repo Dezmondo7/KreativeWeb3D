@@ -155,11 +155,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center text-gray-400">
                 <PhoneIcon />
-                <span className="ml-3">+1 (555) 123-4567</span>
+                <span className="ml-3">07715 479127</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <LocationIcon />
-                <span className="ml-3">New York, NY</span>
+                <span className="ml-3">Bolton, Greater Manchester</span>
               </div>
             </div>
 

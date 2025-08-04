@@ -245,43 +245,43 @@ const navLinks = [
   
   const testimonials = [
     {
-      name: "Luke Greenhalgh",
-      mentions: "@lukegreenhalgh",
+      name: "Luke",
+      mentions: "",
       review:
         "Dale exceeded all expectations. He transformed our intricate project needs into a smooth, fully operational website. His knack for solving tough challenges is truly impressive.",
       imgPath: "",
     },
     {
-      name: "James Fishwick",
-      mentions: "@jamesfishwick",
+      name: "Amanda",
+      mentions: "",
       review:
         "Collaborating with Dale was an absolute pleasure. He took our old, outdated site and rebuilt it into a sleek, intuitive platform. His precision and dedication to excellence set him apart. I strongly recommend him for any web development work.",
       imgPath: "",
     },
     {
-      name: "Graham Hewitt",
-      mentions: "@hewittgraham",
+      name: "Graham",
+      mentions: "",
       review:
         "Working with Dale was a genuinely rewarding experience. His professionalism, responsiveness, and unwavering commitment to excellence shone through at every stage of the project. What truly sets him apart is his passion for all aspects of development. If you're looking to enhance your website and strengthen your brand, Dale is the perfect choice.",
       imgPath: "",
     },
     {
-      name: "Marcus O'donnelly",
-      mentions: "@marcusodonnelly",
+      name: "Marcus",
+      mentions: "",
       review:
         "Dale was great to work with from start to finish. He revamped our old website into a clean, user-friendly experience that feels current and easy to use. The end result was truly impressive.",
       imgPath: "",
     },
     {
-      name: "Sam Wolfenden",
-      mentions: "@swolfenden",
+      name: "Sam ",
+      mentions: "",
       review:
         "Dale's web development skills are outstanding. He built a powerful platform for us, and we've seen a noticeable boost in performance since going live. His professionalism and expertise are second to none!",
       imgPath: "",
     },
     {
-      name: "Albert Flores",
-      mentions: "@albertflores",
+      name: "Claire",
+      mentions: "",
       review:
         "Dale was fantastic to work with. He grasped our needs right away and delivered a website that went above and beyond what we envisioned. His expertise in both frontend development is exceptional.",
     },

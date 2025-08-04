@@ -9,9 +9,21 @@
     { text: 'Designs', imgPath: '/images/concepts.svg' }
 ] */}
 
+// Reakt web company timeline
 import letterRlogo from '../assets/letter-r.png'
 import unicornLogo from '../assets/horn.png'
 import reactLogo from '../assets/react.png'
+import reactGraphic from '../assets/atom.png'
+import contentIcon from '../assets/content.png'
+import brandIcon from '../assets/website-content.png'
+import maintenanceIcon from '../assets/web-maintenance.png'
+import projectIcon from '../assets/project-management.png'
+import websecIcon from '../assets/web-security.png'
+import googleIcon from '../assets/google.png'
+
+// Services
+import webIcon from '../assets/software.png'
+import mobileCodeIcon from '../assets/mobile-coding.png'
 
 const navLinks = [
     {
@@ -89,48 +101,47 @@ const navLinks = [
   
   const abilities = [
     {    
-      imgPath: "src/public/images/web.png",
+      imgPath: webIcon,
       title: "Web Design",
       desc: "I mix creativity with technical precision to craft standout UI designs that are tailored towards delivering an outstanding user journey for your customers. ",
     },  
     {    
-      imgPath: "src/public/images/code.png",
+      imgPath: mobileCodeIcon,
       title: "Web Development",
       desc: "Every website is uniquely coded, no templates, no copy paste designs. I code everything from scratch to reflect your brand and goals. With clean, modern code and fully responsive layouts, each site performs seamlessly across desktop, mobile, and tablet devices."
     },
       {
-      imgPath: "src/public/images/react.png",
+      imgPath: reactGraphic,
       title: "Latest Technology",
       desc: "Your website will be built with React—the same fast, dynamic tech used by Facebook, Instagram, and Netflix. It’s perfect for creating smooth, interactive experiences that load quickly and run seamlessly as your business grows."
     },
     {
-      imgPath: "src/public/images/time.png",
+      imgPath: brandIcon,
       title: "Brand Design",
-      imgPath: "src/public/images/layers.png",
       desc: "Top-quality branding including logo design and colour palette selections to incorporate into your web build."
     },
     {
-      imgPath: "src/public/images/news.png",
+      imgPath: contentIcon,
       title: "Content Creation",
       desc: "I bring professional, high-quality writing experience—having been published in major newspapers—and tailor content specifically to your needs.",
     },
     {
-      imgPath: "src/public/images/security.png",
+      imgPath: websecIcon,
       title: "Quality & Security",
       desc: "We carefully check every part of your website on all devices to ensure it looks amazing and works smoothly. All websites are built with security in mind—using best practices to protect.",
     },
     {
-      imgPath: "src/public/images/google.png",
+      imgPath: googleIcon,
       title: "Performance Optimization",
       desc: "Search Engine Optimization (SEO) helps your website show up when people search online. Using React technology, we build fast, efficient sites that perform better in Google search results—helping you stay ahead of the competition.",
     },
     {
-      imgPath: "src/public/images/service.png",
+      imgPath: maintenanceIcon,
       title: "Web Maintenance & Support",
       desc: "By offering ongoing support and maintenance your site is secure, updated, and performing at its best—even after it’s live.",
     },
     {
-      imgPath: "src/public/images/quick-response.png",
+      imgPath: projectIcon,
       title: "Delivered on Time",
       desc: "100% of projects are delivered on time, with a strong focus on quality and attention to detail.",
     },

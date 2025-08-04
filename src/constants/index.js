@@ -9,7 +9,7 @@
     { text: 'Designs', imgPath: '/images/concepts.svg' }
 ] */}
 
-import letterRlogo from '../../assets/letter-r.png'
+import letterRlogo from '../assets/letter-r.png'
 
 const navLinks = [
     {

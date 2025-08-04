@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import starIcon from '../assets/star.png';
 
 const GlowCard = ({ card, children, index } ) => {
      const cardRefs = useRef([]);
@@ -27,7 +28,7 @@ const GlowCard = ({ card, children, index } ) => {
             <div className="glow" />
             <div className="flex items-center gap-1 mb-5">
                 {Array.from({length: 5}, (_, i ) => (
-                    <img src="src/public/images/star.png" key={i} alt="star" className="size-5" />
+                    <img src={starIcon} key={i} alt="star" className="size-5" />
 
                 ))}
             </div>

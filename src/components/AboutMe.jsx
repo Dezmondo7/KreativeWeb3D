@@ -1,3 +1,4 @@
+import avatarLogo from '../assets/av2.png';
 
 const AboutMe = () => {
   // Sample skills data - you can customize these
@@ -44,7 +45,7 @@ const AboutMe = () => {
                 <div className="w-full h-full rounded-full bg-transparent overflow-hidden">
                   {/* Replace this with your actual image */}
                   <img
-                    src="src/public/images/av2.png"
+                    src={avatarLogo}
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />

@@ -245,46 +245,45 @@ const navLinks = [
   
   const testimonials = [
     {
-      name: "Esther Howard",
-      mentions: "@estherhoward",
+      name: "Luke Greenhalgh",
+      mentions: "@lukegreenhalgh",
       review:
-        "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-      imgPath: "src/public/images/client1.png",
+        "Dale exceeded all expectations. He transformed our intricate project needs into a smooth, fully operational website. His knack for solving tough challenges is truly impressive.",
+      imgPath: "",
     },
     {
-      name: "Wade Warren",
-      mentions: "@wadewarren",
+      name: "James Fishwick",
+      mentions: "@jamesfishwick",
       review:
-        "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-      imgPath: "src/public/images/client3.png",
+        "Collaborating with Dale was an absolute pleasure. He took our old, outdated site and rebuilt it into a sleek, intuitive platform. His precision and dedication to excellence set him apart. I strongly recommend him for any web development work.",
+      imgPath: "",
     },
     {
-      name: "Guy Hawkins",
-      mentions: "@guyhawkins",
+      name: "Graham Hewitt",
+      mentions: "@hewittgraham",
       review:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      imgPath: "src/public/images/client2.png",
+        "Working with Dale was a genuinely rewarding experience. His professionalism, responsiveness, and unwavering commitment to excellence shone through at every stage of the project. What truly sets him apart is his passion for all aspects of development. If you're looking to enhance your website and strengthen your brand, Dale is the perfect choice.",
+      imgPath: "",
     },
     {
-      name: "Marvin McKinney",
-      mentions: "@marvinmckinney",
+      name: "Marcus O'donnelly",
+      mentions: "@marcusodonnelly",
       review:
-        "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-      imgPath: "src/public/images/client5.png",
+        "Dale was great to work with from start to finish. He revamped our old website into a clean, user-friendly experience that feels current and easy to use. The end result was truly impressive.",
+      imgPath: "",
     },
     {
-      name: "Floyd Miles",
-      mentions: "@floydmiles",
+      name: "Sam Wolfenden",
+      mentions: "@swolfenden",
       review:
-        "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-      imgPath: "src/public/images/client4.png",
+        "Dale's web development skills are outstanding. He built a powerful platform for us, and we've seen a noticeable boost in performance since going live. His professionalism and expertise are second to none!",
+      imgPath: "",
     },
     {
       name: "Albert Flores",
       mentions: "@albertflores",
       review:
-        "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-      imgPath: "src/publi/images/client6.png",
+        "Dale was fantastic to work with. He grasped our needs right away and delivered a website that went above and beyond what we envisioned. His expertise in both frontend development is exceptional.",
     },
   ];
   

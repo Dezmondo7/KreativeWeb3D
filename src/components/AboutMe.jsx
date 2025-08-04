@@ -1,4 +1,6 @@
 import avatarLogo from '../assets/av2.png';
+import javascriptIcon from '../assets/javascript.png'
+
 
 const AboutMe = () => {
   // Sample skills data - you can customize these
@@ -7,10 +9,10 @@ const AboutMe = () => {
     { name: "JavaScript", level: "Advanced", icon: "🟨" },
     { name: "HTML/CSS", level: "Expert", icon: "🎨" },
     { name: "Tailwind CSS", level: "Advanced", icon: "💨" },
-    { name: "Node.js", level: "Intermediate", icon: "🟢" },
-    { name: "Git", level: "Advanced", icon: "📝" },
+    { name: "Node.js", level: "Advanced", icon: "🟢" },
+    { name: "Git", level: "Intermediate", icon: "📝" },
     { name: "Responsive Design", level: "Expert", icon: "📱" },
-    { name: "UI/UX Design", level: "Intermediate", icon: "✨" },
+    { name: "UI/UX Design", level: "Advanced", icon: "✨" },
   ]
 
   const getLevelColor = (level) => {

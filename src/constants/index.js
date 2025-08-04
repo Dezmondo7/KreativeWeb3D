@@ -9,6 +9,8 @@
     { text: 'Designs', imgPath: '/images/concepts.svg' }
 ] */}
 
+import letterRlogo from '../../assets/letter-r.png'
+
 const navLinks = [
     {
 
@@ -193,7 +195,7 @@ const navLinks = [
     {
       review: "New technology helps shape what we deliver. By taking a calm and methodical approach to work, this forward thinking mindset opens the space of necessary calmness to let creativity flow.",
       imgPath: "",
-      logoPath: "src/public/images/letter-r.png",
+      logoPath: letterRlogo,
       title: "The Creative Studio",
       date: "",
       responsibilities: [

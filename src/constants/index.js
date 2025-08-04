@@ -10,6 +10,8 @@
 ] */}
 
 import letterRlogo from '../assets/letter-r.png'
+import unicornLogo from '../assets/horn.png'
+import reactLogo from '../assets/react.png'
 
 const navLinks = [
     {
@@ -206,7 +208,7 @@ const navLinks = [
     },
     {
       review: "Your brand’s image is everything — I get that. That's why a client-centric approach is a key part of what makes each project successful.",
-      logoPath: "src/public/images/horn.png",
+      logoPath: unicornLogo,
       title: "A Unique Brand",
       date: "",
       responsibilities: [
@@ -219,7 +221,7 @@ const navLinks = [
     {
       review: "I got into this to do what I love. I'm dedicated to developing the most creative websites while enjoying every step of the journey.",
       imgPath: "",
-      logoPath: "src/public/images/react.png",
+      logoPath: reactLogo,
       title: "Our Philosophy",
       date: "",
       responsibilities: [

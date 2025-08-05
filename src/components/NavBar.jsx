@@ -31,16 +31,12 @@ const NavBar = () => {
 
             <nav className="">
 
-                <div className=" mx-auto p-4 flex items-center justify-between">
-                    <span className="logo cursor-pointer font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+                <div className="mx-auto p-4 flex items-center justify-between">
+                    <span className=" logo cursor-pointer font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
                         Reakt Web Design
                     </span>
 
-                  {/*}  {!isOpen && (
-                        <div onClick={toggleMenu} className="cursor-pointer md:hidden">
-                            <HiMenu size={30} />
-                        </div>)} */}
-
+                  
                     <div className="">
                         <ul className=" hidden lg:flex items-center gap-4 flex justify-content space-between items-center">
                             {navLinks.map(({ link, name }) => (
@@ -76,11 +72,11 @@ const NavBar = () => {
 
                         {/* Dropdown menu */}
                         {isOpen ? ( 
-                            <div className=" bg-gray-800 flex overflow-y-hidden fixed z-10 top-0 left-0 w-screen min-h-screen justify-center items-center flex-col gap-10 duration-300 ease-in">
+                            <div className="bg-transparent flex overflow-y-hidden fixed z-10 top-0 left-0 w-screen min-h-screen justify-center items-center flex-col gap-10 duration-300 ease-in">
                             <a href="#">Home</a>
-                             <a href="#">About</a>
-                              <a href="#">Services</a>
-                               <a href="#">Contact</a>
+                             <a href="#about">About</a>
+                              <a href="#services">Services</a>
+                               <a href="#contact">Contact</a>
                         </div>
 
                         ) : (

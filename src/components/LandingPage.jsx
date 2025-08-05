@@ -77,7 +77,7 @@ const LandingPage = () => {
     {/* Typewrite effect */ }
     const [displayedText, setDisplayedText] = useState("")
     const [showCursor, setShowCursor] = useState(true)
-    const fullText = "Web Design Studio"
+    const fullText = "Powered by React"
 
     useEffect(() => {
         let currentIndex = 0
@@ -112,12 +112,12 @@ const LandingPage = () => {
                         {/* Main Heading */}
                         <div className="hidden sm:inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6 sm:mb-8">
                             <ZapIcon />
-                            <span className="text-xs sm:text-sm text-purple-300 ml-1.5 sm:ml-2 cursor-default">Next-Gen Freelance Web Design</span>
+                            <span className="text-xs sm:text-sm text-purple-300 ml-1.5 sm:ml-2 cursor-default">Next-Gen Website Design</span>
                         </div>
 
-                        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
-                            <span>Welcome to My</span>
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
+                        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
+                            <span>Built for the Future</span>
+                            <span className="leading-[1.2] text-4xl sm:text-6xl md:text-7xl lg:text-7xl block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
                                 {displayedText}
                                 {showCursor && <span className="animate-pulse text-purple-600">|</span>}
                             </span>

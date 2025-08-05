@@ -96,7 +96,7 @@ const CounterSection = () => {
             className="text-white text-3xl font-medium tracking-wide"
             style={{ fontFamily: "Mona Sans, system-ui, sans-serif" }}
           >
-            Built for the future
+            Future-Proof Websites
           </h2>
         </div>
 

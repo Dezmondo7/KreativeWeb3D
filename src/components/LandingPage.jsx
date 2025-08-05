@@ -103,11 +103,11 @@ const LandingPage = () => {
 
 
 
-            <div id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black px-4 sm:px-6 lg:px-8">
+            <div id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black px-2 sm:px-6 lg:px-8">
 
 
                 <div className="max-w-4xl mx-auto text-center w-full">
-                    <div className="space-y-6 sm:space-y-8">
+                    <div className="space-y-4 sm:space-y-8">
 
                         {/* Main Heading */}
                         <div className="hidden sm:inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6 sm:mb-8">
@@ -115,7 +115,7 @@ const LandingPage = () => {
                             <span className="text-xs sm:text-sm text-purple-300 ml-1.5 sm:ml-2 cursor-default">Next-Gen Freelance Web Design</span>
                         </div>
 
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
+                        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
                             <span>Welcome to My</span>
                             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
                                 {displayedText}
@@ -132,13 +132,13 @@ const LandingPage = () => {
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-6 sm:pt-8 px-2">
                             <a
                                 href="#contact"
-                                className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-white to-white text-black font-semibold cursor-pointer rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-base sm:text-lg inline-block text-center no-underline"
+                                className="w-full sm:w-auto px-5 py-2 sm:px-8 sm:py-4 bg-gradient-to-r from-white to-white text-black font-semibold cursor-pointer rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-sm sm:text-lg inline-block text-center no-underline"
                             >
                                 Get Quote
                             </a> 
                             <a
                                 href="#about"
-                                 className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 border-2 border-gray-300 text-gray-400 font-semibold rounded-lg cursor-pointer hover:border-gray-400 hover:bg-gray-800 transition-all duration-200 text-base sm:text-lg">
+                                 className="w-full sm:w-auto px-5 py-2 sm:px-8 sm:py-4 border-2 border-gray-300 text-gray-400 font-semibold rounded-lg cursor-pointer hover:border-gray-400 hover:bg-gray-800 transition-all duration-200 text-sm sm:text-lg">
                                 Learn More
                             </a>
                         </div>

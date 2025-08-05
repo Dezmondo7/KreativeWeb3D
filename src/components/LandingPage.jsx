@@ -144,7 +144,7 @@ const LandingPage = () => {
                         </div>
 
                         {/* Feature Pills */}
-                        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 pt-6 sm:pt-8 px-2">
+                        <div className="hidden sm:flex flex-wrap justify-center gap-2 sm:gap-3 pt-6 sm:pt-8 px-2">
                             <span className="px-3 py-1.5 sm:px-4 sm:py-2 bg-white/70 backdrop-blur-sm hover rounded-full cursor-default text-xs sm:text-sm font-medium text-gray-700 shadow-sm">
                                 ⚡ Lightning Fast
                             </span>

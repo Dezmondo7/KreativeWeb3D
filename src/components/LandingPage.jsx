@@ -106,16 +106,16 @@ const LandingPage = () => {
             <div id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black px-4 sm:px-6 lg:px-8">
 
 
-                <div className="max-w-4xl mx-auto text-center">
-                    <div className="space-y-8">
+                <div className="max-w-4xl mx-auto text-center w-full">
+                    <div className="space-y-6 sm:space-y-8">
 
                         {/* Main Heading */}
-                        <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
+                        <div className="hidden sm:inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6 sm:mb-8">
                             <ZapIcon />
-                            <span className="text-sm text-purple-300 ml-2 cursor-default">Next-Gen Freelance Web Design</span>
+                            <span className="text-xs sm:text-sm text-purple-300 ml-1.5 sm:ml-2 cursor-default">Next-Gen Freelance Web Design</span>
                         </div>
 
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
                             <span>Welcome to My</span>
                             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
                                 {displayedText}
@@ -124,37 +124,37 @@ const LandingPage = () => {
                         </h1>
 
                         {/* Subtitle */}
-                        <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 max-w-2xl mx-auto leading-relaxed px-2">
                             <span className="">Launching or leveling up? Discover the power of modern web design & development. Freelance-crafted, interactive React websites that look sharp, run fast, and leave a lasting impression.</span>
                         </p>
 
                         {/* Call to Action Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-6 sm:pt-8 px-2">
                             <a
                                 href="#contact"
-                                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-white to-white text-black font-semibold cursor-pointer rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-lg inline-block text-center no-underline"
+                                className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-white to-white text-black font-semibold cursor-pointer rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-base sm:text-lg inline-block text-center no-underline"
                             >
                                 Get Quote
                             </a> 
                             <a
                                 href="#about"
-                                 className="w-full sm:w-auto px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 text-lg">
+                                 className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 border-2 border-gray-300 text-gray-400 font-semibold rounded-lg cursor-pointer hover:border-gray-400 hover:bg-gray-800 transition-all duration-200 text-base sm:text-lg">
                                 Learn More
                             </a>
                         </div>
 
                         {/* Feature Pills */}
-                        <div className="flex flex-wrap justify-center gap-3 pt-8">
-                            <span className="px-4 py-2 bg-white/70 backdrop-blur-sm hover rounded-full cursor-default text-sm font-medium text-gray-700 shadow-sm">
+                        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 pt-6 sm:pt-8 px-2">
+                            <span className="px-3 py-1.5 sm:px-4 sm:py-2 bg-white/70 backdrop-blur-sm hover rounded-full cursor-default text-xs sm:text-sm font-medium text-gray-700 shadow-sm">
                                 ⚡ Lightning Fast
                             </span>
-                            <span className="px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full cursor-default text-sm font-medium text-gray-700 shadow-sm">
+                            <span className="px-3 py-1.5 sm:px-4 sm:py-2 bg-white/70 backdrop-blur-sm rounded-full cursor-default text-xs sm:text-sm font-medium text-gray-700 shadow-sm">
                                 🔒 Secure
                             </span>
-                            <span className="px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full cursor-default text-sm font-medium text-gray-700 shadow-sm">
+                            <span className="px-3 py-1.5 sm:px-4 sm:py-2 bg-white/70 backdrop-blur-sm rounded-full cursor-default text-xs sm:text-sm font-medium text-gray-700 shadow-sm">
                                 📱 Responsive
                             </span>
-                            <span className=" px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full cursor-default text-sm font-medium text-gray-700 shadow-sm">
+                            <span className=" px-3 py-1.5 sm:px-4 sm:py-2 bg-white/70 backdrop-blur-sm rounded-full cursor-default text-xs sm:text-sm font-medium text-gray-700 shadow-sm">
                                 🚀 Modern
                             </span>
                         </div>

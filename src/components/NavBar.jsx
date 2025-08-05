@@ -3,6 +3,7 @@ import { navLinks } from '../constants/index.js'
 import { useEffect, useState } from 'react'
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
+import LogoR from '../assets/letter-r.png'
 
 const NavBar = () => {
     //Track user scrolling
@@ -32,13 +33,23 @@ const NavBar = () => {
             <nav className="">
 
                 <div className="mx-auto p-4 flex items-center justify-between">
-                    <span className=" logo cursor-pointer font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-                        Reakt Web Design
+
+                    <span className="logo cursor-pointer font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent flex items-center gap-1">
+                        {/* Logo image – visible on small devices only */}
+                        <img
+                            src={LogoR}
+                            alt="Logo"
+                            className="w-5 h-5 object-contain block md:hidden"
+                        />
+
+                        {/* Text – shows 'Reakt' on small devices, full name on medium+ */}
+                        <span className="block md:hidden">Reakt</span>
+                        <span className="hidden md:inline">Reakt Web Design</span>
                     </span>
 
-                  
+
                     <div className="">
-                        <ul className=" hidden lg:flex items-center gap-4 flex justify-content space-between items-center">
+                        <ul className="hidden lg:flex items-center gap-4 flex justify-content space-between items-center">
                             {navLinks.map(({ link, name }) => (
                                 <li key={name} className="group relative">
                                     <a href={link} className="relative inline-block px-1">
@@ -71,13 +82,13 @@ const NavBar = () => {
                         )}
 
                         {/* Dropdown menu */}
-                        {isOpen ? ( 
+                        {isOpen ? (
                             <div className="bg-transparent flex overflow-y-hidden fixed z-10 top-0 left-0 w-screen min-h-screen justify-center items-center flex-col gap-10 duration-300 ease-in">
-                            <a href="#">Home</a>
-                             <a href="#about">About</a>
-                              <a href="#services">Services</a>
-                               <a href="#contact">Contact</a>
-                        </div>
+                                <a href="#">Home</a>
+                                <a href="#about">About</a>
+                                <a href="#services">Services</a>
+                                <a href="#contact">Contact</a>
+                            </div>
 
                         ) : (
                             <div className="overflow-y-hidden fixed z-10 top-0 left-[-150%] w-screen min-h-screen justify-center items-center flex-col gap-10 duration-300 ease-in"></div>

@@ -1,62 +1,56 @@
 "use client"
 import React, { useState, useEffect } from "react"
 
-{/* SVG Icon */ }
-const ZapIcon = () => (
-  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-    <path
-      fillRule="evenodd"
-      d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-      clipRule="evenodd"
-    />
-  </svg>
-)
-
-{/* ORIGINAL Falling Particles Component (as you provided) */ }
-const FallingParticles = () => {
-  const [particles, setParticles] = useState([])
+// Falling Particles Component
+const Starfield = () => {
+  const [stars, setStars] = useState([])
 
   useEffect(() => {
-    const createParticle = () => ({
+    const createStar = () => ({
       id: Math.random(),
       x: Math.random() * window.innerWidth,
-      y: -10,
-      size: Math.random() * 4 + 2,
-      speed: Math.random() * 3 + 1,
-      opacity: Math.random() * 0.3 + 0.1,
+      y: Math.random() * window.innerHeight,
+      size: Math.random() * 2 + 0.5,
+      opacity: Math.random() * 0.5 + 0.3,
+      speedX: (Math.random() - 0.5) * 0.2,
+      speedY: (Math.random() - 0.5) * 0.2,
     })
 
-    const initialParticles = Array.from({ length: 100 }, createParticle)
-    setParticles(initialParticles)
+    const initialStars = Array.from({ length: 150 }, createStar)
+    setStars(initialStars)
 
-    const animateParticles = () => {
-      setParticles((prevParticles) =>
-        prevParticles.map((particle) => {
-          const newY = particle.y + particle.speed
-          if (newY > window.innerHeight + 100) {
-            return createParticle()
-          }
-          return { ...particle, y: newY }
+    const interval = setInterval(() => {
+      setStars((prevStars) =>
+        prevStars.map((star) => {
+          let newX = star.x + star.speedX
+          let newY = star.y + star.speedY
+
+          if (newX < 0 || newX > window.innerWidth) newX = Math.random() * window.innerWidth
+          if (newY < 0 || newY > window.innerHeight) newY = Math.random() * window.innerHeight
+
+          return { ...star, x: newX, y: newY }
         })
       )
-    }
+    }, 50)
 
-    const interval = setInterval(animateParticles, 50)
     return () => clearInterval(interval)
   }, [])
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
-      {particles.map((particle) => (
+    <div className="fixed inset-0 z-10 pointer-events-none">
+      {stars.map((star) => (
         <div
-          key={particle.id}
-          className="absolute rounded-full bg-white"
+          key={star.id}
+          className="absolute rounded-full bg-white animate-pulse"
           style={{
-            left: `${particle.x}px`,
-            top: `${particle.y}px`,
-            width: `${particle.size}px`,
-            height: `${particle.size}px`,
-            opacity: particle.opacity,
+            left: `${star.x}px`,
+            top: `${star.y}px`,
+            width: `${star.size}px`,
+            height: `${star.size}px`,
+            opacity: star.opacity,
+            animationDuration: `${Math.random() * 3 + 2}s`,
+            backgroundColor: `hsl(${Math.random() * 360}, 100%, 80%)`,
+            filter: 'blur(0.5px)',
           }}
         />
       ))}
@@ -85,35 +79,34 @@ const LandingPage = () => {
 
   return (
     <>
-      {/* Falling Particles (your original code) */}
-      <FallingParticles />
+      <Starfield />
 
-      <section id="home" className="relative h-screen bg-gradient-to-br from-purple-800/40 via-black to-black pt-16 flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="z-10 text-center max-w-3xl mx-auto">
-
-          {/* Tagline */}
-          {/*}   <div className="inline-flex items-center sm:px-2 px-3 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-6">
-            <ZapIcon />
-            <span className="text-xs text-purple-300 ml-2">
-              Next-Gen Website Design
-            </span>
-          </div> */}
-
+     
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(0,255,255,0.07)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(128,0,255,0.15)_0%,transparent_70%)] pointer-events-none" />
+      <section
+        id="home"
+        className="relative h-screen bg-gradient-to-br from-purple-800/40  via-black to-black pt-16 flex items-center justify-center px-4 sm:px-6 lg:px-8"
+      >
+        <div className="z-20 text-center max-w-3xl mx-auto">
           {/* Smaller Heading */}
-          <h2 className="text-xl max-w-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
             Built for the Future
           </h2>
 
           {/* Larger Heading (Animated) */}
           <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
             {displayedText}
-            {showCursor && <span className="animate-pulse text-purple-600">|</span>}
+            {showCursor && (
+              <span className="animate-pulse text-purple-600">|</span>
+            )}
           </h1>
 
           {/* Subtext */}
           <p className="text-base sm:text-lg text-gray-400 mt-6 max-w-2xl mx-auto leading-relaxed px-2">
-            Launching or leveling up? Discover the power of modern web design & development.
-            Freelance-crafted, interactive React websites that look sharp, run fast, and leave a lasting impression.
+            Launching or leveling up? Discover the power of modern web design &
+            development. Freelance-crafted, interactive React websites that look
+            sharp, run fast, and leave a lasting impression.
           </p>
 
           {/* CTA Buttons */}
@@ -133,8 +126,13 @@ const LandingPage = () => {
           </div>
 
           {/* Feature Pills */}
-          <div className="hidden sm:block flex-wrap justify-center gap-3 mt-8">
-            {["⚡ Lightning Fast", "🔒 Secure", "📱 Responsive", "🚀 Modern"].map((feature, index) => (
+          <div className="hidden sm:flex flex-wrap justify-center gap-3 mt-8">
+            {[
+              "⚡ Lightning Fast",
+              "🔒 Secure",
+              "📱 Responsive",
+              "🚀 Modern",
+            ].map((feature, index) => (
               <span
                 key={index}
                 className="px-3 py-1 bg-white/70 backdrop-blur-sm text-gray-700 rounded-full text-sm font-medium shadow-sm"

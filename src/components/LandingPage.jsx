@@ -26,14 +26,14 @@ const FallingParticles = () => {
       opacity: Math.random() * 0.3 + 0.1,
     })
 
-    const initialParticles = Array.from({ length: 50 }, createParticle)
+    const initialParticles = Array.from({ length: 100 }, createParticle)
     setParticles(initialParticles)
 
     const animateParticles = () => {
       setParticles((prevParticles) =>
         prevParticles.map((particle) => {
           const newY = particle.y + particle.speed
-          if (newY > window.innerHeight + 10) {
+          if (newY > window.innerHeight + 100) {
             return createParticle()
           }
           return { ...particle, y: newY }

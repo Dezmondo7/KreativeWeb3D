@@ -19,6 +19,30 @@ const NavBar = () => {
         setIsOpen(false);
     };
 
+
+    // underline hover effect for dropdown menue
+ {isOpen && (
+  <div className="bg-black/90 flex overflow-y-hidden fixed z-10 top-0 left-0 w-screen min-h-screen justify-center items-center flex-col gap-10 duration-300 ease-in">
+    {[
+      { href: "#home", label: "Home" },
+      { href: "#about", label: "About" },
+      { href: "#services", label: "Services" },
+      { href: "#testimonials", label: "Testimonials" },
+      { href: "#contact", label: "Contact" }
+    ].map(({ href, label }) => (
+      <a
+        key={label}
+        href={href}
+        onClick={handleLinkClick}
+        className="group relative text-white text-2xl font-medium transition duration-300"
+      >
+        {label}
+        <span className="pointer-events-none absolute left-0 bottom-0 h-0.5 w-0 bg-purple-400 transition-all duration-300 group-hover:w-full" />
+      </a>
+    ))}
+  </div>
+)}
+
     useEffect(() => {
         if (isOpen) {
             document.body.classList.add('no-scroll');
@@ -40,35 +64,35 @@ const NavBar = () => {
             window.removeEventListener('resize', handleResize)
         }
     }, []);
-    
+
     //this tracks which section is in view
     useEffect(() => {
-    const sectionIds = navLinks.map(({ link }) => link.slice(1)); // remove '#' to get IDs
+        const sectionIds = navLinks.map(({ link }) => link.slice(1)); // remove '#' to get IDs
 
-    const handleScroll = () => {
-        const scrollPos = window.scrollY + window.innerHeight / 2;
+        const handleScroll = () => {
+            const scrollPos = window.scrollY + window.innerHeight / 2;
 
-        let current = '';
-        for (const id of sectionIds) {
-            const section = document.getElementById(id);
-            if (section) {
-                const top = section.offsetTop;
-                const height = section.offsetHeight;
-                if (scrollPos >= top && scrollPos < top + height) {
-                    current = id;
-                    break;
+            let current = '';
+            for (const id of sectionIds) {
+                const section = document.getElementById(id);
+                if (section) {
+                    const top = section.offsetTop;
+                    const height = section.offsetHeight;
+                    if (scrollPos >= top && scrollPos < top + height) {
+                        current = id;
+                        break;
+                    }
                 }
             }
-        }
 
-        setActiveSection(current);
-    };
+            setActiveSection(current);
+        };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // initial check
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // initial check
 
-    return () => window.removeEventListener('scroll', handleScroll);
-}, []);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -77,7 +101,7 @@ const NavBar = () => {
             setScrolled(isScrolled);
         }
 
-        
+
 
         window.addEventListener('scroll', handleScroll);
 
@@ -111,11 +135,11 @@ const NavBar = () => {
                             {navLinks.map(({ link, name }) => (
                                 <li key={name}
                                     className={`relative inline-block px-1 ${activeSection === link.slice(1) ? 'text-purple-400 font-semibold' : ''
-                                     }`}
+                                        }`}
                                 >
-                                    <a href={link} className="relative inline-block px-1">
+                                    <a href={link} className="relative inline-block px-1 group">
                                         <span>{name}</span>
-                                        <span className="absolute left-0 -bottom-0.5 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full" />
+                                        <span className="absolute left-0 -bottom-0.5 h-0.5 w-0 bg-purple-400 transition-all duration-300 group-hover:w-full" />
                                     </a>
                                 </li>
                             ))}
@@ -145,11 +169,52 @@ const NavBar = () => {
                         {/* Dropdown menu */}
                         {isOpen ? (
                             <div className="bg-black/90 flex overflow-y-hidden fixed z-10 top-0 left-0 w-screen min-h-screen justify-center items-center flex-col gap-10 duration-300 ease-in">
-                                <a href="#home" onClick={handleLinkClick}>Home</a>
-                                <a href="#about" onClick={handleLinkClick}>About</a>
-                                <a href="#services" onClick={handleLinkClick}>Services</a>
-                                <a href="#testimonials" onClick={handleLinkClick}> Testimonials</a>
-                                <a href="#contact" onClick={handleLinkClick}>Contact</a>
+
+                                <a
+                                    href="#home"
+                                    onClick={handleLinkClick}
+                                    className="group relative text-white text-2xl font-medium transition duration-300"
+                                >
+                                    Home
+                                    <span className="pointer-events-none absolute left-0 bottom-0 h-0.5 w-0 bg-purple-400 transition-all duration-300 group-hover:w-full" />
+                                </a>
+
+                                <a
+                                    href="#about"
+                                    onClick={handleLinkClick}
+                                    className="group relative text-white text-2xl font-medium transition duration-300"
+                                >
+                                    About
+                                    <span className="pointer-events-none absolute left-0 bottom-0 h-0.5 w-0 bg-purple-400 transition-all duration-300 group-hover:w-full" />
+                                </a>
+
+                                <a
+                                    href="#services"
+                                    onClick={handleLinkClick}
+                                    className="group relative text-white text-2xl font-medium transition duration-300"
+                                >
+                                    Services
+                                    <span className="pointer-events-none absolute left-0 bottom-0 h-0.5 w-0 bg-purple-400 transition-all duration-300 group-hover:w-full" />
+                                </a>
+
+                                <a
+                                    href="#testimonials"
+                                    onClick={handleLinkClick}
+                                    className="group relative text-white text-2xl font-medium transition duration-300"
+                                >
+                                    Testimonials
+                                    <span className="pointer-events-none absolute left-0 bottom-0 h-0.5 w-0 bg-purple-400 transition-all duration-300 group-hover:w-full" />
+                                </a>
+
+                                <a
+                                    href="#contact"
+                                    onClick={handleLinkClick}
+                                    className="group relative text-white text-2xl font-medium transition duration-300"
+                                >
+                                    Contact
+                                    <span className="pointer-events-none absolute left-0 bottom-0 h-0.5 w-0 bg-purple-400 transition-all duration-300 group-hover:w-full" />
+                                </a>
+
                             </div>
 
                         ) : (

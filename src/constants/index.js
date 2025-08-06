@@ -211,7 +211,7 @@ const navLinks = [
       title: "The Creative Studio",
       date: "",
       responsibilities: [
-        "Reakt Web Design offers a fresh approach to building custom high performance websites powered by React",
+        "Reakt Web Design offers a fresh approach to building custom high performance websites",
         "A fan of first principles thinking — tackling challenges from the ground up to deliver smarter solutions",
         "I'm always exploring the latest tech, It’s the driving force behind websites that stand out",
       ],

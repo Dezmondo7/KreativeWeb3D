@@ -3,16 +3,72 @@ import { navLinks } from '../constants/index.js'
 import { useEffect, useState } from 'react'
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-import LogoR from '../assets/letter-r.png'
+import LogoR from '../assets/letter-r.png';
+import '../index.css'
 
 const NavBar = () => {
     //Track user scrolling
     const [scrolled, setScrolled] = useState(false)
-
     const [isOpen, setIsOpen] = useState(false)
+    const [activeSection, setActiveSection] = useState('');
     const toggleMenu = () => {
         setIsOpen(!isOpen)
-    }
+    };
+    //Event listerner to close window on click
+    const handleLinkClick = () => {
+        setIsOpen(false);
+    };
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove("no-scroll");
+        }
+    }, [isOpen]);
+
+    //useEffect to close the window if the screen size is changed when dropdown menu is open
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                setIsOpen(false)
+            }
+        }
+        window.addEventListener('resize', handleResize)
+
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, []);
+    
+    //this tracks which section is in view
+    useEffect(() => {
+    const sectionIds = navLinks.map(({ link }) => link.slice(1)); // remove '#' to get IDs
+
+    const handleScroll = () => {
+        const scrollPos = window.scrollY + window.innerHeight / 2;
+
+        let current = '';
+        for (const id of sectionIds) {
+            const section = document.getElementById(id);
+            if (section) {
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                if (scrollPos >= top && scrollPos < top + height) {
+                    current = id;
+                    break;
+                }
+            }
+        }
+
+        setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
+}, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,11 +77,13 @@ const NavBar = () => {
             setScrolled(isScrolled);
         }
 
+        
+
         window.addEventListener('scroll', handleScroll);
 
         return () => window.removeEventListener("scroll", handleScroll)
 
-    }), [];
+    }, []);
 
     return (
         <header className={`navbar ${scrolled ? 'scrolled' : 'not-scrolled'}`}>
@@ -51,7 +109,10 @@ const NavBar = () => {
                     <div className="">
                         <ul className="hidden lg:flex items-center gap-4 flex justify-content space-between items-center">
                             {navLinks.map(({ link, name }) => (
-                                <li key={name} className="group relative">
+                                <li key={name}
+                                    className={`relative inline-block px-1 ${activeSection === link.slice(1) ? 'text-purple-400 font-semibold' : ''
+                                     }`}
+                                >
                                     <a href={link} className="relative inline-block px-1">
                                         <span>{name}</span>
                                         <span className="absolute left-0 -bottom-0.5 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full" />
@@ -83,11 +144,12 @@ const NavBar = () => {
 
                         {/* Dropdown menu */}
                         {isOpen ? (
-                            <div className="bg-transparent flex overflow-y-hidden fixed z-10 top-0 left-0 w-screen min-h-screen justify-center items-center flex-col gap-10 duration-300 ease-in">
-                                <a href="#">Home</a>
-                                <a href="#about">About</a>
-                                <a href="#services">Services</a>
-                                <a href="#contact">Contact</a>
+                            <div className="bg-black/90 flex overflow-y-hidden fixed z-10 top-0 left-0 w-screen min-h-screen justify-center items-center flex-col gap-10 duration-300 ease-in">
+                                <a href="#" onClick={handleLinkClick}>Home</a>
+                                <a href="#about" onClick={handleLinkClick}>About</a>
+                                <a href="#services" onClick={handleLinkClick}>Services</a>
+                                <a href="#testimonials" onClick={handleLinkClick}> Testimonials</a>
+                                <a href="#contact" onClick={handleLinkClick}>Contact</a>
                             </div>
 
                         ) : (

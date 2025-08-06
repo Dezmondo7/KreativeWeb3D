@@ -50,6 +50,7 @@ const Footer = () => {
     { name: "Home", link: "#home" },
     { name: "About", link: "#about" },
     { name: "Services", link: "#services" },
+    { name: "Testimonials", link: "#testimonials"},
     { name: "Contact", link: "#contact" },
   ]
 

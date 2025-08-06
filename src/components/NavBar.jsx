@@ -32,7 +32,7 @@ const NavBar = () => {
 
             <nav className="">
 
-                <div className="mx-auto p-4 flex items-center justify-between">
+                <div className="mx-auto flex items-center justify-between">
 
                     <span className="logo cursor-pointer font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent flex items-center gap-1">
                         {/* Logo image – visible on small devices only */}

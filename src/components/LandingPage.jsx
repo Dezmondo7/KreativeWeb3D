@@ -1,7 +1,7 @@
 "use client"
-import React, { useEffect, useState } from "react"
+import React, { useState, useEffect } from "react"
 
-// Zap Icon
+{/* SVG Icon */ }
 const ZapIcon = () => (
   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
     <path
@@ -12,7 +12,7 @@ const ZapIcon = () => (
   </svg>
 )
 
-// Falling Particles
+{/* ORIGINAL Falling Particles Component (as you provided) */ }
 const FallingParticles = () => {
   const [particles, setParticles] = useState([])
 
@@ -30,10 +30,13 @@ const FallingParticles = () => {
     setParticles(initialParticles)
 
     const animateParticles = () => {
-      setParticles((prev) =>
-        prev.map((p) => {
-          const newY = p.y + p.speed
-          return newY > window.innerHeight + 10 ? createParticle() : { ...p, y: newY }
+      setParticles((prevParticles) =>
+        prevParticles.map((particle) => {
+          const newY = particle.y + particle.speed
+          if (newY > window.innerHeight + 10) {
+            return createParticle()
+          }
+          return { ...particle, y: newY }
         })
       )
     }
@@ -44,16 +47,16 @@ const FallingParticles = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0">
-      {particles.map((p) => (
+      {particles.map((particle) => (
         <div
-          key={p.id}
+          key={particle.id}
           className="absolute rounded-full bg-white"
           style={{
-            left: `${p.x}px`,
-            top: `${p.y}px`,
-            width: `${p.size}px`,
-            height: `${p.size}px`,
-            opacity: p.opacity,
+            left: `${particle.x}px`,
+            top: `${particle.y}px`,
+            width: `${particle.size}px`,
+            height: `${particle.size}px`,
+            opacity: particle.opacity,
           }}
         />
       ))}
@@ -82,25 +85,26 @@ const LandingPage = () => {
 
   return (
     <>
+      {/* Falling Particles (your original code) */}
       <FallingParticles />
 
       <section className="relative h-screen bg-gradient-to-br from-purple-900/20 via-black to-black pt-16 flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="z-10 text-center max-w-3xl mx-auto">
 
           {/* Tagline */}
-          <div className="inline-flex items-center px-2 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full mb-6">
+          <div className="inline-flex items-center sm:px-2 px-3 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-6">
             <ZapIcon />
             <span className="text-xs text-purple-300 ml-2">
               Next-Gen Website Design
             </span>
           </div>
 
-          {/* Heading (smaller) */}
+          {/* Smaller Heading */}
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
             Built for the Future
           </h2>
 
-          {/* Powered by React (larger, animated) */}
+          {/* Larger Heading (Animated) */}
           <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
             {displayedText}
             {showCursor && <span className="animate-pulse text-purple-600">|</span>}
@@ -133,7 +137,7 @@ const LandingPage = () => {
             {["⚡ Lightning Fast", "🔒 Secure", "📱 Responsive", "🚀 Modern"].map((feature, index) => (
               <span
                 key={index}
-                className="px-4 py-2 bg-white/70 backdrop-blur-sm text-gray-700 rounded-full text-sm font-medium shadow-sm"
+                className="px-3 py-1 bg-white/70 backdrop-blur-sm text-gray-700 rounded-full text-sm font-medium shadow-sm"
               >
                 {feature}
               </span>

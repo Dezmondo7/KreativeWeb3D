@@ -65,7 +65,7 @@ const NavBar = () => {
                     <div className="flex items-center gap-4">
                         <a href="#contact" className="contact-btn group hidden md:flex">
                             <div className="inner">
-                                <span>Contact</span>
+                                <span>Start Project</span>
                             </div>
                         </a>
 

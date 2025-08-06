@@ -1,176 +1,148 @@
-import React from 'react'
 "use client"
-import { useState, useEffect } from "react"
+import React, { useEffect, useState } from "react"
 
-
-
-{/* SVG */ }
+// Zap Icon
 const ZapIcon = () => (
-    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-        <path
-            fillRule="evenodd"
-            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-            clipRule="evenodd"
-        />
-    </svg>
+  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+    <path
+      fillRule="evenodd"
+      d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+      clipRule="evenodd"
+    />
+  </svg>
 )
 
-
-// Falling Particles Component
+// Falling Particles
 const FallingParticles = () => {
-    const [particles, setParticles] = useState([])
+  const [particles, setParticles] = useState([])
 
-    useEffect(() => {
-        const createParticle = () => ({
-            id: Math.random(),
-            x: Math.random() * window.innerWidth,
-            y: -10,
-            size: Math.random() * 4 + 2,
-            speed: Math.random() * 3 + 1,
-            opacity: Math.random() * 0.3 + 0.1,
+  useEffect(() => {
+    const createParticle = () => ({
+      id: Math.random(),
+      x: Math.random() * window.innerWidth,
+      y: -10,
+      size: Math.random() * 4 + 2,
+      speed: Math.random() * 3 + 1,
+      opacity: Math.random() * 0.3 + 0.1,
+    })
+
+    const initialParticles = Array.from({ length: 50 }, createParticle)
+    setParticles(initialParticles)
+
+    const animateParticles = () => {
+      setParticles((prev) =>
+        prev.map((p) => {
+          const newY = p.y + p.speed
+          return newY > window.innerHeight + 10 ? createParticle() : { ...p, y: newY }
         })
+      )
+    }
 
-        const initialParticles = Array.from({ length: 50 }, createParticle)
-        setParticles(initialParticles)
+    const interval = setInterval(animateParticles, 50)
+    return () => clearInterval(interval)
+  }, [])
 
-        const animateParticles = () => {
-            setParticles((prevParticles) =>
-                prevParticles.map((particle) => {
-                    const newY = particle.y + particle.speed
-                    if (newY > window.innerHeight + 10) {
-                        return createParticle()
-                    }
-                    return { ...particle, y: newY }
-                }),
-            )
-        }
-
-        const interval = setInterval(animateParticles, 50)
-        return () => clearInterval(interval)
-    }, [])
-
-
-
-    return (
-        <div className="fixed inset-0 pointer-events-none z-0">
-            {particles.map((particle) => (
-                <div
-                    key={particle.id}
-                    className="absolute rounded-full bg-white"
-                    style={{
-                        left: `${particle.x}px`,
-                        top: `${particle.y}px`,
-                        width: `${particle.size}px`,
-                        height: `${particle.size}px`,
-                        opacity: particle.opacity,
-                    }}
-                />
-            ))}
-        </div>
-    )
+  return (
+    <div className="fixed inset-0 pointer-events-none z-0">
+      {particles.map((p) => (
+        <div
+          key={p.id}
+          className="absolute rounded-full bg-white"
+          style={{
+            left: `${p.x}px`,
+            top: `${p.y}px`,
+            width: `${p.size}px`,
+            height: `${p.size}px`,
+            opacity: p.opacity,
+          }}
+        />
+      ))}
+    </div>
+  )
 }
 
-
 const LandingPage = () => {
+  const [displayedText, setDisplayedText] = useState("")
+  const [showCursor, setShowCursor] = useState(true)
+  const fullText = "Powered by React"
 
+  useEffect(() => {
+    let index = 0
+    const typingInterval = setInterval(() => {
+      if (index <= fullText.length) {
+        setDisplayedText(fullText.slice(0, index))
+        index++
+      } else {
+        clearInterval(typingInterval)
+        setTimeout(() => setShowCursor(false), 500)
+      }
+    }, 200)
+    return () => clearInterval(typingInterval)
+  }, [])
 
-    {/* Typewrite effect */ }
-    const [displayedText, setDisplayedText] = useState("")
-    const [showCursor, setShowCursor] = useState(true)
-    const fullText = "Powered by React"
+  return (
+    <>
+      <FallingParticles />
 
-    useEffect(() => {
-        let currentIndex = 0
-        const typingInterval = setInterval(() => {
-            if (currentIndex <= fullText.length) {
-                setDisplayedText(fullText.slice(0, currentIndex))
-                currentIndex++
-            } else {
-                clearInterval(typingInterval)
-                // Hide cursor after typing is complete
-                setTimeout(() => setShowCursor(false), 500)
-            }
-        }, 200) // Adjust speed here (lower = faster)
+      <section className="relative h-screen bg-gradient-to-br from-purple-900/20 via-black to-black pt-16 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="z-10 text-center max-w-3xl mx-auto">
 
-        return () => clearInterval(typingInterval)
-    }, [])
+          {/* Tagline */}
+          <div className="inline-flex items-center px-2 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full mb-6">
+            <ZapIcon />
+            <span className="text-xs text-purple-300 ml-2">
+              Next-Gen Website Design
+            </span>
+          </div>
 
-    return (
-        <>
+          {/* Heading (smaller) */}
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
+            Built for the Future
+          </h2>
 
-            {/* Falling Particles Background */}
-            <FallingParticles />
+          {/* Powered by React (larger, animated) */}
+          <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+            {displayedText}
+            {showCursor && <span className="animate-pulse text-purple-600">|</span>}
+          </h1>
 
+          {/* Subtext */}
+          <p className="text-base sm:text-lg text-gray-400 mt-6 max-w-2xl mx-auto leading-relaxed px-2">
+            Launching or leveling up? Discover the power of modern web design & development.
+            Freelance-crafted, interactive React websites that look sharp, run fast, and leave a lasting impression.
+          </p>
 
+          {/* CTA Buttons */}
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#contact"
+              className="px-6 py-3 bg-white text-black font-semibold rounded-lg shadow hover:shadow-xl hover:scale-105 transition-transform text-sm sm:text-base text-center"
+            >
+              Get Quote
+            </a>
+            <a
+              href="#about"
+              className="px-6 py-3 border border-gray-300 text-gray-300 font-semibold rounded-lg hover:border-gray-400 hover:bg-gray-800 transition duration-200 text-sm sm:text-base text-center"
+            >
+              Learn More
+            </a>
+          </div>
 
-            <div id="home" className="h-screen pt-16 flex items-center justify-center bg-gradient-to-br inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black px-2 sm:px-6 lg:px-8">
-
-
-                <div className="max-w-4xl mx-auto text-center w-full">
-                    <div className="space-y-4 sm:space-y-8">
-
-                        {/* Main Heading */}
-                        <div className="hidden sm:inline-flex items-center px-2 py-1.5 sm:px-2 sm:py-1 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6 sm:mb-4">
-                            <ZapIcon />
-                            <span className="text-[0.65rem] sm:text-xs text-purple-300 ml-1.5 sm:ml-2 cursor-default leading-snug">
-                                Next-Gen Website Design
-                            </span>
-                        </div>
-
-                        <h1 className="text-l sm:text-3xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
-                            <span>Built for the Future</span>
-                            <span className="leading-[1.2] text-2xl sm:text-4xl md:text-5xl lg:text-5xl block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
-                                {displayedText}
-                                {showCursor && <span className="animate-pulse text-purple-600">|</span>}
-                            </span>
-                        </h1>
-
-                        {/* Subtitle */}
-                        <p className="text-base sm:text-base md:text-base lg:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed px-2">
-                            <span className="">Launching or leveling up? Discover the power of modern web design & development. Freelance-crafted, interactive React websites that look sharp, run fast, and leave a lasting impression.</span>
-                        </p>
-
-                        {/* Call to Action Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-6 sm:pt-8 px-2">
-                            <a
-                                href="#contact"
-                                className="sm:w-auto px-5 py-2 sm:px-8 border-2 sm:py-4 bg-gradient-to-r from-white to-white text-black font-semibold cursor-pointer rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-sm sm:text-lg inline-block text-center no-underline"
-                            >
-                                Get Quote
-                            </a> 
-                            <a
-                                href="#about"
-                                 className="sm:w-auto px-5 py-2 sm:px-8 sm:py-4 border-2 border-gray-300 text-gray-400 font-semibold rounded-lg cursor-pointer hover:border-gray-400 hover:bg-gray-800 transition-all duration-200 text-sm sm:text-lg">
-                                Learn More
-                            </a>
-                        </div>
-
-                        {/* Feature Pills */}
-                        <div className="hidden sm:flex flex-wrap justify-center gap-2 sm:gap-3 pt-6 sm:pt-8 px-2">
-                            <span className="px-3 py-1.5 sm:px-4 sm:py-2 bg-white/70 backdrop-blur-sm hover rounded-full cursor-default text-xs sm:text-sm font-medium text-gray-700 shadow-sm">
-                                ⚡ Lightning Fast
-                            </span>
-                            <span className="px-3 py-1.5 sm:px-4 sm:py-2 bg-white/70 backdrop-blur-sm rounded-full cursor-default text-xs sm:text-sm font-medium text-gray-700 shadow-sm">
-                                🔒 Secure
-                            </span>
-                            <span className="px-3 py-1.5 sm:px-4 sm:py-2 bg-white/70 backdrop-blur-sm rounded-full cursor-default text-xs sm:text-sm font-medium text-gray-700 shadow-sm">
-                                📱 Responsive
-                            </span>
-                            <span className=" px-3 py-1.5 sm:px-4 sm:py-2 bg-white/70 backdrop-blur-sm rounded-full cursor-default text-xs sm:text-sm font-medium text-gray-700 shadow-sm">
-                                🚀 Modern
-                            </span>
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </div>
-
-
-
-        </>
-    )
+          {/* Feature Pills */}
+          <div className="hidden sm:flex flex-wrap justify-center gap-3 mt-8">
+            {["⚡ Lightning Fast", "🔒 Secure", "📱 Responsive", "🚀 Modern"].map((feature, index) => (
+              <span
+                key={index}
+                className="px-4 py-2 bg-white/70 backdrop-blur-sm text-gray-700 rounded-full text-sm font-medium shadow-sm"
+              >
+                {feature}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  )
 }
 
 export default LandingPage

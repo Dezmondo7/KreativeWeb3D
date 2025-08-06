@@ -110,21 +110,23 @@ const LandingPage = () => {
                     <div className="space-y-4 sm:space-y-8">
 
                         {/* Main Heading */}
-                        <div className="hidden sm:inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6 sm:mb-8">
+                        <div className="hidden sm:inline-flex items-center px-2 py-1.5 sm:px-2 sm:py-1 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6 sm:mb-4">
                             <ZapIcon />
-                            <span className="text-xs sm:text-sm text-purple-300 ml-1.5 sm:ml-2 cursor-default">Next-Gen Website Design</span>
+                            <span className="text-[0.65rem] sm:text-xs text-purple-300 ml-1.5 sm:ml-2 cursor-default leading-snug">
+                                Next-Gen Website Design
+                            </span>
                         </div>
 
-                        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
+                        <h1 className="text-l sm:text-3xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
                             <span>Built for the Future</span>
-                            <span className="leading-[1.2] text-4xl sm:text-6xl md:text-7xl lg:text-7xl block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
+                            <span className="leading-[1.2] text-2xl sm:text-4xl md:text-5xl lg:text-5xl block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
                                 {displayedText}
                                 {showCursor && <span className="animate-pulse text-purple-600">|</span>}
                             </span>
                         </h1>
 
                         {/* Subtitle */}
-                        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 max-w-2xl mx-auto leading-relaxed px-2">
+                        <p className="text-base sm:text-base md:text-base lg:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed px-2">
                             <span className="">Launching or leveling up? Discover the power of modern web design & development. Freelance-crafted, interactive React websites that look sharp, run fast, and leave a lasting impression.</span>
                         </p>
 
@@ -132,13 +134,13 @@ const LandingPage = () => {
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-6 sm:pt-8 px-2">
                             <a
                                 href="#contact"
-                                className="w-full sm:w-auto px-5 py-2 sm:px-8 sm:py-4 bg-gradient-to-r from-white to-white text-black font-semibold cursor-pointer rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-sm sm:text-lg inline-block text-center no-underline"
+                                className="sm:w-auto px-5 py-2 sm:px-8 border-2 sm:py-4 bg-gradient-to-r from-white to-white text-black font-semibold cursor-pointer rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-sm sm:text-lg inline-block text-center no-underline"
                             >
                                 Get Quote
                             </a> 
                             <a
                                 href="#about"
-                                 className="w-full sm:w-auto px-5 py-2 sm:px-8 sm:py-4 border-2 border-gray-300 text-gray-400 font-semibold rounded-lg cursor-pointer hover:border-gray-400 hover:bg-gray-800 transition-all duration-200 text-sm sm:text-lg">
+                                 className="sm:w-auto px-5 py-2 sm:px-8 sm:py-4 border-2 border-gray-300 text-gray-400 font-semibold rounded-lg cursor-pointer hover:border-gray-400 hover:bg-gray-800 transition-all duration-200 text-sm sm:text-lg">
                                 Learn More
                             </a>
                         </div>

@@ -102,12 +102,12 @@ const navLinks = [
     {    
       imgPath: webIcon,
       title: "Web Design",
-      desc: "I mix creativity with technical precision to craft standout UI designs that are tailored towards delivering an outstanding user journey for your customers. ",
+      desc: "Mixing creativity with technical precision creates standout UI designs that are tailored towards delivering an outstanding user journey for your customers. ",
     },  
     {    
       imgPath: mobileCodeIcon,
       title: "Web Development",
-      desc: "Every website is uniquely coded, no templates, no copy paste designs. I code everything from scratch to reflect your brand and goals. With clean, modern code and fully responsive layouts, each site performs seamlessly across desktop, mobile, and tablet devices."
+      desc: "Every website is uniquely coded, no templates, no copy paste designs. With clean, modern code and fully responsive layouts, each site performs seamlessly across desktop, mobile, and tablet devices."
     },
       {
       imgPath: reactGraphic,
@@ -127,7 +127,7 @@ const navLinks = [
     {
       imgPath: websecIcon,
       title: "Quality & Security",
-      desc: "We meticulously test every aspect of your website across all devices to ensure it looks stunning and performs flawlessly. Every site includes encrypted security certification to protect your data and build trust with your visitors.",
+      desc: "Your website is meticulously tested across all devices to ensure it looks stunning and performs flawlessly. Every site includes encrypted security certification to protect your data and build trust with your visitors.",
     },
     {
       imgPath: googleIcon,

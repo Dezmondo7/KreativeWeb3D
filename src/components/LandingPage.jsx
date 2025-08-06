@@ -88,16 +88,16 @@ const LandingPage = () => {
       {/* Falling Particles (your original code) */}
       <FallingParticles />
 
-      <section className="relative h-screen bg-gradient-to-br from-purple-900/20 via-black to-black pt-16 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <section className="relative h-screen bg-gradient-to-br from-purple-800/30 via-black to-black pt-16 flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="z-10 text-center max-w-3xl mx-auto">
 
           {/* Tagline */}
-          <div className="inline-flex items-center sm:px-2 px-3 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-6">
+          {/*}   <div className="inline-flex items-center sm:px-2 px-3 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-6">
             <ZapIcon />
             <span className="text-xs text-purple-300 ml-2">
               Next-Gen Website Design
             </span>
-          </div>
+          </div> */}
 
           {/* Smaller Heading */}
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
@@ -133,7 +133,7 @@ const LandingPage = () => {
           </div>
 
           {/* Feature Pills */}
-          <div className="hidden sm:flex flex-wrap justify-center gap-3 mt-8">
+          <div className="hidden sm:block flex-wrap justify-center gap-3 mt-8">
             {["⚡ Lightning Fast", "🔒 Secure", "📱 Responsive", "🚀 Modern"].map((feature, index) => (
               <span
                 key={index}

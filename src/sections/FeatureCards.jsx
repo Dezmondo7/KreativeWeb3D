@@ -3,7 +3,7 @@ import { abilities } from '../constants/index.js'
 
 const FeatureCards = () => {
     return(                    
-        <div className="w-full padding-x-lg" id="services" style={{marginTop: '60px', paddingTop: '200px'}}>
+        <div className="w-full max-w-screen-xl mx-auto padding-x-lg" id="services" style={{marginTop: '60px', paddingTop: '200px'}}>
             <div className="text-center p-8">
                 <h1
                     className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bbg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-6xl font-bold mb-4 tracking-tigh cursor-pointer transition-all duration-300 hover:scale-105"

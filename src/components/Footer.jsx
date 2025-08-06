@@ -59,9 +59,9 @@ const Footer = () => {
   const resources = [ "Privacy Policy", "Terms of Service"]
 
   return (
-    <footer className="relative bg-gradient-to-br from-black to-purple-900/20 border-t border-purple-500/20 mt-40 sm:mt-40">
+    <footer className="relative bg-gradient-to-br from-black to-purple-900/20 border-t border-purple-500/20">
       {/* Subtle particle effect for footer */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none mt-40">
         <div className="absolute -top-2 left-1/4 w-2 h-2 bg-purple-400/30 rounded-full animate-pulse"></div>
         <div className="absolute top-10 right-1/3 w-1 h-1 bg-cyan-400/40 rounded-full animate-pulse delay-1000"></div>
         <div className="absolute top-20 left-1/2 w-1.5 h-1.5 bg-purple-300/20 rounded-full animate-pulse delay-2000"></div>

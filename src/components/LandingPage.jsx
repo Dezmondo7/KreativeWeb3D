@@ -100,7 +100,7 @@ const LandingPage = () => {
           </div> */}
 
           {/* Smaller Heading */}
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
+          <h2 className="text-xl max-w-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
             Built for the Future
           </h2>
 

@@ -35,7 +35,7 @@ const ContactForm = () => {
   // Function called on submit that uses emailjs to send email of valid contact form
   const onSubmit = async (data) => {
     console.log(data)
-    const { name, email, subject, message, budget } = data
+    const { name, email, subject, message, budget, telephone } = data
     try {
       setDisabled(true)
       const templateParams = {
@@ -44,6 +44,7 @@ const ContactForm = () => {
         subject,
         message,
         budget,
+        telephone,
       }
 
       await emailjs.send(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, templateParams, REACT_APP_PUBLIC_KEY)
@@ -129,11 +130,11 @@ const ContactForm = () => {
 
               {/* Subject */}
               <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-300 block">Company *</label>
+                <label className="text-sm font-medium text-gray-300 block">Company Name *</label>
                 <input
                   type="text"
                   {...register("subject", {
-                    required: { value: true, message: "Please enter your Company Name" },
+                    required: { value: true, message: "Please enter your company name" },
                     maxLength: {
                       value: 75,
                       message: "Subject cannot exceed 75 characters",
@@ -144,9 +145,26 @@ const ContactForm = () => {
                 />
                 {errors.subject && <p className="text-red-400 text-sm mt-1">{errors.subject.message}</p>}
               </div>
-                
-                {/*Budget */}
-                 <div className="space-y-2">
+
+              {/*Telephone */}
+              <div className="space-y-2">
+                  <label className="text-sm font-medium text-gray-300 block">Contact Number </label>
+              <input            
+                type="tel"
+                {...register("telephone", {
+                  pattern: {
+                    value: /^[0-9]{7,15}$/,
+                    message: "Please enter a valid phone",
+                  },
+                })}
+                className="w-full px-4 py-4 bg-black/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-200"
+                placeholder="Enter contact number (optional)"
+              />
+              {errors.telephone && <p className="text-red-400 text-sm mt-1">{errors.telephone.message}</p>}
+              </div>
+
+              {/*Budget */}
+              <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-300 block"> Estimated Budget £ *</label>
                 <input
                   type="number"
@@ -167,14 +185,14 @@ const ContactForm = () => {
 
               {/* Message */}
               <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-300 block">Message *</label>
+                <label className="text-sm font-medium text-gray-300 block">Project Information *</label>
                 <textarea
                   rows={6}
                   {...register("message", {
                     required: { value: true, message: "Please enter a message" },
                   })}
                   className="w-full px-4 py-4 bg-black/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-200 resize-none"
-                  placeholder="Tell us about your idea for this web project..."
+                  placeholder="Please share your idea for this web project..."
                 />
                 {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message.message}</p>}
               </div>
@@ -277,11 +295,10 @@ const ContactForm = () => {
       {alertInfo.display && (
         <div className="fixed top-4 right-4 z-100 max-w-md">
           <div
-            className={`p-4 rounded-xl shadow-lg backdrop-blur-sm border ${
-              alertInfo.type === "success"
+            className={`p-4 rounded-xl shadow-lg backdrop-blur-sm border ${alertInfo.type === "success"
                 ? "bg-green-500/20 border-green-500/30 text-green-200"
                 : "bg-red-500/20 border-red-500/30 text-red-200"
-            }`}
+              }`}
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center">

@@ -127,12 +127,12 @@ const navLinks = [
     {
       imgPath: websecIcon,
       title: "Quality & Security",
-      desc: "We carefully check every part of your website on all devices to ensure it looks amazing and works smoothly. All websites are built with security in mind—using best practices to protect.",
+      desc: "We meticulously test every aspect of your website across all devices to ensure it looks stunning and performs flawlessly. Every site includes encrypted security certification to protect your data and build trust with your visitors.",
     },
     {
       imgPath: googleIcon,
       title: "Performance Optimization",
-      desc: "Search Engine Optimization (SEO) helps your website show up when people search online. Using React technology, we build fast, efficient sites that perform better in Google search results—helping you stay ahead of the competition.",
+      desc: "Search Engine Optimization (SEO) ensures your website ranks higher when potential customers search online. By leveraging React technology, we build high-performance, lightning-fast websites optimized for search engines—giving you a competitive edge in the digital marketplace.",
     },
     {
       imgPath: maintenanceIcon,

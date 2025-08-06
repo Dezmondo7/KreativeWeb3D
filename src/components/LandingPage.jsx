@@ -22,7 +22,7 @@ const Starfield = () => {
     const initialStars = Array.from({ length: numStars }, createStar)
     setStars(initialStars)
 
-   let animationFrameId
+    let animationFrameId
 
     const animate = () => {
       setStars((prevStars) =>
@@ -92,32 +92,27 @@ const LandingPage = () => {
     <>
       <Starfield />
 
-     
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(0,255,255,0.07)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(128,0,255,0.15)_0%,transparent_70%)] pointer-events-none" />
       <section
         id="home"
-        className="relative h-screen bg-gradient-to-br from-purple-800/40  via-black to-black pt-16 flex items-center justify-center px-4 sm:px-6 lg:px-8"
+        className="relative h-screen bg-gradient-to-br from-purple-800/40 via-black to-black pt-8 sm:pt-12 lg:pt-16 flex items-center justify-center px-4 sm:px-6 lg:px-8"
       >
-        <div className="z-20 text-center max-w-3xl mx-auto">
+        <div className="z-20 text-center max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto">
           {/* Smaller Heading */}
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
             Built for the Future
           </h2>
 
           {/* Larger Heading (Animated) */}
-          <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
             {displayedText}
-            {showCursor && (
-              <span className="animate-pulse text-purple-600">|</span>
-            )}
+            {showCursor && <span className="animate-pulse text-purple-600">|</span>}
           </h1>
 
           {/* Subtext */}
-          <p className="text-base sm:text-lg text-gray-400 mt-6 max-w-2xl mx-auto leading-relaxed px-2">
-            Launching or leveling up? Discover the power of modern web design &
-            development. Freelance-crafted, interactive React websites that look
-            sharp, run fast, and leave a lasting impression.
+          <p className="text-base sm:text-lg text-gray-400 mt-6 max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2">
+            Launching or leveling up? Discover the power of modern web design & development. Freelance-crafted, interactive React websites that look sharp, run fast, and leave a lasting impression.
           </p>
 
           {/* CTA Buttons */}
@@ -138,12 +133,7 @@ const LandingPage = () => {
 
           {/* Feature Pills */}
           <div className="hidden sm:flex flex-wrap justify-center gap-3 mt-8">
-            {[
-              "⚡ Lightning Fast",
-              "🔒 Secure",
-              "📱 Responsive",
-              "🚀 Modern",
-            ].map((feature, index) => (
+            {["⚡ Lightning Fast", "🔒 Secure", "📱 Responsive", "🚀 Modern"].map((feature, index) => (
               <span
                 key={index}
                 className="px-3 py-1 bg-white/70 backdrop-blur-sm text-gray-700 rounded-full text-sm font-medium shadow-sm"

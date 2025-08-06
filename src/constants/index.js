@@ -205,7 +205,7 @@ const navLinks = [
   
   const expCards = [
     {
-      review: "New technology helps shape what we deliver. By taking a calm and methodical approach to work, this forward thinking mindset opens the space of necessary calmness to let creativity flow.",
+      review: "New technology helps shape what is delivered. By taking a calm and methodical approach to work, this forward thinking mindset opens the space of necessary calmness to let creativity flow.",
       imgPath: "",
       logoPath: letterRlogo,
       title: "The Creative Studio",
@@ -213,31 +213,31 @@ const navLinks = [
       responsibilities: [
         "Reakt Web Design offers a fresh approach to building custom high performance websites",
         "A fan of first principles thinking — tackling challenges from the ground up to deliver smarter solutions",
-        "I'm always exploring the latest tech, It’s the driving force behind websites that stand out",
+        "By tapping into the latest digital tools, your brand can stand out and make some noise",
       ],
     },
     {
-      review: "Your brand’s image is everything — I get that. That's why a client-centric approach is a key part of what makes each project successful.",
+      review: "Your brand’s image is everything — I get that. That's why a client-centric approach is a key part of making each project successful.",
       logoPath: unicornLogo,
       title: "A Unique Brand",
       date: "",
       responsibilities: [
         "Trusting a developer with your brand is a big decision",
-        "It is an awesome responsibility for me to bridge the gap between your company and its audience",
+        "It is an awesome responsibility to bridge the gap between your company and its audience",
         "You get agency-level web design without the agency-sized price tag",
         
       ],
     },
     {
-      review: "I got into this to do what I love. I'm dedicated to developing the most creative websites while enjoying every step of the journey.",
+      review: "Passion and dedication goes into developing everything while enjoying every step of the journey.",
       imgPath: "",
       logoPath: reactLogo,
       title: "Our Philosophy",
       date: "",
       responsibilities: [
         "We’re here to have a blast and create some pretty cool stuff",
-        "Every project is an opportunity to showcase creative flair and deliver exceptional React development",
-        "I’m passionate about my work, and I want you to enjoy the process as much as I enjoy bringing your project to life",
+        "Every project is a chance to transform fresh ideas into real outcomes",
+        "This is a place where creative ideas meet creative minds",
       ],
     },
   ];

@@ -6,6 +6,9 @@ const Starfield = () => {
   const [stars, setStars] = useState([])
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 768
+    const numStars = isMobile ? 60 : 150
+
     const createStar = () => ({
       id: Math.random(),
       x: Math.random() * window.innerWidth,
@@ -16,24 +19,32 @@ const Starfield = () => {
       speedY: (Math.random() - 0.5) * 0.2,
     })
 
-    const initialStars = Array.from({ length: 150 }, createStar)
+    const initialStars = Array.from({ length: numStars }, createStar)
     setStars(initialStars)
 
-    const interval = setInterval(() => {
+   let animationFrameId
+
+    const animate = () => {
       setStars((prevStars) =>
         prevStars.map((star) => {
           let newX = star.x + star.speedX
           let newY = star.y + star.speedY
 
-          if (newX < 0 || newX > window.innerWidth) newX = Math.random() * window.innerWidth
-          if (newY < 0 || newY > window.innerHeight) newY = Math.random() * window.innerHeight
+          if (newX < 0 || newX > window.innerWidth)
+            newX = Math.random() * window.innerWidth
+          if (newY < 0 || newY > window.innerHeight)
+            newY = Math.random() * window.innerHeight
 
           return { ...star, x: newX, y: newY }
         })
       )
-    }, 50)
 
-    return () => clearInterval(interval)
+      animationFrameId = requestAnimationFrame(animate)
+    }
+
+    animationFrameId = requestAnimationFrame(animate)
+
+    return () => cancelAnimationFrame(animationFrameId)
   }, [])
 
   return (
@@ -41,16 +52,16 @@ const Starfield = () => {
       {stars.map((star) => (
         <div
           key={star.id}
-          className="absolute rounded-full bg-white animate-pulse"
+          className="absolute rounded-full bg-white"
           style={{
             left: `${star.x}px`,
             top: `${star.y}px`,
             width: `${star.size}px`,
             height: `${star.size}px`,
             opacity: star.opacity,
-            animationDuration: `${Math.random() * 3 + 2}s`,
             backgroundColor: `hsl(${Math.random() * 360}, 100%, 80%)`,
-            filter: 'blur(0.5px)',
+            filter: "blur(0.5px)",
+            transition: "transform 0.1s ease-out",
           }}
         />
       ))}

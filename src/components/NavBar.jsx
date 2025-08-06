@@ -21,27 +21,29 @@ const NavBar = () => {
 
 
     // underline hover effect for dropdown menue
- {isOpen && (
-  <div className="bg-black/90 flex overflow-y-hidden fixed z-10 top-0 left-0 w-screen min-h-screen justify-center items-center flex-col gap-10 duration-300 ease-in">
-    {[
-      { href: "#home", label: "Home" },
-      { href: "#about", label: "About" },
-      { href: "#services", label: "Services" },
-      { href: "#testimonials", label: "Testimonials" },
-      { href: "#contact", label: "Contact" }
-    ].map(({ href, label }) => (
-      <a
-        key={label}
-        href={href}
-        onClick={handleLinkClick}
-        className="group relative text-white text-2xl font-medium transition duration-300"
-      >
-        {label}
-        <span className="pointer-events-none absolute left-0 bottom-0 h-0.5 w-0 bg-purple-400 transition-all duration-300 group-hover:w-full" />
-      </a>
-    ))}
-  </div>
-)}
+    {
+        isOpen && (
+            <div className="bg-black/90 flex overflow-y-hidden fixed z-10 top-0 left-0 w-screen min-h-screen justify-center items-center flex-col gap-10 duration-300 ease-in">
+                {[
+                    { href: "#home", label: "Home" },
+                    { href: "#about", label: "About" },
+                    { href: "#services", label: "Services" },
+                    { href: "#testimonials", label: "Testimonials" },
+                    { href: "#contact", label: "Contact" }
+                ].map(({ href, label }) => (
+                    <a
+                        key={label}
+                        href={href}
+                        onClick={handleLinkClick}
+                        className="group relative text-white text-2xl font-medium transition duration-300"
+                    >
+                        {label}
+                        <span className="pointer-events-none absolute left-0 bottom-0 h-0.5 w-0 bg-purple-400 transition-all duration-300 group-hover:w-full" />
+                    </a>
+                ))}
+            </div>
+        )
+    }
 
     useEffect(() => {
         if (isOpen) {
@@ -115,20 +117,26 @@ const NavBar = () => {
             <nav className="">
 
                 <div className="w-full max-w-screen-xl mx-auto px-4 flex items-center justify-between">
-
-                    <span className="logo cursor-pointer font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent flex items-center gap-1">
-                        {/* Logo image – visible on small devices only */}
+                    <span className="logo cursor-pointer font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent flex items-center gap-2">
+                        {/* Small logo + "Reakt" on small devices only */}
                         <img
                             src={LogoR}
                             alt="Logo"
-                            className="w-5 h-5 object-contain block md:hidden"
+                            className="w-9 h-9 object-contain block md:hidden"
+                        />
+                        <span className="block md:hidden"></span>
+
+                        {/* Bigger logo only on medium devices */}
+                        <img
+                            src={LogoR}
+                            alt="Logo"
+                            className="w-9 h-9 sm:w-10 sm:h-10 object-contain hidden md:block lg:hidden"
                         />
 
-                        {/* Text – shows 'Reakt' on small devices, full name on medium+ */}
-                        <span className="block md:hidden">Reakt</span>
-                        <span className="hidden md:inline">Reakt Web Design</span>
+                        {/* Bigger logo + full text on large devices and up */}
+                       
+                        <span className="hidden lg:block">Reakt Web Design</span>
                     </span>
-
 
                     <div className="">
                         <ul className="hidden lg:flex items-center gap-4 flex justify-content space-between items-center">

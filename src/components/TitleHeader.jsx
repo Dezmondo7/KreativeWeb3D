@@ -13,7 +13,7 @@ const TitleHeader = ({title, sub }) => {
 
               <div className="text-center p-8">
                 <h1
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bbg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-6xl font-bold mb-4 tracking-tigh cursor-pointer transition-all duration-300 hover:scale-105"
+                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-transparent text-6xl font-bold mb-4 tracking-tigh cursor-pointer transition-all duration-300 hover:scale-105"
                     style={{
                         animation: "float 3s ease-in-out infinite",
                     }}

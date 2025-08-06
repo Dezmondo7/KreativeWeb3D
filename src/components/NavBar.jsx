@@ -145,7 +145,7 @@ const NavBar = () => {
                         {/* Dropdown menu */}
                         {isOpen ? (
                             <div className="bg-black/90 flex overflow-y-hidden fixed z-10 top-0 left-0 w-screen min-h-screen justify-center items-center flex-col gap-10 duration-300 ease-in">
-                                <a href="#" onClick={handleLinkClick}>Home</a>
+                                <a href="#home" onClick={handleLinkClick}>Home</a>
                                 <a href="#about" onClick={handleLinkClick}>About</a>
                                 <a href="#services" onClick={handleLinkClick}>Services</a>
                                 <a href="#testimonials" onClick={handleLinkClick}> Testimonials</a>

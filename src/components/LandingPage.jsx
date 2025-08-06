@@ -88,7 +88,7 @@ const LandingPage = () => {
       {/* Falling Particles (your original code) */}
       <FallingParticles />
 
-      <section className="relative h-screen bg-gradient-to-br from-purple-800/30 via-black to-black pt-16 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <section id="home" className="relative h-screen bg-gradient-to-br from-purple-800/30 via-black to-black pt-16 flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="z-10 text-center max-w-3xl mx-auto">
 
           {/* Tagline */}

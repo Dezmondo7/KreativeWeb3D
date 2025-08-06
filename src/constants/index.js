@@ -27,7 +27,6 @@ import mobileCodeIcon from '../assets/mobile-coding.png'
 
 const navLinks = [
     {
-
       name: "Home",
       link: "#home"
     },

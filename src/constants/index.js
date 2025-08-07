@@ -112,7 +112,7 @@ const navLinks = [
       {
       imgPath: reactGraphic,
       title: "Latest Technology",
-      desc: "Your website will be built with React—the same fast, dynamic tech used by Facebook, Instagram, and Netflix. It’s perfect for creating smooth, interactive experiences that load quickly and run seamlessly as your business grows."
+      desc: "Your website will be built with React—the same fast, dynamic tech developed by Meta (formerly Facebook), used by Instagram, and Netflix. It’s perfect for creating smooth, interactive experiences that load quickly and run seamlessly as your business grows."
     },
     {
       imgPath: brandIcon,

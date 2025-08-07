@@ -13,6 +13,8 @@ import LandingPage from './components/LandingPage.jsx';
 import Footer from './components/Footer.jsx';
 import ContactForm from './components/ContactForm.jsx';
 import AboutMe from './components/AboutMe.jsx';
+import FAQSection from './components/FAQSection.jsx';
+import ReactSection from './components/ReactSection.jsx';
 
 const App = () => {
   return (
@@ -22,11 +24,13 @@ const App = () => {
     {/*<Hero />*/}
     <AnimatedCounter />
     <Experience />
+    <ReactSection />
     <AboutMe />
     {/*<Showcase />*/}
     <FeatureCards />
     {/*<Techstack /> */}
     <Testimonials />
+    <FAQSection />
     <ContactForm />
     <Footer />
    

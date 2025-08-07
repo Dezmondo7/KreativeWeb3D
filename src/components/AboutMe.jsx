@@ -1,9 +1,8 @@
+import React from 'react';
 import avatarLogo from '../assets/av2.png';
-import javascriptIcon from '../assets/javascript.png'
-
+import javascriptIcon from '../assets/javascript.png';
 
 const AboutMe = () => {
-  // Sample skills data - you can customize these
   const skills = [
     { name: "React", level: "Advanced", icon: "⚛️" },
     { name: "JavaScript", level: "Advanced", icon: "🟨" },
@@ -13,20 +12,20 @@ const AboutMe = () => {
     { name: "Git", level: "Intermediate", icon: "📝" },
     { name: "Responsive Design", level: "Expert", icon: "📱" },
     { name: "UI/UX Design", level: "Advanced", icon: "✨" },
-  ]
+  ];
 
   const getLevelColor = (level) => {
     switch (level) {
       case "Expert":
-        return "from-green-400 to-emerald-600"
+        return "from-green-400 to-emerald-600";
       case "Advanced":
-        return "from-cyan-400 to-purple-600"
+        return "from-cyan-400 to-purple-600";
       case "Intermediate":
-        return "from-yellow-400 to-orange-500"
+        return "from-yellow-400 to-orange-500";
       default:
-        return "from-gray-400 to-gray-600"
+        return "from-gray-400 to-gray-600";
     }
-  }
+  };
 
   return (
     <div
@@ -35,17 +34,11 @@ const AboutMe = () => {
     >
       <div className="max-w-4xl mx-auto text-center">
         <div className="space-y-12">
-          {/* Section Header */}
-         {/*} <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
-            <span className="text-sm text-purple-300 cursor-default">👋 Get to Know Me</span> 
-          </div> */}
-
           {/* Profile Image */}
           <div className="flex justify-center mb-12">
             <div className="relative">
-              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full  p-1 shadow-2xl">
+              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full p-1 shadow-2xl">
                 <div className="w-full h-full rounded-full bg-transparent overflow-hidden">
-                  {/* Replace this with your actual image */}
                   <img
                     src={avatarLogo}
                     alt="Profile"
@@ -53,56 +46,49 @@ const AboutMe = () => {
                   />
                 </div>
               </div>
-              {/* Decorative elements *
-              <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-transparent to-white rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-gradient-to-r from-purple-600 to-cyan-400 rounded-full animate-pulse delay-1000"></div> */}
             </div>
           </div>
 
-          {/* About Me Content */}
-          <div className="space-y-8">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-              About Me
-            </h2>
+          {/* Updated Heading to match ReactSection */}
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            About Me
+          </h2>
 
-            <div className="max-w-3xl mx-auto space-y-6">
-              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                “Hi - I’m Dale — a front-end web developer and designer with expertise in React who blends creativity and code to build beautiful, engaging digital experiences. With a keen eye for design and a strong technical background, I specialise in building
-                modern, responsive websites that not only look great but perform exceptionally."
-              </p>
+          {/* Updated paragraph font size & color */}
+          <div className="max-w-3xl mx-auto space-y-6">
+            <p className="text-sm text-gray-400 leading-relaxed">
+              Hi – I’m Dale — a front-end web developer and designer with expertise in React who blends creativity and code to build beautiful, engaging digital experiences. With a keen eye for design and a strong technical background, I specialize in building modern, responsive websites that not only look great but perform exceptionally.
+            </p>
 
-              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                "When I'm not working on client projects, you'll find me exploring the latest web technologies, contributing to open-source projects, or enjoying a good cup of coffee while experimenting with new front-end tools. I believe in the power
-                of clean code, intuitive user interfaces, and the magic that happens when creativity meets
-                functionality."
-              </p>
+            <p className="text-sm text-gray-400 leading-relaxed">
+              When I'm not working on client projects, you'll find me exploring the latest web technologies, contributing to open-source projects, or enjoying a good cup of coffee while experimenting with new front-end tools. I believe in the power of clean code, intuitive user interfaces, and the magic that happens when creativity meets functionality.
+            </p>
+          </div>
+
+          {/* Personal Stats */}
+          <div className="flex flex-wrap justify-center gap-4 pt-6">
+            <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              <span className="text-cyan-400 font-bold text-lg">50+</span>
+              <span className="text-gray-300 ml-2">Projects Completed</span>
             </div>
-
-            {/* Personal Stats/Highlights */}
-            <div className="flex flex-wrap justify-center gap-4 pt-6">
-              <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                <span className="text-cyan-400 font-bold text-lg">50+</span>
-                <span className="text-gray-300 ml-2">Projects Completed</span>
-              </div>
-              <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                <span className="text-purple-400 font-bold text-lg">8+</span>
-                <span className="text-gray-300 ml-2">Years IT Experience</span>
-              </div>
-              <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                <span className="text-cyan-400 font-bold text-lg">24/7</span>
-                <span className="text-gray-300 ml-2">Learning Mode</span>
-              </div>
+            <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              <span className="text-purple-400 font-bold text-lg">8+</span>
+              <span className="text-gray-300 ml-2">Years IT Experience</span>
+            </div>
+            <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              <span className="text-cyan-400 font-bold text-lg">24/7</span>
+              <span className="text-gray-300 ml-2">Learning Mode</span>
             </div>
           </div>
 
           {/* Skills Section */}
           <div className="space-y-8 pt-12">
-            <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+            <h3 className="text-lg text-white font-semibold">
               My Coding Skills
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-5xl mx-auto">
-              {skills.map((skill, index) => (
+              {skills.map((skill) => (
                 <div
                   key={skill.name}
                   className="group relative p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
@@ -118,14 +104,12 @@ const AboutMe = () => {
                       {skill.level}
                     </span>
                   </div>
-
-                  {/* Hover effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-purple-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               ))}
             </div>
 
-            {/* Additional Skills Pills */}
+            {/* Extra Traits */}
             <div className="flex flex-wrap justify-center gap-3 pt-6">
               <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full cursor-default text-sm font-medium text-gray-300 border border-white/20">
                 🎯 Problem Solver
@@ -141,14 +125,10 @@ const AboutMe = () => {
               </span>
             </div>
           </div>
-
-          {/* Call to Action */}
-          
-          
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutMe
+export default AboutMe;

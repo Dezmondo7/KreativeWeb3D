@@ -15,7 +15,7 @@ const cards = [
   },
   {
    title: "SEO-Friendly – Higher Google Rankings",
-description: "We optimize every React site we build with smart SEO techniques and keyword targeting, helping your website rank higher in Google search results and attract more visitors."
+description: "React technology is designed so that smart SEO techniques and keyword targeting can rank your site higher in Google search results and attract more visitors."
   },
   {
     title: "Great for Dynamic & Interactive experiences",

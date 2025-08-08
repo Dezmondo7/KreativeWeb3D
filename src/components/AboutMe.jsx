@@ -17,11 +17,11 @@ const AboutMe = () => {
   const getLevelColor = (level) => {
     switch (level) {
       case "Expert":
-        return "from-green-400 to-emerald-600";
+        return "transparent";
       case "Advanced":
-        return "from-cyan-400 to-purple-600";
+        return "transparent";
       case "Intermediate":
-        return "from-yellow-400 to-orange-500";
+        return "from-navy-400 via-navy-400 to-purple-600";
       default:
         return "from-gray-400 to-gray-600";
     }
@@ -56,6 +56,7 @@ const AboutMe = () => {
 
           {/* Updated paragraph font size & color */}
           <div className="max-w-3xl mx-auto space-y-6">
+            
             <p className="text-sm text-gray-400 leading-relaxed">
               Hi – I’m Dale — a front-end web developer and designer with expertise in React who blends creativity and code to build beautiful, engaging digital experiences. With a keen eye for design and a strong technical background, I specialize in building modern, responsive websites that not only look great but perform exceptionally.
             </p>
@@ -86,24 +87,24 @@ const AboutMe = () => {
             <h3 className="text-lg text-white font-semibold">
               My Coding Skills
             </h3>
-
+             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-5xl mx-auto">
               {skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="group relative p-4 bg-white/5 bg-gradient-to-br from-purple-900/15 via-black/80 to-black/90 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
+                  className="group relative p-4 bg-white/5 absolute inset-0 bg-gradient-to-br from-purple-900/10 to-transparent rounded-2xl rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className="flex items-center space-x-3 mb-2">
                     <span className="text-2xl">{skill.icon}</span>
                     <h4 className="font-semibold text-white">{skill.name}</h4>
                   </div>
-                  <div className="flex items-center justify-between">
+               {/*   <div className="flex items-center justify-between">
                     <span
                       className={`px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${getLevelColor(skill.level)} text-white`}
                     >
                       {skill.level}
                     </span>
-                  </div>
+                  </div> */}
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-purple-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               ))}

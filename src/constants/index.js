@@ -19,7 +19,7 @@ import brandIcon from '../assets/website-content.png'
 import maintenanceIcon from '../assets/web-maintenance.png'
 import projectIcon from '../assets/project-management.png'
 import websecIcon from '../assets/web-security.png'
-import googleIcon from '../assets/google.png'
+import seoIcon from '../assets/seo.png'
 
 // Services
 import webIcon from '../assets/software.png'
@@ -130,7 +130,7 @@ const navLinks = [
       desc: "Your website is meticulously tested across all devices to ensure it looks stunning and performs flawlessly. Every site includes encrypted security certification to protect your data and build trust with your visitors.",
     },
     {
-      imgPath: googleIcon,
+      imgPath: seoIcon,
       title: "Performance Optimization",
       desc: "Search Engine Optimization (SEO) ensures your website ranks higher when potential customers search online. By leveraging React technology, we build high-performance, lightning-fast websites optimized for search engines—giving you a competitive edge in the digital marketplace.",
     },
@@ -231,7 +231,7 @@ const navLinks = [
     {
       review: "Passion and dedication goes into developing everything while enjoying every step of the journey.",
       imgPath: "",
-      logoPath: reactLogo,
+      logoPath: reactGraphic,
       title: "Our Philosophy",
       date: "",
       responsibilities: [

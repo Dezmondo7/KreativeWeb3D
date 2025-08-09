@@ -1,5 +1,11 @@
 import React from 'react';
 import { abilities } from '../constants/index.js';
+import { motion } from 'framer-motion';
+
+const cardVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+};
 
 const FeatureCards = () => {
   return (
@@ -23,7 +29,7 @@ const FeatureCards = () => {
             e.target.style.transform = 'translateY(-15px) scale(1.1)';
             setTimeout(() => {
               e.target.style.transform = 'translateY(0) scale(1)';
-            }, 200);
+            }, 500);
           }}
         >
           Services
@@ -35,12 +41,18 @@ const FeatureCards = () => {
         {/* Glow Blob Positioned Behind Cards */}
         <div className="absolute top-[50%] left-[20%] w-[200px] h-[200px] bg-purple-600/20 blur-[120px] rounded-full z-0 pointer-events-none" />
         <div className="absolute bottom-[65%] right-[10%] w-[400px] h-[200px] bg-purple-600/20 blur-[120px] rounded-full z-0 pointer-events-none" />
+
         {/* Cards Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 relative z-10">
-          {abilities.map(({ imgPath, title, desc }) => (
-            <div
+          {abilities.map(({ imgPath, title, desc }, index) => (
+            <motion.div
               key={title}
               className="relative overflow-hidden rounded-2xl border border-white/10 flex flex-col justify-start items-start bg-[rgba(255,255,255,0.05,)] backdrop-blur-md hover:border-white/20 transition duration-500 p-8 gap-4"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 1, delay: index * 0.2 }}
             >
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-transparent rounded-2xl pointer-events-none" />
@@ -50,7 +62,7 @@ const FeatureCards = () => {
               </div>
               <h3 className="relative z-10 text-white text-lg font-semibold">{title}</h3>
               <p className="relative z-10 text-gray-400 text-sm leading-relaxed">{desc}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -58,7 +70,8 @@ const FeatureCards = () => {
       {/* Floating animation keyframes */}
       <style jsx>{`
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px);
           }
           50% {

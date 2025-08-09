@@ -15,6 +15,7 @@ import ContactForm from './components/ContactForm.jsx';
 import AboutMe from './components/AboutMe.jsx';
 import FAQSection from './components/FAQSection.jsx';
 import ReactSection from './components/ReactSection.jsx';
+import PricingSection from './components/pricing.jsx'
 
 const App = () => {
   return (
@@ -29,8 +30,9 @@ const App = () => {
     {/*<Showcase />*/}
     <FeatureCards />
     {/*<Techstack /> */}
-    <Testimonials />
     <FAQSection />
+    <Testimonials />
+    <PricingSection />
     <ContactForm />
     <Footer />
    

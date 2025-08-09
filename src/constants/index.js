@@ -107,7 +107,7 @@ const navLinks = [
     {    
       imgPath: mobileCodeIcon,
       title: "Web Development",
-      desc: "Every website is uniquely coded, no templates, no copy paste designs. With clean, modern code and fully responsive layouts, each site performs seamlessly across desktop, mobile, and tablet devices."
+      desc: "Every website is uniquely coded. With clean, modern code and fully responsive layouts, each site performs seamlessly across desktop, mobile, and tablet devices."
     },
       {
       imgPath: reactGraphic,

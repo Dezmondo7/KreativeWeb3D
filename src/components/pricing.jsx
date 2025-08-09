@@ -85,6 +85,8 @@ function PricingSection() {
     <section className="w-full px-5 overflow-hidden flex flex-col justify-start items-center my-0 py-8 md:py-14 mt-40 relative">
       <div className="self-stretch relative flex flex-col justify-center items-center gap-2 py-0">
         <div className="flex flex-col justify-start items-center gap-4">
+
+          {/*Title */}
           <h2 className="text-center text-foreground text-4xl md:text-5xl font-semibold leading-tight md:leading-[40px]">
             Pricing built for every Project
           </h2>
@@ -138,7 +140,7 @@ function PricingSection() {
                   className="absolute inset-0 rounded-xl pointer-events-none z-0"
                   style={{
                     background:
-                      "rgba(128,0,128,0.1)", // very transparent purple
+                      "rgba(24, 10, 43)", // very transparent purple
                     backdropFilter: "blur(8px)",
                     boxShadow:
                       "0 0 20px 10px rgba(128,0,128,0.15)",
@@ -147,18 +149,14 @@ function PricingSection() {
               )}
               {isSide && (
                 <div
-                  className="absolute inset-0 rounded-xl pointer-events-none z-0"
-                  style={{
-                    background:
-                      "linear-gradient( to right, rgba(0,0,0,0.75), transparent 40%, transparent 60%, rgba(0,0,0,0.75) )",
-                    // For left side card fade left to right,
-                    // For right side card fade right to left (adjust gradient direction)
-                    ...(idx === 0
-                      ? { background: "linear-gradient(to right, rgba(0,0,0,0.75), transparent 60%)" }
-                      : { background: "linear-gradient(to left, rgba(0,0,0,0.75), transparent 60%)" }),
-                  }}
-                />
-              )}
+                  className="absolute inset-0 rounded-xl pointer-events-none z-0"  
+                style={{
+                   background: "rgba(20,14,24,0.75)"
+                  }} 
+                  />
+                  )} 
+                
+              
               <div
                 className={`p-4 overflow-hidden rounded-xl flex flex-col justify-start items-start gap-6 relative z-10 ${
                   plan.popular

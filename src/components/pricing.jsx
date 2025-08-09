@@ -77,7 +77,7 @@ function PricingSection() {
         "Enhanced SEO performance work",
         "Priority deployments & support",
         "Priority email and chat support",
-  
+
       ],
       buttonText: "Get Started",
       buttonClass:
@@ -106,7 +106,7 @@ function PricingSection() {
               className={`pl-2 pr-1 py-1 flex justify-start items-start gap-2 rounded-md ${isAnnual ? "bg-accent shadow-[0px_1px_1px_-0.5px_rgba(0,0,0,0.08)]" : ""
                 }`}
             >
-             {/*} This is a great feature button which switches between monthly and annual prices to be included on other builds
+              {/*} This is a great feature button which switches between monthly and annual prices to be included on other builds
              
              <span
                 className={`text-center text-sm font-medium leading-tight ${isAnnual ? "text-accent-foreground" : "text-zinc-400"
@@ -161,8 +161,8 @@ function PricingSection() {
 
               <div
                 className={`p-4 overflow-hidden rounded-xl flex flex-col justify-start items-start gap-6 relative z-10 ${plan.popular
-                    ? "bg-primary shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.10)]"
-                    : "bg-gradient-to-b from-gray-50/5 to-gray-50/0"
+                  ? "bg-primary shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.10)]"
+                  : "bg-gradient-to-b from-gray-50/5 to-gray-50/0"
                   }`}
                 style={
                   plan.popular
@@ -230,7 +230,15 @@ function PricingSection() {
                       </div>
                     </div>
                   </div>
-                  <Button className={`self-stretch px-5 py-2 rounded-[40px] flex justify-center items-center ${plan.buttonClass}`}>
+                  <Button
+                    className={`self-stretch px-5 py-2 rounded-[40px] flex justify-center items-center cursor-pointer ${plan.buttonClass}`}
+                    onClick={() => {
+                      const contactSection = document.getElementById("contact");
+                      if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
+                  >
                     <div className="px-1.5 flex justify-center items-center gap-2">
                       <span
                         className={`text-center text-sm font-medium leading-tight ${plan.name === "Free"

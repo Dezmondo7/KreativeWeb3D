@@ -29,55 +29,59 @@ function PricingSection() {
 
   const pricingPlans = [
     {
-      name: "Free",
-      monthlyPrice: "$0",
-      annualPrice: "$0",
-      description: "Perfect for individuals starting their journey.",
+      name: "Freelance",
+      monthlyPrice: "£30-45 per hour",
+      annualPrice: "£30-45 per hour",
+      description: "Ideal for custom React and Tailwind components & interactive features.",
       features: [
-        "Real-time code suggestions",
-        "Basic integration logos",
-        "Single MCP server connection",
-        "Up to 2 AI coding agents",
-        "Vercel deployments with Pointer branding",
+        "Responsive UI development with React & TailwindCSS",
+        "Clean, maintainable, and well-documented code",
+        "Interactive UI components and animations",
+        "Cross-browser and mobile-friendly designs",
+        "Regular progress updates and communication",
+        "For milestone pricing or custom quotes, please get in touch",
       ],
       buttonText: "Get Started",
       buttonClass:
         "bg-zinc-300 shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] outline outline-0.5 outline-[#1e29391f] outline-offset-[-0.5px] text-gray-800 text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-zinc-400",
     },
     {
-      name: "Pro",
+      name: "Start-ups & Soloprenuers ",
       monthlyPrice: "$20",
-      annualPrice: "$16",
-      description: "Ideal for professionals.",
+      annualPrice: "£500-£1500",
+      description: "React and Tailwind front-end build designed to get your business moving fast.",
       features: [
-        "Enhanced real-time previews",
-        "Unlimited integrations with custom logos",
-        "Multiple MCP server connections",
-        "Up to 10 concurrent AI coding agents",
-        "Collaborative coding with team chat",
-        "Advanced version control integrations",
-        "Priority email and chat support",
+        "Responsive landing page or MVP front-end built with React & Tailwind",
+        "Up to 3 custom UI components or interactive features",
+        "SEO & performance optimizations",
+        "1 round of revisions within 2 weeks",
+        "Deployment guidence and support",
+        "1 Years Hosting & Security included",
+        "Tailor your package with optional extras"
       ],
-      buttonText: "Join now",
+      buttonText: "Get Started",
       buttonClass:
-        "bg-primary-foreground shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] text-primary text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-primary-foreground/90",
+        "bg-zinc-300 shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] outline outline-0.5 outline-[#1e29391f] outline-offset-[-0.5px] text-gray-800 text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-zinc-400",
       popular: true,
     },
     {
       name: "Ultra",
       monthlyPrice: "$200",
-      annualPrice: "$160",
-      description: "Tailored solutions for teams.",
+      annualPrice: "£1500+",
+      description: "Elevate your brand with our Ultra front-end package.",
       features: [
-        "Dedicated account support",
-        "Unlimited MCP server clusters",
-        "Unlimited AI coding agents",
-        "Enterprise-grade security and compliance",
-        "Priority deployments and SLA guarantees",
+        "Ideal for website builds or front-end refreshes",
+        "Full Multi-page website",
+        "Custom UI components and complex interactions ",
+        "Domain, Hosting & Encrypted Security",
+        "Enhanced SEO performance work",
+        "Priority deployments & support",
+        "Priority email and chat support",
+  
       ],
-      buttonText: "Talk to Sales",
+      buttonText: "Get Started",
       buttonClass:
-        "bg-secondary shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] text-secondary-foreground text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-secondary/90",
+        "bg-zinc-300 shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] outline outline-0.5 outline-[#1e29391f] outline-offset-[-0.5px] text-gray-800 text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-zinc-400",
     },
   ];
 
@@ -91,39 +95,37 @@ function PricingSection() {
             Pricing built for every Project
           </h2>
           <p className="self-stretch text-center text-muted-foreground text-sm font-medium leading-tight">
-            Choose a plan that fits, from hourly project rates{" "}
-            <br />to start-up packages & website refreshes.
+            Choose a plan that fits, hourly rates for projects, {" "}
+            <br />start-up packages & website refreshes.
           </p>
         </div>
         <div className="pt-4">
           <div className="p-0.5 bg-muted rounded-lg outline outline-1 outline-[#0307120a] outline-offset-[-1px] flex justify-start items-center gap-1 md:mt-0">
             <button
               onClick={() => setIsAnnual(true)}
-              className={`pl-2 pr-1 py-1 flex justify-start items-start gap-2 rounded-md ${
-                isAnnual ? "bg-accent shadow-[0px_1px_1px_-0.5px_rgba(0,0,0,0.08)]" : ""
-              }`}
-            >
-              <span
-                className={`text-center text-sm font-medium leading-tight ${
-                  isAnnual ? "text-accent-foreground" : "text-zinc-400"
+              className={`pl-2 pr-1 py-1 flex justify-start items-start gap-2 rounded-md ${isAnnual ? "bg-accent shadow-[0px_1px_1px_-0.5px_rgba(0,0,0,0.08)]" : ""
                 }`}
+            >
+             {/*} This is a great feature button which switches between monthly and annual prices to be included on other builds
+             
+             <span
+                className={`text-center text-sm font-medium leading-tight ${isAnnual ? "text-accent-foreground" : "text-zinc-400"
+                  }`}
               >
                 Annually
               </span>
             </button>
             <button
               onClick={() => setIsAnnual(false)}
-              className={`px-2 py-1 flex justify-start items-start rounded-md ${
-                !isAnnual ? "bg-accent shadow-[0px_1px_1px_-0.5px_rgba(0,0,0,0.08)]" : ""
-              }`}
+              className={`px-2 py-1 flex justify-start items-start rounded-md ${!isAnnual ? "bg-accent shadow-[0px_1px_1px_-0.5px_rgba(0,0,0,0.08)]" : ""
+                }`}
             >
               <span
-                className={`text-center text-sm font-medium leading-tight ${
-                  !isAnnual ? "text-accent-foreground" : "text-zinc-400"
-                }`}
+                className={`text-center text-sm font-medium leading-tight ${!isAnnual ? "text-accent-foreground" : "text-zinc-400"
+                  }`}
               >
                 Monthly
-              </span>
+              </span> */}
             </button>
           </div>
         </div>
@@ -149,20 +151,19 @@ function PricingSection() {
               )}
               {isSide && (
                 <div
-                  className="absolute inset-0 rounded-xl pointer-events-none z-0"  
-                style={{
-                   background: "rgba(20,14,24,0.75)"
-                  }} 
-                  />
-                  )} 
-                
-              
+                  className="absolute inset-0 rounded-xl pointer-events-none z-0"
+                  style={{
+                    background: "rgba(20,14,24,0.75)"
+                  }}
+                />
+              )}
+
+
               <div
-                className={`p-4 overflow-hidden rounded-xl flex flex-col justify-start items-start gap-6 relative z-10 ${
-                  plan.popular
+                className={`p-4 overflow-hidden rounded-xl flex flex-col justify-start items-start gap-6 relative z-10 ${plan.popular
                     ? "bg-primary shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.10)]"
                     : "bg-gradient-to-b from-gray-50/5 to-gray-50/0"
-                }`}
+                  }`}
                 style={
                   plan.popular
                     ? {}
@@ -172,14 +173,13 @@ function PricingSection() {
                 <div className="self-stretch flex flex-col justify-start items-start gap-6">
                   <div className="self-stretch flex flex-col justify-start items-start gap-8">
                     <div
-                      className={`w-full h-5 text-sm font-medium leading-tight ${
-                        plan.popular ? "text-primary-foreground" : "text-zinc-200"
-                      }`}
+                      className={`w-full h-5 text-sm font-medium leading-tight ${plan.popular ? "text-primary-foreground" : "text-zinc-200"
+                        }`}
                     >
                       {plan.name}
                       {plan.popular && (
                         <div className="ml-2 px-2 overflow-hidden rounded-full justify-center items-center gap-2.5 inline-flex mt-0 py-0.5 bg-gradient-to-b from-primary-light/50 to-primary-light bg-white">
-                          <div className="text-center text-primary-foreground text-xs font-normal leading-tight break-words">
+                          <div className="text-center text-primary-foreground text-black text-xs font-normal leading-tight break-words">
                             Popular
                           </div>
                         </div>
@@ -188,9 +188,8 @@ function PricingSection() {
                     <div className="self-stretch flex flex-col justify-start items-start gap-1">
                       <div className="flex justify-start items-center gap-1.5">
                         <div
-                          className={`relative h-10 flex items-center text-3xl font-medium leading-10 ${
-                            plan.popular ? "text-primary-foreground" : "text-zinc-50"
-                          }`}
+                          className={`relative h-10 flex items-center text-3xl font-medium leading-10 ${plan.popular ? "text-primary-foreground" : "text-zinc-50"
+                            }`}
                         >
                           <span className="invisible">{isAnnual ? plan.annualPrice : plan.monthlyPrice}</span>
                           <span
@@ -217,17 +216,15 @@ function PricingSection() {
                           </span>
                         </div>
                         <div
-                          className={`text-center text-sm font-medium leading-tight ${
-                            plan.popular ? "text-primary-foreground/70" : "text-zinc-400"
-                          }`}
+                          className={`text-center text-sm font-medium leading-tight ${plan.popular ? "text-primary-foreground/70" : "text-zinc-400"
+                            }`}
                         >
-                          /month
+
                         </div>
                       </div>
                       <div
-                        className={`self-stretch text-sm font-medium leading-tight ${
-                          plan.popular ? "text-primary-foreground/70" : "text-zinc-400"
-                        }`}
+                        className={`self-stretch text-sm font-medium leading-tight ${plan.popular ? "text-primary-foreground/70" : "text-zinc-400"
+                          }`}
                       >
                         {plan.description}
                       </div>
@@ -236,13 +233,12 @@ function PricingSection() {
                   <Button className={`self-stretch px-5 py-2 rounded-[40px] flex justify-center items-center ${plan.buttonClass}`}>
                     <div className="px-1.5 flex justify-center items-center gap-2">
                       <span
-                        className={`text-center text-sm font-medium leading-tight ${
-                          plan.name === "Free"
+                        className={`text-center text-sm font-medium leading-tight ${plan.name === "Free"
                             ? "text-gray-800"
                             : plan.name === "Pro"
-                            ? "text-primary"
-                            : "text-zinc-950"
-                        }`}
+                              ? "text-primary"
+                              : "text-zinc-950"
+                          }`}
                       >
                         {plan.buttonText}
                       </span>
@@ -251,27 +247,24 @@ function PricingSection() {
                 </div>
                 <div className="self-stretch flex flex-col justify-start items-start gap-4">
                   <div
-                    className={`self-stretch text-sm font-medium leading-tight ${
-                      plan.popular ? "text-primary-foreground/70" : "text-muted-foreground"
-                    }`}
+                    className={`self-stretch text-sm font-medium leading-tight ${plan.popular ? "text-primary-foreground/70" : "text-muted-foreground"
+                      }`}
                   >
-                    {plan.name === "Free" ? "Get Started today:" : "Everything in Free +"}
+                    {plan.name === "Free" ? "Get Started today:" : "Features +"}
                   </div>
                   <div className="self-stretch flex flex-col justify-start items-start gap-3">
                     {plan.features.map((feature) => (
                       <div key={feature} className="self-stretch flex justify-start items-center gap-2">
                         <div className="w-4 h-4 flex items-center justify-center">
                           <Check
-                            className={`w-full h-full ${
-                              plan.popular ? "text-primary-foreground" : "text-muted-foreground"
-                            }`}
+                            className={`w-full h-full ${plan.popular ? "text-primary-foreground" : "text-muted-foreground"
+                              }`}
                             strokeWidth={2}
                           />
                         </div>
                         <div
-                          className={`leading-tight font-normal text-sm text-left ${
-                            plan.popular ? "text-primary-foreground" : "text-muted-foreground"
-                          }`}
+                          className={`leading-tight font-normal text-sm text-left ${plan.popular ? "text-primary-foreground" : "text-muted-foreground"
+                            }`}
                         >
                           {feature}
                         </div>

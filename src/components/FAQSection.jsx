@@ -3,34 +3,44 @@ import { ChevronDown } from 'lucide-react';
 
 const faqData = [
   {
-    question: "What is React and what does it do?",
+    question: "What technologies do you specialize in?",
     answer:
-      "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library that aims to make building user interfaces based on components more seamless. It is maintained by Meta (formerly Facebook) and a community of individual developers and companies.",
+      "I specialize in front-end development using React and TailwindCSS, creating responsive, high-performance, and modern user interfaces.",
   },
   {
-    question: "Do you provide hosting, security, and maintenance?",
+    question: "How do you handle project pricing?",
     answer:
-      "Absolutely. We provide secure hosting with encryption-level protection. As part of building your website, we also offer ongoing maintenance, updates, and upgrades to ensure your platform stays modern, safe, and fully functional.",
+      " I offer hourly rates starting at £35+, quick build packages from £500 to £1500, and full website builds starting at £1500+. For milestone pricing or custom quotes, feel free to contact me directly.",
   },
   {
-    question: "Can I integrate Pointer with my existing tools?",
+    question: "Can you help with website refreshes or updates?",
     answer:
-      "Yes! Pointer offers one-click integrations with popular development tools including GitHub, GitLab, VS Code, Slack, and many more. Our MCP connectivity allows you to easily manage and configure server access across your entire development stack.",
+      "Absolutely! Whether you need a full rebuild or just want to refresh your current front-end with modern React and Tailwind designs, I can tailor a solution that fits your needs.",
   },
   {
-    question: "What's included in the free plan?",
+    question: "How do you respond to customers asking for quotes?",
     answer:
-      "The free plan includes real-time code suggestions, basic integrations, single MCP server connection, up to 2 AI coding agents, and Vercel deployments with Pointer branding. It's perfect for individual developers getting started.",
+      "When a customer asks for a quote via the contact form or email, I usually start by arranging a discovery call to understand their project requirements, goals, scope, budget, and timeline. This helps me provide an accurate, tailored estimate. After clarifying the details, I follow up with a proposal outlining the work, pricing, and next steps. Once we’re aligned, we get started and maintain open communication throughout the project.",
   },
   {
-    question: "How do parallel coding agents work?",
+    question: "Will you collaborate with my backend team?",
     answer:
-      "Our parallel coding agents can work on different parts of your codebase simultaneously, solving complex problems faster than traditional single-threaded approaches. You can launch multiple agents to handle different tasks like bug fixes, feature development, and code optimization concurrently.",
+      "Yes, I focus exclusively on front-end development and am happy to work closely with your backend developers, especially on any exciting projects.",
   },
   {
-    question: "Is my code secure with Pointer?",
+    question: "What is the typical turnaround time for projects?",
     answer:
-      "Absolutely. We use enterprise-grade security measures including end-to-end encryption, secure data transmission, and compliance with industry standards. Your code never leaves your secure environment without your explicit permission, and we offer on-premises deployment options for enterprise customers.",
+      "Turnaround times depend on the project scope. Quick builds can take a few weeks, while full websites may take a month or more. I’ll provide an estimated timeline during project discussions.",
+  },
+  {
+    question: "Can you customize packages if I have specific needs?",
+    answer:
+      "Definitely! I’m flexible and can tailor packages or pricing to fit your project requirements. Just get in touch to discuss your needs.",
+  },
+   {
+    question: "How do you communicate during projects?",
+    answer:
+      "I communicate primarily via Slack for quick and direct messaging, complemented by email and scheduled calls to ensure clear and timely project updates",
   },
 ];
 

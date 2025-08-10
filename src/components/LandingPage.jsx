@@ -96,9 +96,9 @@ const LandingPage = () => {
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(128,0,255,0.15)_0%,transparent_70%)] pointer-events-none" />
      <section
   id="home"
-  className="relative h-screen bg-gradient-to-br from-purple-800/40 via-black to-black pt-24 sm:pt-32 lg:pt-40 flex items-center justify-center px-4 sm:px-6 lg:px-8 min-h-screen"
+  className="relative bg-gradient-to-br from-purple-800/40 via-black to-black pt-24 sm:pt-32 lg:pt-40 flex items-center justify-center px-4 sm:px-6 lg:px-8 min-h-screen"
 >
-        <div className="z-20 text-center max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto">
+        <div className="z-20 text-center max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto bg-clip-text">
           {/* Smaller Heading */}
           <h2
             className="font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight"

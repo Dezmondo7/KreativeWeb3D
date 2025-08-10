@@ -3,14 +3,14 @@ import { ChevronDown } from 'lucide-react';
 
 const faqData = [
   {
-    question: "What technologies do you specialize in?",
+    question: "What’s the Real Difference Between React and WordPress?",
     answer:
-      "I specialize in front-end development using React and TailwindCSS, creating responsive, high-performance, and modern user interfaces.",
+      "React is perfect if you want a fast, modern, and fully custom website built just for your business — especially if you want interactive features or a smooth, app-like experience. WordPress is mostly built around drag-and-drop tools, so a lot of sites end up looking pretty similar and have the same basic features.",
   },
   {
     question: "How do you handle project pricing?",
     answer:
-      " I offer hourly rates starting at £35+, quick build packages from £500 to £1500, and full website builds starting at £1500+. For milestone pricing or custom quotes, feel free to contact me directly.",
+      "I offer hourly rates starting at £35+, start-up packages from £500 to £1500, and full website builds starting at £1500+. For milestone pricing or custom quotes, feel free to contact me directly.",
   },
   {
     question: "Can you help with website refreshes or updates?",
@@ -20,7 +20,7 @@ const faqData = [
   {
     question: "How do you respond to customers asking for quotes?",
     answer:
-      "When a customer asks for a quote via the contact form or email, I usually start by arranging a discovery call to understand their project requirements, goals, scope, budget, and timeline. This helps me provide an accurate, tailored estimate. After clarifying the details, I follow up with a proposal outlining the work, pricing, and next steps. Once we’re aligned, we get started and maintain open communication throughout the project.",
+      "When a customer asks for a quote via the contact form or email, I usually start by arranging a discovery call to understand their project requirements. This helps me provide an accurate, tailored estimate. After clarifying the details, I follow up with a proposal outlining the work, pricing, and next steps. Once we’re aligned, we get started and maintain open communication throughout the project.",
   },
   {
     question: "Will you collaborate with my backend team?",

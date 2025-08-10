@@ -68,7 +68,7 @@ function PricingSection() {
       name: "Elevated",
       monthlyPrice: "$200",
       annualPrice: "£1500+",
-      description: "Elevate your brand with our Ultra front-end package.",
+      description: "Elevate your brand to the next level with our Ultra front-end package.",
       features: [
         "Ideal for website builds or front-end refreshes",
         "Full Multi-page website",

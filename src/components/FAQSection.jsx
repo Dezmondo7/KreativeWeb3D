@@ -3,19 +3,29 @@ import { ChevronDown } from 'lucide-react';
 
 const faqData = [
   {
-    question: "What’s the Real Difference Between React and WordPress?",
+    question: "What’s the real difference between React and WordPress?",
     answer:
       "React is perfect if you want a fast, modern, and fully custom website built just for your business — especially if you want interactive features or a smooth, app-like experience. WordPress is mostly built around drag-and-drop tools, so a lot of sites end up looking pretty similar and have the same basic features.",
+  },
+   {
+    question: "Can you help with website refreshes or updates?",
+    answer:
+      "Absolutely! Whether you need a full rebuild or just want to refresh your current front-end with modern React and Tailwind designs, I can tailor a solution that fits your needs.",
   },
   {
     question: "How do you handle project pricing?",
     answer:
       "I offer hourly rates starting at £35+, start-up packages from £500 to £1500, and full website builds starting at £1500+. For milestone pricing or custom quotes, feel free to contact me directly.",
   },
-  {
-    question: "Can you help with website refreshes or updates?",
+    {
+    question: "Can you customize packages if I have specific needs?",
     answer:
-      "Absolutely! Whether you need a full rebuild or just want to refresh your current front-end with modern React and Tailwind designs, I can tailor a solution that fits your needs.",
+      "Definitely! I’m flexible and can tailor packages or pricing to fit your project requirements. Just get in touch to discuss your needs.",
+  },
+   {
+    question: "What is the typical turnaround time for projects?",
+    answer:
+      "Turnaround times depend on the project scope. Quick builds can take a few weeks, while full websites may take a month or more. I’ll provide an estimated timeline during project discussions.",
   },
   {
     question: "How do you respond to customers asking for quotes?",
@@ -23,24 +33,14 @@ const faqData = [
       "When a customer asks for a quote via the contact form or email, I usually start by arranging a discovery call to understand their project requirements. This helps me provide an accurate, tailored estimate. After clarifying the details, I follow up with a proposal outlining the work, pricing, and next steps. Once we’re aligned, we get started and maintain open communication throughout the project.",
   },
   {
-    question: "Will you collaborate with my backend team?",
-    answer:
-      "Yes, I focus exclusively on front-end development and am happy to work closely with your backend developers, especially on any exciting projects.",
-  },
-  {
-    question: "What is the typical turnaround time for projects?",
-    answer:
-      "Turnaround times depend on the project scope. Quick builds can take a few weeks, while full websites may take a month or more. I’ll provide an estimated timeline during project discussions.",
-  },
-  {
-    question: "Can you customize packages if I have specific needs?",
-    answer:
-      "Definitely! I’m flexible and can tailor packages or pricing to fit your project requirements. Just get in touch to discuss your needs.",
-  },
-   {
     question: "How do you communicate during projects?",
     answer:
       "I communicate primarily via Slack for quick and direct messaging, complemented by email and scheduled calls to ensure clear and timely project updates",
+  },
+  {
+    question: "Will you collaborate with my backend team?",
+    answer:
+      "Yes, I focus exclusively on front-end development and am happy to work closely with your backend developers, especially on any exciting projects.",
   },
 ];
 

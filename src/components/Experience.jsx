@@ -88,7 +88,7 @@ const Experience = () => {
                           {card.date}
                         </p>
 
-                        <ul className="list-disc ms-5 mt-5 flex flex-col gap-4 text-gray-400 text-base leading-relaxed">
+                        <ul className="list-disc ms-5 mt-5 flex flex-col gap-4 text-gray-4200 text-base leading-relaxed">
                           {card.responsibilities.map((responsibility) => (
                             <li key={responsibility}>
                               {responsibility}

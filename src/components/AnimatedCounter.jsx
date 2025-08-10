@@ -50,7 +50,7 @@ const CountUp = ({ end, suffix = "", duration = 2000 }) => {
   return (
     <div
       ref={elementRef}
-      className="counter-number text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-purple-500 text-6xl font-bold mb-4 tracking-tight"
+      className="counter-number bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-purple-500 text-6xl font-bold mb-4 tracking-tight"
     >
       {count.toLocaleString()}
       {suffix}

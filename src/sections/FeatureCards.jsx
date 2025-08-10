@@ -40,8 +40,14 @@ const FeatureCards = () => {
       <div className="relative z-10 mt-10">
         {/* Glow Blob Positioned Behind Cards */}
         <div className="absolute top-[50%] left-[20%] w-[200px] h-[200px] bg-purple-600/20 blur-[120px] rounded-full z-0 pointer-events-none" />
-        <div className="absolute bottom-[65%] right-[10%] w-[400px] h-[200px] bg-purple-600/20 blur-[120px] rounded-full z-0 pointer-events-none" />
+        <div className="absolute bottom-[65%] right-[10%] w-[400px] h-[200px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />  
+        <div className="absolute bottom-[15%] right-[10%] w-[400px] h-[300px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />
+        <div className="absolute bottom-[65%] right-[70%] w-[400px] h-[450px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />
+         <div className="absolute bottom-[60%] right-[40%] w-[200px] h-[300px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />
+          <div className="absolute bottom-[10%] right-[80%] w-[200px] h-[200px] bg-purple-600/20 blur-[120px] rounded-full z-0 pointer-events-none" />
 
+
+        {/* Cards Grid */}
         {/* Cards Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 relative z-10">
           {abilities.map(({ imgPath, title, desc }, index) => (

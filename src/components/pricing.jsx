@@ -30,8 +30,8 @@ function PricingSection() {
   const pricingPlans = [
     {
       name: "Freelance",
-      monthlyPrice: "£30-45 per hour",
-      annualPrice: "£30-45 per hour",
+      monthlyPrice: "£30-45/hr",
+      annualPrice: "£30-45/hr",
       description: "Ideal for custom React and Tailwind components & interactive features.",
       features: [
         "Responsive UI development with React & TailwindCSS",

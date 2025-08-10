@@ -56,11 +56,11 @@ const AboutMe = () => {
           {/* Updated paragraph font size & color */}
           <div className="max-w-3xl mx-auto space-y-6">
             
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-200 leading-relaxed">
               Hi, I’m Dale — a front-end web developer specializing in React with 8+ years of IT experience. I’ve supported enterprise clients like Müller and Evri (Hermes) on technology projects, bringing valuable business insight to every collaboration. 
             </p>
 
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-200 leading-relaxed">
              Certified with a 98% score in front-end development via edX, I build responsive, engaging digital experiences that help businesses grow. When I’m not working on client projects, I’m exploring the latest web technologies, contributing to open-source projects, or enjoying a good cup of coffee while experimenting with new front-end tools. I believe in the power of clean code, intuitive user interfaces, and the magic that happens when creativity meets functionality.
             </p>
           </div>

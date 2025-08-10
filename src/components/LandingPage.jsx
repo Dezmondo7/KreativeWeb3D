@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react"
 
-// Falling Particles Component
+// Starfield Component
 const Starfield = () => {
   const [stars, setStars] = useState([])
 
@@ -9,17 +9,25 @@ const Starfield = () => {
     const isMobile = window.innerWidth < 768
     const numStars = isMobile ? 60 : 150
 
-    const createStar = () => ({
+    const createStar = (large = false) => ({
       id: Math.random(),
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
-      size: Math.random() * 2 + 0.5,
-      opacity: Math.random() * 0.5 + 0.3,
-      speedX: (Math.random() - 0.5) * 0.2,
-      speedY: (Math.random() - 0.5) * 0.2,
+      size: large
+        ? Math.random() * 4 + 2     // Larger: 2px–6px
+        : Math.random() * 2 + 0.5,  // Small: 0.5px–2.5px
+      opacity: large
+        ? Math.random() * 0.4 + 0.6 // Brighter for big stars
+        : Math.random() * 0.5 + 0.3,
+      speedX: (Math.random() - 0.5) * 0.15,
+      speedY: (Math.random() - 0.5) * 0.15,
     })
 
-    const initialStars = Array.from({ length: numStars }, createStar)
+    // 80% small stars, 20% large stars
+    const smallStars = Array.from({ length: Math.floor(numStars * 0.9) }, () => createStar(false))
+    const bigStars = Array.from({ length: Math.floor(numStars * 0.1) }, () => createStar(true))
+    const initialStars = [...smallStars, ...bigStars]
+
     setStars(initialStars)
 
     let animationFrameId
@@ -59,8 +67,11 @@ const Starfield = () => {
             width: `${star.size}px`,
             height: `${star.size}px`,
             opacity: star.opacity,
-            backgroundColor: `hsl(${Math.random() * 360}, 100%, 80%)`,
-            filter: "blur(0.5px)",
+            backgroundColor: `white`,
+            filter:
+              star.size > 3
+                ? "blur(1px) drop-shadow(0 0 4px white)" // Glow for large stars
+                : "blur(0.5px)",
             transition: "transform 0.1s ease-out",
           }}
         />
@@ -94,10 +105,10 @@ const LandingPage = () => {
 
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(0,255,255,0.07)_0%,transparent_70%)] pointer-events-none " />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(128,0,255,0.15)_0%,transparent_70%)] pointer-events-none" />
-     <section
-  id="home"
-  className="relative bg-gradient-to-br from-purple-800/40 via-black to-black pt-24 sm:pt-32 lg:pt-40 flex items-center justify-center px-4 sm:px-6 lg:px-8 min-h-screen"
->
+      <section
+        id="home"
+        className="relative bg-gradient-to-br from-purple-800/40 via-black to-black pt-24 sm:pt-32 lg:pt-40 flex items-center justify-center px-4 sm:px-6 lg:px-8 min-h-screen"
+      >
         <div className="z-20 text-center max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto bg-clip-text">
           {/* Smaller Heading */}
           <h2
@@ -116,7 +127,7 @@ const LandingPage = () => {
           </h1>
 
           {/* Subtext */}
-          <p className="text-base sm:text-lg text-gray-400 mt-6 max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2">
+          <p className="text-base sm:text-lg text-gray-100 mt-6 max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2">
             Launching or leveling up? Discover the power of modern web design & development. Freelance-crafted, interactive React websites that look sharp, run fast, and leave a lasting impression.
           </p>
 

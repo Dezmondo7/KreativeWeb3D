@@ -29,7 +29,7 @@ const AboutMe = () => {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 mt-20 mb-20"
+      className="min-h-screen flex items-center justify-center px-4"
     >
       <div className="max-w-4xl mx-auto text-center">
         <div className="space-y-12">

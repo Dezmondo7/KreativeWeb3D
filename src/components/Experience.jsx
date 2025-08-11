@@ -62,7 +62,7 @@ const Experience = () => {
           >
             Reakt Web Design
           </h2>
-          <p className="text-gray-400 text-lg mt-0  mb-20 md:mb-30 leading-normal">
+          <p className="dancing-script mt-0  mb-20 md:mb-30 leading-normal">
             Unique Creations
           </p>
         </div>

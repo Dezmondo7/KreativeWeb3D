@@ -29,7 +29,7 @@ const AboutMe = () => {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:m-20 mt-40"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 mt-20 mb-20"
     >
       <div className="max-w-4xl mx-auto text-center">
         <div className="space-y-12">
@@ -55,7 +55,6 @@ const AboutMe = () => {
 
           {/* Updated paragraph font size & color */}
           <div className="max-w-3xl mx-auto space-y-6">
-            <div className="absolute bottom-[15%] right-[10%] w-[400px] h-[300px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />
             
             <p className="text-sm text-gray-200 leading-relaxed">
               Hi, I’m Dale — a front-end web developer specializing in React with 8+ years of IT experience. I’ve supported enterprise clients like Müller and Evri (Hermes) on technology projects, bringing valuable business insight to every collaboration. 

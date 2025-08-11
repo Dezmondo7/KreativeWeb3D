@@ -9,8 +9,8 @@ const cardVariants = {
 
 const FeatureCards = () => {
   return (
-    <div className="relative w-full max-w-screen-xl mx-auto px-6 mt-40" id="services">
-      {/* Section Title */}
+    <div className="relative w-full max-w-screen-xl mx-auto px-6 mt-40 " id="services">
+      {/* Section Title 
       <div className="text-center p-8 relative z-10">
         <h1
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight transition-all duration-300 hover:scale-105"
@@ -34,17 +34,27 @@ const FeatureCards = () => {
         >
           Services
         </h1>
+      </div> */}
+
+      <div className="text-center max-w-2xl mx-auto">
+        <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 sm:mt-20 mt-40">
+          Services
+        </h2>
+        <p className="text-gray-400 text-lg">
+          {/* Optional tagline */}
+        </p>
       </div>
+
 
       {/* Card Grid with Glow Background */}
       <div className="relative z-10 mt-10">
         {/* Glow Blob Positioned Behind Cards */}
         <div className="absolute top-[50%] left-[20%] w-[200px] h-[200px] bg-purple-600/20 blur-[120px] rounded-full z-0 pointer-events-none" />
-        <div className="absolute bottom-[65%] right-[10%] w-[400px] h-[200px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />  
+        <div className="absolute bottom-[65%] right-[10%] w-[400px] h-[200px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />
         <div className="absolute bottom-[15%] right-[10%] w-[400px] h-[300px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />
         <div className="absolute bottom-[65%] right-[70%] w-[400px] h-[450px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />
-         <div className="absolute bottom-[60%] right-[40%] w-[200px] h-[300px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />
-          <div className="absolute bottom-[10%] right-[80%] w-[200px] h-[200px] bg-purple-600/20 blur-[120px] rounded-full z-0 pointer-events-none" />
+        <div className="absolute bottom-[60%] right-[40%] w-[200px] h-[300px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />
+        <div className="absolute bottom-[10%] right-[80%] w-[200px] h-[200px] bg-purple-600/20 blur-[120px] rounded-full z-0 pointer-events-none" />
 
 
         {/* Cards Grid */}

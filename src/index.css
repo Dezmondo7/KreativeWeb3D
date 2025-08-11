@@ -32,6 +32,13 @@
   
 }
 
+@layer utilities {
+  .fluid-title {
+    font-size: clamp(2rem, 1.5rem + 2vw, 3.5rem); /* 32px → fluid → 56px */
+    line-height: 1.1;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -83,7 +90,7 @@ section {
   }
 
   .section-padding {
-    @apply px-5 md:px-10 sm:pt-20;
+    @apply px-5 md:px-10;
   }
 
   .mt-responsive {

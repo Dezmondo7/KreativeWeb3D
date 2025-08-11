@@ -54,12 +54,25 @@ const Experience = () => {
   }, []);
 
   return (
-    <section id="about" className="w-full md:mt-40 mt-20 section-padding xl:px-0">
-      <div className="w-full h-full md:px-20 px-5 mt-20">
-        <TitleHeader title="Reakt Web Design" sub="" />
+    <section id="about" className="w-full section-padding xl:px-0">
+      <div className="w-full h-full md:px-20 px-5">
+        {/*}  <TitleHeader title="Reakt Web Design" sub="" /> */}
+        <div className="text-center max-w-2xl mx-auto">
+          <h2
+            className="mt-20 md:mt-30 lg:mt-40 text-4xl md:text-5xl font-extrabold mb-20 bg-gradient-to-r from-cyan-400 to-purple-600 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.4)] tracking-wide"
+          >
+            Reakt Web Design
+          </h2>
+          <p className="text-gray-400 text-lg mt-5">
+            {/* Optional tagline */}
+          </p>
+        </div>
+
 
         <div className="relative">
-          <div className="relative z-50 xl:space-y-32 space-y-10 mt-40">
+
+          <div className="relative z-50 xl:space-y-32 space-y-10">
+
             {expCards.map((card, index) => (
               <div key={card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6">

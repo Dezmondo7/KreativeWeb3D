@@ -63,14 +63,14 @@ function BentoCard({ title, description }) {
 // ✅ This is the actual exported section component
 function ReactSection() {
   return (
-    <section className="relative w-full py-20 px-5 bg-gradient-to-br from-black to-black-900/20 mt-40">
+    <section className="relative w-full py-20 px-5 bg-gradient-to-br from-black to-black-900/20">
       {/* Glow blob background */}
       <div className="absolute top-[50%] left-[30%] w-[400px] h-[600px] bg-purple-600/20 blur-[100px] rounded-full z-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center gap-12">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-white text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 mt-20 md:mt-30 lg:mt-40">
             Empower Your Website with React
           </h2>
           <p className="text-gray-400 text-lg">

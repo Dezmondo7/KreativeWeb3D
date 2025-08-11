@@ -9,42 +9,16 @@ const cardVariants = {
 
 const FeatureCards = () => {
   return (
-    <div className="relative w-full max-w-screen-xl mx-auto px-6 mt-40 " id="services">
-      {/* Section Title 
-      <div className="text-center p-8 relative z-10">
-        <h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight transition-all duration-300 hover:scale-105"
-          style={{
-            animation: 'float 3s ease-in-out infinite',
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.animationPlayState = 'paused';
-            e.target.style.transform = 'translateY(-10px) scale(1.05)';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.animationPlayState = 'running';
-            e.target.style.transform = 'translateY(0) scale(1)';
-          }}
-          onClick={(e) => {
-            e.target.style.transform = 'translateY(-15px) scale(1.1)';
-            setTimeout(() => {
-              e.target.style.transform = 'translateY(0) scale(1)';
-            }, 500);
-          }}
-        >
-          Services
-        </h1>
-      </div> */}
-
+    <div className="relative w-full max-w-screen-xl mx-auto px-6 mt-40" id="services">
+      {/* Section Title */}
       <div className="text-center max-w-2xl mx-auto">
-        <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 sm:mt-20 mt-40">
+        <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 mt-20 md:mt-30 lg:mt-40">
           Services
         </h2>
         <p className="text-gray-400 text-lg">
-          {/* Optional tagline */}
+          Complete Web Services, Design, Develop & Secure.
         </p>
       </div>
-
 
       {/* Card Grid with Glow Background */}
       <div className="relative z-10 mt-10">
@@ -56,8 +30,6 @@ const FeatureCards = () => {
         <div className="absolute bottom-[60%] right-[40%] w-[200px] h-[300px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />
         <div className="absolute bottom-[10%] right-[80%] w-[200px] h-[200px] bg-purple-600/20 blur-[120px] rounded-full z-0 pointer-events-none" />
 
-
-        {/* Cards Grid */}
         {/* Cards Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 relative z-10">
           {abilities.map(({ imgPath, title, desc }, index) => (

@@ -98,33 +98,11 @@ const AboutMe = () => {
                     <span className="text-2xl">{skill.icon}</span>
                     <h4 className="font-semibold text-white">{skill.name}</h4>
                   </div>
-               {/*   <div className="flex items-center justify-between">
-                    <span
-                      className={`px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${getLevelColor(skill.level)} text-white`}
-                    >
-                      {skill.level}
-                    </span>
-                  </div> */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-purple-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+             
+                  
                 </div>
               ))}
             </div>
-
-            {/* Extra Traits */}
-          {/*}  <div className="flex flex-wrap justify-center gap-3 pt-6">
-              <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full cursor-default text-sm font-medium text-gray-300 border border-white/20">
-                🎯 Problem Solver
-              </span>
-              <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full cursor-default text-sm font-medium text-gray-300 border border-white/20">
-                🚀 Fast Learner
-              </span>
-              <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full cursor-default text-sm font-medium text-gray-300 border border-white/20">
-                💡 Creative Thinker
-              </span>
-              <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full cursor-default text-sm font-medium text-gray-300 border border-white/20">
-                🤝 Team Player
-              </span>
-            </div> */}
           </div>
         </div>
       </div>

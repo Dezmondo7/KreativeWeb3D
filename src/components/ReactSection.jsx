@@ -65,7 +65,7 @@ function ReactSection() {
   return (
     <section className="relative w-full py-20 px-5 bg-gradient-to-br from-black to-black-900/20">
       {/* Glow blob background */}
-      <div className="absolute top-[50%] left-[30%] w-[400px] h-[600px] bg-purple-600/20 blur-[100px] rounded-full z-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      <div className="absolute top-[60%] left-[25%] w-[400px] h-[500px] bg-purple-600/20 blur-[100px] rounded-full z-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center gap-12">
         {/* Header */}

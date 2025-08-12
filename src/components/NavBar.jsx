@@ -156,7 +156,7 @@ const NavBar = () => {
 
                     {/* Right - contact Button & Burger Menu */}
                     <div className="flex items-center gap-4">
-                        <a href="#contact" className="contact-btn group hidden md:flex">
+                        <a href="#contact" className="contact-btn group hidden lg:flex">
                             <div className="inner">
                                 <span>Start Project</span>
                             </div>
@@ -164,12 +164,12 @@ const NavBar = () => {
 
                         {/* Burger Menu - appears on small screens only */}
                         {!isOpen && (
-                            <div onClick={toggleMenu} className="cursor-pointer md:hidden">
+                            <div onClick={toggleMenu} className="cursor-pointer lg:hidden">
                                 <HiMenu size={30} />
                             </div>
                         )}
                         {isOpen && (
-                            <div onClick={toggleMenu} className="cursor-pointer md:hidden z-20">
+                            <div onClick={toggleMenu} className="cursor-pointer lg:hidden z-20">
                                 <IoClose size={30} />
                             </div>
                         )}

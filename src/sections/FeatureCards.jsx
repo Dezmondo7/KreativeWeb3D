@@ -13,15 +13,37 @@ const ServiceCard = ({ imgPath, title, desc, index, isMobile, autoStart }) => {
   const isTypingRef = useRef(false);
   const intervalRef = useRef(null);
   const charIndexRef = useRef(0);
+  const isMounted = useRef(true);
+  const containerRef = useRef(null);
+  const [inView, setInView] = useState(false);
   const TYPING_SPEED = 20;
 
   useEffect(() => {
-    charIndexRef.current = displayText.length;
-  }, [displayText]);
+    isMounted.current = true;
+    return () => {
+      isMounted.current = false;
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, []);
 
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3,
+      }
+    );
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
     return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
     };
   }, []);
 
@@ -32,23 +54,28 @@ const ServiceCard = ({ imgPath, title, desc, index, isMobile, autoStart }) => {
     intervalRef.current = setInterval(() => {
       const i = charIndexRef.current;
       if (i < desc.length) {
-        setDisplayText((prev) => prev + desc.charAt(i));
+        if (isMounted.current) {
+          setDisplayText((prev) => prev + desc.charAt(i));
+        }
         charIndexRef.current += 1;
       }
       if (charIndexRef.current >= desc.length) {
         clearInterval(intervalRef.current);
         intervalRef.current = null;
         isTypingRef.current = false;
-        setDone(true);
+        if (isMounted.current) {
+          setDone(true);
+        }
       }
     }, TYPING_SPEED);
   };
 
+  // Trigger typing only if on mobile, autoStart is true, and card is in view
   useEffect(() => {
-    if (isMobile && autoStart) {
+    if (isMobile && autoStart && inView) {
       startTyping();
     }
-  }, [isMobile, autoStart]);
+  }, [isMobile, autoStart, inView]);
 
   const handleMouseEnter = () => {
     if (!isMobile) {
@@ -58,10 +85,9 @@ const ServiceCard = ({ imgPath, title, desc, index, isMobile, autoStart }) => {
 
   return (
     <motion.div
+      ref={containerRef}
       key={title}
-      className={`relative overflow-hidden rounded-2xl border border-white/10 flex flex-col justify-start items-start bg-[rgba(255,255,255,0.05,)] backdrop-blur-md hover:border-white/20 transition duration-500 p-8 gap-4 ${
-        index === 0 ? 'shimmer-effect' : ''
-      }`}
+      className="relative overflow-hidden rounded-2xl border border-white/10 flex flex-col justify-start items-start bg-[rgba(255,255,255,0.05,)] backdrop-blur-md hover:border-white/20 transition duration-500 p-8 gap-4"
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
@@ -77,38 +103,6 @@ const ServiceCard = ({ imgPath, title, desc, index, isMobile, autoStart }) => {
       </div>
       <h3 className="relative z-10 text-white text-lg font-semibold">{title}</h3>
       <p className="relative z-10 text-gray-400 text-sm leading-relaxed">{displayText}</p>
-
-      <style jsx>{`
-        .shimmer-effect {
-          position: relative;
-          overflow: hidden;
-        }
-        .shimmer-effect::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: -150%;
-          height: 100%;
-          width: 150%;
-          background: linear-gradient(
-            120deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.15) 50%,
-            rgba(255, 255, 255, 0) 100%
-          );
-          animation: shimmer 2.5s infinite;
-          pointer-events: none;
-          z-index: 20;
-        }
-        @keyframes shimmer {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-      `}</style>
     </motion.div>
   );
 };
@@ -117,6 +111,7 @@ const FeatureCards = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [autoStartIndex, setAutoStartIndex] = useState(0);
 
+  // Detect mobile/tablet screen size
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 1366);
     checkMobile();
@@ -124,10 +119,12 @@ const FeatureCards = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Auto-type cards sequentially on mobile/tablet
   useEffect(() => {
     if (!isMobile) return;
 
     if (autoStartIndex < abilities.length) {
+      // Trigger next card's autoStart after previous finishes + 500ms pause
       const timeout = setTimeout(() => {
         setAutoStartIndex((prev) => prev + 1);
       }, (abilities[autoStartIndex]?.desc.length ?? 0) * 20 + 500);
@@ -143,7 +140,9 @@ const FeatureCards = () => {
         <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 mt-20 md:mt-30 lg:mt-40">
           Services
         </h2>
-        <p className="text-gray-400 text-lg">Complete Web Services, Design, Develop & Secure.</p>
+        <p className="text-gray-400 text-lg">
+          Complete Web Services, Design, Develop & Secure.
+        </p>
       </div>
 
       {/* Card Grid with Glow Background */}

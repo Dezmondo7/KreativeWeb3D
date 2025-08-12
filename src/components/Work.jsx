@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import LetterR from "../assets/letter-r.png";
 import FlickFinderVideo from "../assets/FlickFinderVideo.mp4";
+import CrtImage from '../assets/CuratedImg.png'
 
 const projects = [
   {
@@ -17,35 +18,14 @@ const projects = [
     title: "Sleek Web Experience",
     description: "Creative landing page for a Movie Finder App",
     videoUrl: FlickFinderVideo,
-    category: "Web Design",
+    category: "Web & Brand Design",
   },
   {
     id: 3,
     title: "Intuitive Mobile App",
     description: "User-friendly app design for a health and wellness company",
-    imageUrl: "/placeholder.svg",
-    category: "Mobile App",
-  },
-  {
-    id: 4,
-    title: "Elegant Digital Campaign",
-    description: "Sophisticated marketing strategy for a luxury automotive brand",
-    imageUrl: "/placeholder.svg",
-    category: "Digital Marketing",
-  },
-  {
-    id: 5,
-    title: "Refined UI/UX Design",
-    description: "Streamlined user interfaces for a financial services platform",
-    imageUrl: "/placeholder.svg",
-    category: "UI/UX",
-  },
-  {
-    id: 6,
-    title: "Minimalist Product Design",
-    description: "Sleek and functional design for a smart home device",
-    imageUrl: "/placeholder.svg",
-    category: "Product Design",
+    imageUrl: CrtImage,
+    category: "Mobile & Web App",
   },
 ];
 
@@ -82,14 +62,14 @@ const LazyImageCard = ({ item }) => {
       <div className="p-6">
         <div className="text-sm font-medium text-primary mb-1">{item.category}</div>
         <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
-        <a
+        {/*} <a
           href="https://www.flowersandsaints.com.au"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary hover:underline inline-flex items-center"
         >
-          View Project
-          <svg
+          
+         <svg
             className="w-4 h-4 ml-2"
             fill="none"
             stroke="currentColor"
@@ -98,7 +78,7 @@ const LazyImageCard = ({ item }) => {
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
-        </a>
+        </a> */}
       </div>
     </motion.div>
   );
@@ -132,7 +112,7 @@ const LazyVideoCard = ({ item }) => {
       <div className="p-6">
         <div className="text-sm font-medium text-primary mb-1">{item.category}</div>
         <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
-        <a
+        {/*<a
           href="#"
           className="text-primary hover:underline inline-flex items-center"
         >
@@ -146,7 +126,7 @@ const LazyVideoCard = ({ item }) => {
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
-        </a>
+        </a> */}
       </div>
     </motion.div>
   );
@@ -167,8 +147,9 @@ const PortfolioGrid = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Our Work</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+
+          <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 mt-20 md:mt-30 lg:mt-40">Our Work</h2>
+          <p className="text-gray-400 text-lg">
             A showcase of our minimalist designs and creative solutions.
           </p>
         </motion.div>
@@ -179,7 +160,7 @@ const PortfolioGrid = () => {
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={`cursor-pointer px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 filter === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-secondary-foreground hover:bg-secondary/80"

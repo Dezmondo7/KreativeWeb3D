@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { abilities } from '../constants/index.js';
 import { motion } from 'framer-motion';
 
@@ -7,7 +7,135 @@ const cardVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
 
+const ServiceCard = ({ imgPath, title, desc, index, isMobile, autoStart }) => {
+  const [displayText, setDisplayText] = useState('');
+  const [done, setDone] = useState(false);
+  const isTypingRef = useRef(false);
+  const intervalRef = useRef(null);
+  const charIndexRef = useRef(0);
+  const TYPING_SPEED = 20;
+
+  useEffect(() => {
+    charIndexRef.current = displayText.length;
+  }, [displayText]);
+
+  useEffect(() => {
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, []);
+
+  const startTyping = () => {
+    if (done || isTypingRef.current) return;
+
+    isTypingRef.current = true;
+    intervalRef.current = setInterval(() => {
+      const i = charIndexRef.current;
+      if (i < desc.length) {
+        setDisplayText((prev) => prev + desc.charAt(i));
+        charIndexRef.current += 1;
+      }
+      if (charIndexRef.current >= desc.length) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+        isTypingRef.current = false;
+        setDone(true);
+      }
+    }, TYPING_SPEED);
+  };
+
+  useEffect(() => {
+    if (isMobile && autoStart) {
+      startTyping();
+    }
+  }, [isMobile, autoStart]);
+
+  const handleMouseEnter = () => {
+    if (!isMobile) {
+      startTyping();
+    }
+  };
+
+  return (
+    <motion.div
+      key={title}
+      className={`relative overflow-hidden rounded-2xl border border-white/10 flex flex-col justify-start items-start bg-[rgba(255,255,255,0.05,)] backdrop-blur-md hover:border-white/20 transition duration-500 p-8 gap-4 ${
+        index === 0 ? 'shimmer-effect' : ''
+      }`}
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 1, delay: index * 0.2 }}
+      onMouseEnter={handleMouseEnter}
+    >
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-transparent rounded-2xl pointer-events-none" />
+
+      <div className="relative z-10 flex items-center justify-center rounded-full size-14 mb-4">
+        <img src={imgPath || '/placeholder.svg'} alt={title} />
+      </div>
+      <h3 className="relative z-10 text-white text-lg font-semibold">{title}</h3>
+      <p className="relative z-10 text-gray-400 text-sm leading-relaxed">{displayText}</p>
+
+      <style jsx>{`
+        .shimmer-effect {
+          position: relative;
+          overflow: hidden;
+        }
+        .shimmer-effect::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -150%;
+          height: 100%;
+          width: 150%;
+          background: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          animation: shimmer 2.5s infinite;
+          pointer-events: none;
+          z-index: 20;
+        }
+        @keyframes shimmer {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+      `}</style>
+    </motion.div>
+  );
+};
+
 const FeatureCards = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [autoStartIndex, setAutoStartIndex] = useState(0);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 1366);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile) return;
+
+    if (autoStartIndex < abilities.length) {
+      const timeout = setTimeout(() => {
+        setAutoStartIndex((prev) => prev + 1);
+      }, (abilities[autoStartIndex]?.desc.length ?? 0) * 20 + 500);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [autoStartIndex, isMobile]);
+
   return (
     <div className="relative w-full max-w-screen-xl mx-auto px-6 mt-40" id="services">
       {/* Section Title */}
@@ -15,14 +143,12 @@ const FeatureCards = () => {
         <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 mt-20 md:mt-30 lg:mt-40">
           Services
         </h2>
-        <p className="text-gray-400 text-lg">
-          Complete Web Services, Design, Develop & Secure.
-        </p>
+        <p className="text-gray-400 text-lg">Complete Web Services, Design, Develop & Secure.</p>
       </div>
 
       {/* Card Grid with Glow Background */}
       <div className="relative z-10 mt-10">
-        {/* Glow Blob Positioned Behind Cards */}
+        {/* Glow Blobs */}
         <div className="absolute top-[50%] left-[20%] w-[200px] h-[200px] bg-purple-600/20 blur-[120px] rounded-full z-0 pointer-events-none" />
         <div className="absolute bottom-[65%] right-[10%] w-[400px] h-[200px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />
         <div className="absolute bottom-[15%] right-[10%] w-[400px] h-[300px] bg-purple-400/20 blur-[120px] rounded-full z-0 pointer-events-none" />
@@ -33,24 +159,15 @@ const FeatureCards = () => {
         {/* Cards Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 relative z-10">
           {abilities.map(({ imgPath, title, desc }, index) => (
-            <motion.div
+            <ServiceCard
               key={title}
-              className="relative overflow-hidden rounded-2xl border border-white/10 flex flex-col justify-start items-start bg-[rgba(255,255,255,0.05,)] backdrop-blur-md hover:border-white/20 transition duration-500 p-8 gap-4"
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 1, delay: index * 0.2 }}
-            >
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-transparent rounded-2xl pointer-events-none" />
-
-              <div className="relative z-10 flex items-center justify-center rounded-full size-14 mb-4">
-                <img src={imgPath || '/placeholder.svg'} alt={title} />
-              </div>
-              <h3 className="relative z-10 text-white text-lg font-semibold">{title}</h3>
-              <p className="relative z-10 text-gray-400 text-sm leading-relaxed">{desc}</p>
-            </motion.div>
+              imgPath={imgPath}
+              title={title}
+              desc={desc}
+              index={index}
+              isMobile={isMobile}
+              autoStart={index === autoStartIndex}
+            />
           ))}
         </div>
       </div>

@@ -43,6 +43,7 @@ const navLinks = [
       link: "#testimonials",
     },
   ];
+
   
   const words = [
     { text: "Ideas", imgPath: "src/public/images/ideas.svg" },

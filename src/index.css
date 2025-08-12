@@ -419,14 +419,13 @@ section {
     rgba(69, 222, 196, 0) 0%,
     #62e0ff 25%,
     #52aeff 37.51%,
-    #fd5c79 62.83%,
     #6d45ce 92.91%
   );
 }
 
 .gradient-edge:nth-of-type(1) {
   left: 0;
-  background: rgb(0, 0, 0);
+  background: transparent;
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 1) 0%,
@@ -435,7 +434,7 @@ section {
 }
 .gradient-edge:nth-of-type(2) {
   right: 0;
-  background: linear-gradient(
+  background: transparent(
     -90deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(255, 255, 255, 0) 100%

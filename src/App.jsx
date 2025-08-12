@@ -16,6 +16,7 @@ import AboutMe from './components/AboutMe.jsx';
 import FAQSection from './components/FAQSection.jsx';
 import ReactSection from './components/ReactSection.jsx';
 import PricingSection from './components/pricing.jsx'
+import Work from './components/Work.jsx'
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
     <Experience />
     <ReactSection />
     <AboutMe />
+    <Work />
     {/*<Showcase />*/}
     <FeatureCards />
     {/*<Techstack /> */}

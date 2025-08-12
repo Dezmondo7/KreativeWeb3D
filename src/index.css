@@ -441,6 +441,27 @@ section {
   );
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(192, 192, 192, 0.15) 0%,    /* light silver */
+    rgba(230, 230, 230, 0.5) 50%,    /* brighter silver highlight */
+    rgba(192, 192, 192, 0.15) 100%   /* light silver */
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2.5s infinite;
+  border-radius: 1rem;
+}
+
 /* marquee */
 .marquee {
   width: 100dvw;

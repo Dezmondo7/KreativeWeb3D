@@ -7,98 +7,21 @@ const cardVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
 
-const ServiceCard = ({ imgPath, title, desc, index, isMobile, autoStart }) => {
-  const [displayText, setDisplayText] = useState('');
-  const [done, setDone] = useState(false);
-  const isTypingRef = useRef(false);
-  const intervalRef = useRef(null);
-  const charIndexRef = useRef(0);
-  const isMounted = useRef(true);
-  const containerRef = useRef(null);
-  const [inView, setInView] = useState(false);
-  const TYPING_SPEED = 20;
-
-  useEffect(() => {
-    isMounted.current = true;
-    return () => {
-      isMounted.current = false;
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setInView(entry.isIntersecting);
-      },
-      {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.3,
-      }
-    );
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
-    };
-  }, []);
-
-  const startTyping = () => {
-    if (done || isTypingRef.current) return;
-
-    isTypingRef.current = true;
-    intervalRef.current = setInterval(() => {
-      const i = charIndexRef.current;
-      if (i < desc.length) {
-        if (isMounted.current) {
-          setDisplayText((prev) => prev + desc.charAt(i));
-        }
-        charIndexRef.current += 1;
-      }
-      if (charIndexRef.current >= desc.length) {
-        clearInterval(intervalRef.current);
-        intervalRef.current = null;
-        isTypingRef.current = false;
-        if (isMounted.current) {
-          setDone(true);
-        }
-      }
-    }, TYPING_SPEED);
-  };
-
-  // Trigger typing only if on mobile, autoStart is true, and card is in view
-  useEffect(() => {
-    if (isMobile && autoStart && inView) {
-      startTyping();
-    }
-  }, [isMobile, autoStart, inView]);
-
-  const handleMouseEnter = () => {
-    if (!isMobile) {
-      startTyping();
-    }
-  };
-
+const ServiceCard = ({ imgPath, title, desc, index, displayText }) => {
   return (
     <motion.div
-      ref={containerRef}
       key={title}
-      className="relative overflow-hidden rounded-2xl border border-white/10 flex flex-col justify-start items-start bg-[rgba(255,255,255,0.05,)] backdrop-blur-md hover:border-white/20 transition duration-500 p-8 gap-4"
+      className="relative overflow-hidden rounded-2xl border border-white/10 flex flex-col justify-start items-start bg-[rgba(255,255,255,0.05)] backdrop-blur-md hover:border-white/20 transition duration-500 p-8 gap-4"
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 1, delay: index * 0.2 }}
-      onMouseEnter={handleMouseEnter}
     >
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-transparent rounded-2xl pointer-events-none" />
 
-      <div className="relative z-10 flex items-center justify-center rounded-full size-14 mb-4">
+      <div className="relative z-10 flex items-center justify-center rounded-full w-14 h-14 mb-4">
         <img src={imgPath || '/placeholder.svg'} alt={title} />
       </div>
       <h3 className="relative z-10 text-white text-lg font-semibold">{title}</h3>
@@ -108,41 +31,71 @@ const ServiceCard = ({ imgPath, title, desc, index, isMobile, autoStart }) => {
 };
 
 const FeatureCards = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [autoStartIndex, setAutoStartIndex] = useState(0);
+  const [typedTexts, setTypedTexts] = useState(abilities.map(() => ''));
+  const charIndexRef = useRef(0);
+  const cardIndexRef = useRef(0);
+  const typingIntervalRef = useRef(null);
+  const containerRef = useRef(null);
 
-  // Detect mobile/tablet screen size
+  const TYPING_SPEED = 30;
+
+  // Trigger typewriter effect on scroll into view, all devices
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 1366);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startTypingSequence();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (containerRef.current) observer.observe(containerRef.current);
+
+    return () => observer.disconnect();
   }, []);
 
-  // Auto-type cards sequentially on mobile/tablet
-  useEffect(() => {
-    if (!isMobile) return;
+  const startTypingSequence = () => {
+    if (typingIntervalRef.current) return;
 
-    if (autoStartIndex < abilities.length) {
-      // Trigger next card's autoStart after previous finishes + 500ms pause
-      const timeout = setTimeout(() => {
-        setAutoStartIndex((prev) => prev + 1);
-      }, (abilities[autoStartIndex]?.desc.length ?? 0) * 20 + 500);
+    const typeNextChar = () => {
+      const currentCardIndex = cardIndexRef.current;
+      const currentDesc = abilities[currentCardIndex]?.desc || '';
+      const currentTypedText = typedTexts[currentCardIndex];
 
-      return () => clearTimeout(timeout);
-    }
-  }, [autoStartIndex, isMobile]);
+      if (charIndexRef.current < currentDesc.length) {
+        // add next char
+        const nextChar = currentDesc.charAt(charIndexRef.current);
+        setTypedTexts((prev) => {
+          const copy = [...prev];
+          copy[currentCardIndex] = copy[currentCardIndex] + nextChar;
+          return copy;
+        });
+        charIndexRef.current += 1;
+      } else {
+        // finished current card, move to next card
+        charIndexRef.current = 0;
+        cardIndexRef.current += 1;
+
+        if (cardIndexRef.current >= abilities.length) {
+          clearInterval(typingIntervalRef.current);
+          typingIntervalRef.current = null;
+        }
+      }
+    };
+
+    typingIntervalRef.current = setInterval(typeNextChar, TYPING_SPEED);
+  };
 
   return (
-    <div className="relative w-full max-w-screen-xl mx-auto px-6 mt-40" id="services">
+    <div className="relative w-full max-w-screen-xl mx-auto px-6 mt-40" id="services" ref={containerRef}>
       {/* Section Title */}
       <div className="text-center max-w-2xl mx-auto">
         <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 mt-20 md:mt-30 lg:mt-40">
           Services
         </h2>
-        <p className="text-gray-400 text-lg">
-          Complete Web Services, Design, Develop & Secure.
-        </p>
+        <p className="text-gray-400 text-lg">Complete Web Services, Design, Develop & Secure.</p>
       </div>
 
       {/* Card Grid with Glow Background */}
@@ -164,25 +117,11 @@ const FeatureCards = () => {
               title={title}
               desc={desc}
               index={index}
-              isMobile={isMobile}
-              autoStart={index === autoStartIndex}
+              displayText={typedTexts[index]}
             />
           ))}
         </div>
       </div>
-
-      {/* Floating animation keyframes */}
-      <style jsx>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
-        }
-      `}</style>
     </div>
   );
 };

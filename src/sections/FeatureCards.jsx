@@ -37,7 +37,7 @@ const FeatureCards = () => {
   const typingIntervalRef = useRef(null);
   const containerRef = useRef(null);
 
-  const TYPING_SPEED = 30;
+  const TYPING_SPEED = 20;
 
   // Trigger typewriter effect on scroll into view, all devices
   useEffect(() => {
@@ -48,7 +48,7 @@ const FeatureCards = () => {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     if (containerRef.current) observer.observe(containerRef.current);

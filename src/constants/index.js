@@ -103,7 +103,7 @@ const navLinks = [
     {    
       imgPath: webIcon,
       title: "Web Design",
-      desc: "Mixing creativity with technical precision creates standout UI designs that are tailored towards delivering an outstanding user journey for your customers. ",
+      desc: "Mixing creativity with technical precision creates standout UI designs that deliver an outstanding user journey for your customers. ",
     },  
     {    
       imgPath: mobileCodeIcon,
@@ -113,7 +113,7 @@ const navLinks = [
       {
       imgPath: reactGraphic,
       title: "Latest Technology",
-      desc: "Your website will be built with React—the same fast, dynamic tech developed by Meta (formerly Facebook), used by Instagram, and Netflix. It’s perfect for creating smooth, interactive experiences that load quickly and run seamlessly as your business grows."
+      desc: "Built with React—the fast, dynamic tech from Meta that powers Instagram and Netflix—and supercharged by AI to speed up development and unleashes creativity."
     },
     {
       imgPath: brandIcon,
@@ -128,12 +128,12 @@ const navLinks = [
     {
       imgPath: websecIcon,
       title: "Quality & Security",
-      desc: "Your website is meticulously tested across all devices to ensure it looks stunning and performs flawlessly. Every site includes encrypted security certification to protect your data and build trust with your visitors.",
+      desc: "Your website is meticulously tested to ensure it looks stunning and performs flawlessly. Every site includes encrypted security certification.",
     },
     {
       imgPath: seoIcon,
       title: "Performance Optimization",
-      desc: "Search Engine Optimization (SEO) ensures your website ranks higher when potential customers search online. By leveraging React technology, we build high-performance, lightning-fast websites optimized for search engines—giving you a competitive edge in the digital marketplace.",
+      desc: "By leveraging React technology, we build high-performance, lightning-fast websites optimized for search engines—giving you a competitive edge in the digital marketplace.",
     },
     {
       imgPath: maintenanceIcon,

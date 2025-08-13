@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import avatarLogo from '../assets/av2.png';
 import javascriptIcon from '../assets/javascript.png';
 import ReactIcon from '../assets/atom.png';
@@ -8,8 +8,24 @@ import NodeJS from '../assets/nodejs.png';
 import GitLogo from '../assets/social.png';
 
 const AboutMe = () => {
+  const [firstInView, setFirstInView] = useState(false);
+  const firstCardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setFirstInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (firstCardRef.current) observer.observe(firstCardRef.current);
+  }, []);
+
   const skills = [
-    { name: "React", level: "Advanced", icon: <img src={ReactIcon} alt="react logo" className="w-6 h-6" /> },
+    { name: "React", level: "Advanced", icon: <img src={ReactIcon} alt="react logo" className="w-6 h-6" />, ref: firstCardRef },
     { name: "JavaScript", level: "Advanced", icon: <img src={JavaScriptLogo} alt="Javascript logo" className="w-6 h-6" /> },
     { name: "HTML/CSS", level: "Expert", icon: <img src={HtmlLogo} alt="Html logo" className="w-6 h-6" />  },
     { name: "Tailwind CSS", level: "Advanced", icon: "💨" },
@@ -28,20 +44,14 @@ const AboutMe = () => {
             <div className="relative">
               <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full p-1 shadow-2xl">
                 <div className="w-full h-full rounded-full bg-transparent overflow-hidden">
-                  <img
-                    src={avatarLogo}
-                    alt="Profile"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={avatarLogo} alt="Profile" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
           </div>
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
-            About Me
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">About Me</h2>
 
           {/* Paragraphs */}
           <div className="max-w-3xl mx-auto space-y-6">
@@ -56,16 +66,30 @@ const AboutMe = () => {
 
           {/* Skills Section */}
           <div className="space-y-8 pt-12">
-            <h3 className="text-lg text-white font-semibold">
-              My Coding Skills
-            </h3>
-             
+            <h3 className="text-lg text-white font-semibold">My Coding Skills</h3>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-5xl mx-auto">
-              {skills.map((skill) => (
+              {skills.map((skill, index) => (
                 <div
                   key={skill.name}
+                  ref={skill.ref ? skill.ref : null}
                   className="relative group p-4 bg-white/5 rounded-2xl border border-white/10 overflow-hidden cursor-pointer"
+                  style={index === 0 && firstInView ? {
+                    animation: 'wiggle 0.5s ease-in-out 2'
+                  } : {}}
                 >
+                  {/* Inline keyframes */}
+                  {index === 0 && firstInView && (
+                    <style>
+                      {`
+                        @keyframes wiggle {
+                          0%, 100% { transform: rotate(-5deg); }
+                          50% { transform: rotate(5deg); }
+                        }
+                      `}
+                    </style>
+                  )}
+
                   {/* Front: icon + name */}
                   <div className="flex flex-col items-center justify-center space-y-2 transition-opacity duration-500 group-hover:opacity-0">
                     <span className="text-2xl">{skill.icon}</span>

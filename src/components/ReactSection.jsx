@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const cards = [
   {
@@ -25,14 +26,17 @@ const cards = [
     title: "Secure & Stable by Design",
     description: "React’s architecture helps minimize security risks, and when paired with our secure, encrypted hosting, your site stays protected and stable — giving you peace of mind.",
   },
-
 ];
 
-function BentoCard({ title, description }) {
+function BentoCard({ title, description, custom }) {
   return (
-    <div
+    <motion.div
       className="overflow-hidden rounded-2xl border border-white/10 flex flex-col justify-start items-start relative group
                  transition-transform duration-200 ease-out hover:scale-[1.01] cursor-pointer"
+      initial={{ opacity: 0, y: 50, rotate: -3, scale: 0.9 }}
+      whileInView={{ opacity: 1, y: 0, rotate: 0, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: custom * 0.15, type: "spring", stiffness: 70 }}
     >
       {/* Blurred background */}
       <div
@@ -56,11 +60,10 @@ function BentoCard({ title, description }) {
           <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
-// ✅ This is the actual exported section component
 function ReactSection() {
   return (
     <section className="relative w-full py-20 px-5 bg-gradient-to-br from-black to-black-900/20">
@@ -80,8 +83,8 @@ function ReactSection() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-          {cards.map((card) => (
-            <BentoCard key={card.title} title={card.title} description={card.description} />
+          {cards.map((card, i) => (
+            <BentoCard key={card.title} title={card.title} description={card.description} custom={i} />
           ))}
         </div>
       </div>

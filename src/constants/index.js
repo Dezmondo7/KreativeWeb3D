@@ -113,7 +113,7 @@ const navLinks = [
       {
       imgPath: reactGraphic,
       title: "Latest Technology",
-      desc: "Built with React—the fast, dynamic tech from Meta that powers Instagram and Netflix—and supercharged by AI to speed up development and unleashes creativity."
+      desc: "Built with React—the fast, dynamic tech from Meta that powers Instagram and Netflix—and supercharged by AI to speed up development and unleash creativity."
     },
     {
       imgPath: brandIcon,

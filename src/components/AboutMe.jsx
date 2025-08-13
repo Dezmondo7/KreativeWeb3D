@@ -1,15 +1,20 @@
 import React from 'react';
 import avatarLogo from '../assets/av2.png';
 import javascriptIcon from '../assets/javascript.png';
+import ReactIcon from '../assets/atom.png'
+import JavaScriptLogo from '../assets/js.png'
+import HtmlLogo from '../assets/html.png'
+import NodeJS from '../assets/nodejs.png'
+import GitLogo from '../assets/social.png'
 
 const AboutMe = () => {
   const skills = [
-    { name: "React", level: "Advanced", icon: "⚛️" },
-    { name: "JavaScript", level: "Advanced", icon: "🟨" },
-    { name: "HTML/CSS", level: "Expert", icon: "🎨" },
+    { name: "React", level: "Advanced", icon: <img src={ReactIcon} alt="react logo" className="w-6 h-6" /> },
+    { name: "JavaScript", level: "Advanced", icon: <img src={JavaScriptLogo} alt="Javascript logo" className="w-6 h-6" /> },
+    { name: "HTML/CSS", level: "Expert", icon: <img src={HtmlLogo} alt="Html logo" className="w-6 h-6" />  },
     { name: "Tailwind CSS", level: "Advanced", icon: "💨" },
-    { name: "Node.js", level: "Advanced", icon: "🟢" },
-    { name: "Git", level: "Intermediate", icon: "📝" },
+    { name: "Node.js", level: "Advanced", icon: <img src={NodeJS} alt="Node JS logo" className="w-6 h-6" /> },
+    { name: "Git", level: "Intermediate", icon: <img src={GitLogo} alt="Git logo" className="w-6 h-6" /> },
     { name: "Responsive Design", level: "Expert", icon: "📱" },
     { name: "UI/UX Design", level: "Advanced", icon: "✨" },
   ];

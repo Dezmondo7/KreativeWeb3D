@@ -213,8 +213,8 @@ const navLinks = [
       date: "",
       responsibilities: [
         "Reakt Web Design offers a fresh approach to building custom high performance websites",
-        "A fan of first principles thinking — tackling challenges from the ground up to deliver smarter solutions",
         "By tapping into the latest digital tools, your brand can stand out and make some noise",
+        "A fan of first principles thinking — tackling challenges from the ground up to deliver smarter solutions",
       ],
     },
     {

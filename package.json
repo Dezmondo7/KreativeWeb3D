@@ -23,6 +23,7 @@
     "gsap": "^3.12.7",
     "lucide-react": "^0.537.0",
     "react": "^19.0.0",
+    "react-cookie": "^8.0.1",
     "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.61.1",

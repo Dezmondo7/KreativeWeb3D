@@ -46,7 +46,7 @@ function PricingSection() {
         "bg-zinc-300 shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] outline outline-0.5 outline-[#1e29391f] outline-offset-[-0.5px] text-gray-800 text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-zinc-400",
     },
     {
-      name: "Start-ups & Soloprenuers ",
+      name: "Start-ups & Solopreneurs",
       monthlyPrice: "$20",
       annualPrice: "£500-£1500",
       description: "React and Tailwind front-end build designed to get your business moving fast.",
@@ -55,9 +55,9 @@ function PricingSection() {
         "Up to 3 custom UI components or interactive features",
         "SEO & performance optimizations",
         "1 round of revisions within 2 weeks",
-        "Deployment guidence and support",
+        "Deployment guidance and support",
         "1 Years Hosting & Security included",
-        "Tailor your package with optional extras"
+        "Tailor your package with optional extras",
       ],
       buttonText: "Get Started",
       buttonClass:
@@ -77,7 +77,6 @@ function PricingSection() {
         "Enhanced SEO performance work",
         "Priority deployments & support",
         "Priority email and chat support",
-
       ],
       buttonText: "Get Started",
       buttonClass:
@@ -89,63 +88,28 @@ function PricingSection() {
     <section className="w-full px-5 overflow-hidden flex flex-col justify-start items-center my-0 py-8 md:py-14 mt-40 relative">
       <div className="self-stretch relative flex flex-col justify-center items-center gap-2 py-0">
         <div className="flex flex-col justify-start items-center gap-4">
-
-          {/*Title */}
           <h2 className="text-center text-foreground text-4xl md:text-5xl font-semibold leading-tight md:leading-[40px]">
             Pricing built for every Project
           </h2>
           <p className="self-stretch text-center text-muted-foreground text-sm font-medium leading-tight">
-            Choose a plan that fits, hourly rates for projects, {" "}
-            <br />start-up packages & website refreshes.
+            Choose a plan that fits, hourly rates for projects, <br />start-up packages & website refreshes.
           </p>
         </div>
-        <div className="pt-4">
-          <div className="p-0.5 bg-muted rounded-lg outline outline-1 outline-[#0307120a] outline-offset-[-1px] flex justify-start items-center gap-1 md:mt-0">
-            <button
-              onClick={() => setIsAnnual(true)}
-              className={`pl-2 pr-1 py-1 flex justify-start items-start gap-2 rounded-md ${isAnnual ? "bg-accent shadow-[0px_1px_1px_-0.5px_rgba(0,0,0,0.08)]" : ""
-                }`}
-            >
-              {/*} This is a great feature button which switches between monthly and annual prices to be included on other builds
-             
-             <span
-                className={`text-center text-sm font-medium leading-tight ${isAnnual ? "text-accent-foreground" : "text-zinc-400"
-                  }`}
-              >
-                Annually
-              </span>
-            </button>
-            <button
-              onClick={() => setIsAnnual(false)}
-              className={`px-2 py-1 flex justify-start items-start rounded-md ${!isAnnual ? "bg-accent shadow-[0px_1px_1px_-0.5px_rgba(0,0,0,0.08)]" : ""
-                }`}
-            >
-              <span
-                className={`text-center text-sm font-medium leading-tight ${!isAnnual ? "text-accent-foreground" : "text-zinc-400"
-                  }`}
-              >
-                Monthly
-              </span> */}
-            </button>
-          </div>
-        </div>
       </div>
+
       <div className="self-stretch px-5 flex flex-col md:flex-row justify-start items-start gap-4 md:gap-6 mt-6 max-w-[1100px] mx-auto relative">
         {pricingPlans.map((plan, idx) => {
           const isMiddle = idx === 1;
           const isSide = idx !== 1;
           return (
             <div key={plan.name} className="relative flex-1">
-              {/* Glow or edge backdrop */}
               {isMiddle && (
                 <div
                   className="absolute inset-0 rounded-xl pointer-events-none z-0"
                   style={{
-                    background:
-                      "rgba(24, 10, 43)", // very transparent purple
+                    background: "rgba(24, 10, 43)", 
                     backdropFilter: "blur(8px)",
-                    boxShadow:
-                      "0 0 20px 10px rgba(128,0,128,0.15)",
+                    boxShadow: "0 0 20px 10px rgba(128,0,128,0.15)",
                   }}
                 />
               )}
@@ -153,14 +117,14 @@ function PricingSection() {
                 <div
                   className="absolute inset-0 rounded-xl pointer-events-none z-0"
                   style={{
-                    background: "rgba(20,14,24,0.75)"
+                    background: "rgba(20,14,24,0.75)",
                   }}
                 />
               )}
 
-
+              {/* Pricing Card with Glow/Lift */}
               <div
-                className={`p-4 overflow-hidden rounded-xl flex flex-col justify-start items-start gap-6 relative z-10 ${plan.popular
+                className={`p-4 rounded-xl flex flex-col gap-6 relative z-10 transition-transform hover:lift ${plan.popular
                   ? "bg-primary shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.10)]"
                   : "bg-gradient-to-b from-gray-50/5 to-gray-50/0"
                   }`}
@@ -215,12 +179,6 @@ function PricingSection() {
                             {plan.monthlyPrice}
                           </span>
                         </div>
-                        <div
-                          className={`text-center text-sm font-medium leading-tight ${plan.popular ? "text-primary-foreground/70" : "text-zinc-400"
-                            }`}
-                        >
-
-                        </div>
                       </div>
                       <div
                         className={`self-stretch text-sm font-medium leading-tight ${plan.popular ? "text-primary-foreground/70" : "text-zinc-400"
@@ -262,20 +220,9 @@ function PricingSection() {
                   </div>
                   <div className="self-stretch flex flex-col justify-start items-start gap-3">
                     {plan.features.map((feature) => (
-                      <div key={feature} className="self-stretch flex justify-start items-center gap-2">
-                        <div className="w-4 h-4 flex items-center justify-center">
-                          <Check
-                            className={`w-full h-full ${plan.popular ? "text-primary-foreground" : "text-muted-foreground"
-                              }`}
-                            strokeWidth={2}
-                          />
-                        </div>
-                        <div
-                          className={`leading-tight font-normal text-sm text-left ${plan.popular ? "text-primary-foreground" : "text-muted-foreground"
-                            }`}
-                        >
-                          {feature}
-                        </div>
+                      <div key={feature} className="self-stretch flex flex-row justify-start items-center gap-2">
+                        <Check className="w-4 h-4 text-primary" />
+                        <span className="text-xs text-muted-foreground">{feature}</span>
                       </div>
                     ))}
                   </div>

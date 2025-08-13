@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import LogoR from '../assets/letter-r.png';
+import MagicWands from '../assets/MagicWands.png'
 import '../index.css'
 
 const NavBar = () => {
@@ -157,8 +158,9 @@ const NavBar = () => {
                     {/* Right - contact Button & Burger Menu */}
                     <div className="flex items-center gap-4">
                         <a href="#contact" className="contact-btn group hidden lg:flex">
-                            <div className="inner">
-                                <span>Start Project</span>
+                            <div className="inner flex tems-center gap-1">
+                                 <img src={MagicWands} className="w-6 h-6 group-hover:brightness-0 group-hover:invert transition-colors duration-200"/>
+                                <span className="font-bold">Start</span>
                             </div>
                         </a>
 

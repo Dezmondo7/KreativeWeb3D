@@ -102,7 +102,9 @@ const LandingPage = () => {
 
   return (
     <>
+    <div className="hidden sm:block">
       <Starfield />
+    </div>  
       <Cookie />
 
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(0,255,255,0.07)_0%,transparent_70%)] pointer-events-none " />

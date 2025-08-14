@@ -2,30 +2,30 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const cards = [
-  {
-    title: "React: The Engine Behind Modern Websites",
-    description: "React is a powerful JavaScript library developed by Meta that helps build fast, interactive user interfaces. Think of it as the engine that makes websites feel smooth, dynamic, and responsive — without constant page reloads.",
-  },
-  {
-    title: "Why Your Website Deserves React",
-    description: "React keeps your site lightning-fast by updating only what’s necessary — meaning lower bounce rates and happier visitors. Whether your site has 10 pages or 10,000, React handles it seamlessly, making it the perfect foundation to grow with your business.",
-  },
-  {
-    title: "How We Work with React",
-    description: "At Reakt Web Design, we leverage React’s component-based architecture to build reusable, maintainable code. This means faster development times and easier updates, keeping your site cutting-edge without breaking the bank.",
-  },
-  {
-    title: "SEO-Friendly – Higher Google Rankings",
-    description: "React’s flexibility allows us to apply smart SEO strategies and keyword targeting so your site ranks higher in Google search results and attracts more visitors.",
-  },
-  {
-    title: "Great for Dynamic & Interactive Experiences",
-    description: "React shines when creating dynamic content. A more engaging, modern experience means better retention, higher conversions, and a professional first impression.",
-  },
-  {
-    title: "Secure & Stable by Design",
-    description: "React’s architecture helps minimize security risks, and when paired with our secure, encrypted hosting, your site stays protected and stable — giving you peace of mind.",
-  },
+{
+  title: "React: The Engine Behind Modern Websites",
+  description: "React is a powerful JavaScript library developed by Meta that powers fast, interactive user interfaces. Think of it as the engine that makes your website smooth, dynamic, and built for the future."
+},
+{
+  title: "Speed That Keeps Visitors Engaged & Conversions High",
+  description: "React updates only what’s necessary, keeping your site lightning-fast. Whether you have 10 pages or 10,000, it handles growth seamlessly — meaning lower bounce rates, happier visitors, and more conversions."
+},
+{
+  title: "Built for Dynamic & Interactive Experiences",
+  description: "From animations to live content updates, React delivers an engaging, modern experience that keeps users coming back."
+},
+{
+  title: "SEO-Friendly by Design",
+  description: "React’s flexibility allows for smart SEO strategies that boost your Google rankings and attract the right audience."
+},
+{
+  title: "Secure & Stable",
+  description: "React’s architecture helps minimize security risks. Paired with our encrypted hosting, your site stays protected, reliable, and ready for anything."
+},
+{
+  title: "Smarter Development, Faster Updates",
+  description: "At Reakt Web Design, we use React’s component-based approach to create reusable, maintainable code — meaning quicker builds, easier updates, and better value for you."
+}
 ];
 
 function BentoCard({ title, description, custom }) {

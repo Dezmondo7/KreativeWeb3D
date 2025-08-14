@@ -69,7 +69,7 @@ const CounterSection = () => {
   return (
     <div
       id="counter"
-      className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 xl:mt-0 mt-20 bg-black relative overflow-hidden"
+      className="max-w-screen-xl mx-auto hidden sm:block px-4 sm:px-6 lg:px-8 py-16 xl:mt-0 mt-20 bg-black relative overflow-hidden"
     >
       <div className="scale-90 sm:scale-100 origin-top-center">
         <div className="max-w-7xl mx-auto relative z-10">

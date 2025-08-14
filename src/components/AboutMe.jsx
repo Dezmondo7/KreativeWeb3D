@@ -40,11 +40,11 @@ const AboutMe = () => {
       <div className="max-w-4xl mx-auto text-center">
         <div className="space-y-12">
           {/* Profile Image */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-12 mt-20 md:mt-30 lg:mt-40">
             <div className="relative">
               <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full p-1 shadow-2xl">
                 <div className="w-full h-full rounded-full bg-transparent overflow-hidden">
-                  <img src={avatarLogo} alt="Profile" className="w-full h-full object-cover" />
+                  <img src={avatarLogo} alt="Profile" className="w-full h-full object-cover " />
                 </div>
               </div>
             </div>
@@ -56,7 +56,7 @@ const AboutMe = () => {
           {/* Paragraphs */}
           <div className="max-w-3xl mx-auto space-y-6">
             <p className="text-sm text-gray-200 leading-relaxed">
-              Hi, I’m Dale — a front-end web developer specializing in React with 8+ years of IT experience. I’ve supported enterprise clients like Müller and Evri (Hermes) on technology projects, bringing valuable business insight to every collaboration. 
+              Hi, I’m Dale — a React front-end web developer with 8+ years of IT experience. I’ve helped enterprise clients like Müller and Evri (Hermes) deliver successful technology projects, bringing business insight to every collaboration.
             </p>
 
             <p className="text-sm text-gray-200 leading-relaxed">

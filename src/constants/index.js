@@ -117,33 +117,18 @@ const navLinks = [
     },
     {
       imgPath: brandIcon,
-      title: "Brand Design",
-      desc: "Top-quality branding including logo design and colour palette selections to incorporate into your web build."
+      title: "Content & Branding",
+      desc: "Professional content paired with thoughtful branding, including logos and color palettes, to make your site compelling and memorable."
     },
     {
-      imgPath: contentIcon,
-      title: "Content Creation",
-      desc: "I bring professional, high-quality writing experience—having been published in major newspapers—and tailor content specifically to your needs.",
+      imgPath: seoIcon,
+      title: "Conversion Optimazation & SEO",
+      desc: "Structuring pages to guide users to take action while building fast, search-engine-ready websites for a competitive edge.",
     },
     {
       imgPath: websecIcon,
       title: "Quality & Security",
       desc: "Your website is meticulously tested to ensure it looks stunning and performs flawlessly. Every site includes encrypted security certification.",
-    },
-    {
-      imgPath: seoIcon,
-      title: "Performance Optimization",
-      desc: "By leveraging React technology, we build high-performance, lightning-fast websites optimized for search engines—giving you a competitive edge in the digital marketplace.",
-    },
-    {
-      imgPath: maintenanceIcon,
-      title: "Web Maintenance & Support",
-      desc: "By offering ongoing support and maintenance your site is secure, updated, and performing at its best—even after it’s live.",
-    },
-    {
-      imgPath: projectIcon,
-      title: "Delivered on Time",
-      desc: "100% of projects are delivered on time, with a strong focus on quality and attention to detail.",
     },
     
   ];
@@ -206,7 +191,7 @@ const navLinks = [
   
   const expCards = [
     {
-      review: "New technology helps shape what is delivered. By taking a calm and methodical approach to work, this forward thinking mindset opens the space of necessary calmness to let creativity flow.",
+      review: "“New technology shapes what we deliver — but it’s our calm, methodical approach that turns innovation into creative, results-driven websites.”",
       imgPath: "",
       logoPath: letterRlogo,
       title: "The Creative Studio",
@@ -214,23 +199,23 @@ const navLinks = [
       responsibilities: [
         "Reakt Web Design brings a fresh, intelligent approach to crafting custom high-performance websites",
         "By blending AI-driven creativity with cutting-edge digital tools, we help brands stand out in a crowded online world",
-        "Guided by first-principles thinking, we solve challenges from the ground up to deliver smarter, lasting solutions",
+        "We put users first, every click, scroll, and interaction becomes part of a journey that gets you results.",
       ],
     },
     {
-      review: "Your brand’s image is everything — I get that. That's why a client-centric approach is a key part of making each project successful.",
+      review: "“Your brand’s image is everything — I get that. That's why a client-centric approach is a key part of making each project successful.”",
       logoPath: unicornLogo,
       title: "A Unique Brand",
       date: "",
       responsibilities: [
         "Handing your brand to a developer is a big leap of trust",
         "We take that responsibility seriously — crafting websites that connect your company to the people who matter most",
-        "And you get agency-level design without the agency-level price tag",
+        "You get agency-level design without the agency-level price tag",
         
       ],
     },
     {
-      review: "Passion and dedication goes into developing everything while enjoying every step of the journey.",
+      review: "“Passion and dedication go into every build - while we enjoy every step of the journey.”",
       imgPath: "",
       logoPath: reactGraphic,
       title: "Our Philosophy",

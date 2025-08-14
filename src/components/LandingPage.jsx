@@ -1,33 +1,36 @@
 "use client"
 import React, { useState, useEffect } from "react"
-import Cookie from '../components/Cookie';
+import Cookie from '../components/Cookie'
 
-// Starfield Component
+// Starfield Component with Depth Parallax
 const Starfield = () => {
   const [stars, setStars] = useState([])
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768
-    const numStars = isMobile ? 60 : 150
+    const baseNumStars = isMobile ? 60 : 150
 
-    const createStar = (large = false) => ({
-      id: Math.random(),
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-      size: large
-        ? Math.random() * 4 + 2     // Larger: 2px–6px
-        : Math.random() * 2 + 0.5,  // Small: 0.5px–2.5px
-      opacity: large
-        ? Math.random() * 0.4 + 0.6 // Brighter for big stars
-        : Math.random() * 0.5 + 0.3,
-      speedX: (Math.random() - 0.5) * 0.15,
-      speedY: (Math.random() - 0.5) * 0.15,
-    })
+    const createStar = (large = false) => {
+      const depth = Math.random() * 1.5 + 0.5 // 0.5 close, 2 far
+      return {
+        id: Math.random(),
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        size: large ? (Math.random() * 4 + 2) / depth : (Math.random() * 2 + 0.5) / depth,
+        opacity: large
+          ? Math.min(1, (Math.random() * 0.4 + 0.6) / depth)
+          : Math.min(1, (Math.random() * 0.5 + 0.3) / depth),
+        speedX: ((Math.random() - 0.5) * 0.15) / depth,
+        speedY: ((Math.random() - 0.5) * 0.15) / depth,
+        depth
+      }
+    }
 
-    // 80% small stars, 20% large stars
-    const smallStars = Array.from({ length: Math.floor(numStars * 0.9) }, () => createStar(false))
-    const bigStars = Array.from({ length: Math.floor(numStars * 0.1) }, () => createStar(true))
-    const initialStars = [...smallStars, ...bigStars]
+    let initialStars = Array.from({ length: Math.floor(baseNumStars * 0.9) }, () =>
+      createStar(false)
+    ).concat(
+      Array.from({ length: Math.floor(baseNumStars * 0.1) }, () => createStar(true))
+    )
 
     setStars(initialStars)
 
@@ -39,21 +42,46 @@ const Starfield = () => {
           let newX = star.x + star.speedX
           let newY = star.y + star.speedY
 
-          if (newX < 0 || newX > window.innerWidth)
-            newX = Math.random() * window.innerWidth
-          if (newY < 0 || newY > window.innerHeight)
-            newY = Math.random() * window.innerHeight
+          if (newX < 0) newX = window.innerWidth
+          if (newX > window.innerWidth) newX = 0
+          if (newY < 0) newY = window.innerHeight
+          if (newY > window.innerHeight) newY = 0
 
           return { ...star, x: newX, y: newY }
         })
       )
-
       animationFrameId = requestAnimationFrame(animate)
     }
 
     animationFrameId = requestAnimationFrame(animate)
 
-    return () => cancelAnimationFrame(animationFrameId)
+    const handleResize = () => {
+      const width = window.innerWidth
+      const height = window.innerHeight
+      setStars((prevStars) => {
+        const desiredCount = baseNumStars
+        const adjustedStars = prevStars.map((star) => ({
+          ...star,
+          x: star.x > width ? Math.random() * width : star.x,
+          y: star.y > height ? Math.random() * height : star.y,
+        }))
+        const starsToAdd = desiredCount - adjustedStars.length
+        if (starsToAdd > 0) {
+          const newStars = Array.from({ length: starsToAdd }, () =>
+            Math.random() < 0.9 ? createStar(false) : createStar(true)
+          )
+          return [...adjustedStars, ...newStars]
+        }
+        return adjustedStars
+      })
+    }
+
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      cancelAnimationFrame(animationFrameId)
+      window.removeEventListener("resize", handleResize)
+    }
   }, [])
 
   return (
@@ -68,12 +96,10 @@ const Starfield = () => {
             width: `${star.size}px`,
             height: `${star.size}px`,
             opacity: star.opacity,
-            backgroundColor: `white`,
             filter:
               star.size > 3
-                ? "blur(1px) drop-shadow(0 0 4px white)" // Glow for large stars
-                : "blur(0.5px)",
-            transition: "transform 0.1s ease-out",
+                ? "blur(1px) drop-shadow(0 0 4px white)"
+                : "blur(0.5px)"
           }}
         />
       ))}
@@ -102,19 +128,17 @@ const LandingPage = () => {
 
   return (
     <>
-    <div className="hidden sm:block">
-      <Starfield />
-    </div>  
+      <div className="hidden sm:block">
+        <Starfield />
+      </div>  
       <Cookie />
-
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(0,255,255,0.07)_0%,transparent_70%)] pointer-events-none " />
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(0,255,255,0.07)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(128,0,255,0.15)_0%,transparent_70%)] pointer-events-none" /> 
       <section
         id="home"
         className="relative bg-gradient-to-br from-purple-800/40 via-black to-black pt-24 sm:pt-32 lg:pt-40 flex items-center justify-center px-4 sm:px-6 lg:px-8 min-h-screen"
       >
         <div className="z-20 text-center max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto bg-clip-text">
-          {/* Smaller Heading */}
           <h2
             className="font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight"
             style={{
@@ -123,19 +147,13 @@ const LandingPage = () => {
           >
             Built for the Future
           </h2>
-
-          {/* Larger Heading (Animated) */}
           <h1 className="mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
             {displayedText}
             {showCursor && <span className="animate-pulse text-purple-600">|</span>}
           </h1>
-
-          {/* Subtext */}
           <p className="text-base sm:text-lg text-gray-100 mt-6 max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2">
             Launching or leveling up? Discover the power of modern web design & development. Freelance-crafted, interactive React websites that look sharp, run fast, and leave a lasting impression.
           </p>
-
-          {/* CTA Buttons */}
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
@@ -150,8 +168,6 @@ const LandingPage = () => {
               Learn More
             </a>
           </div>
-
-          {/* Feature Pills */}
           <div className="hidden sm:flex flex-wrap justify-center gap-3 mt-8">
             {["⚡ Lightning Fast", "🔒 Secure", "📱 Responsive", "🚀 Modern"].map((feature, index) => (
               <span

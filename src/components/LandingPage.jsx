@@ -5,13 +5,14 @@ import Cookie from '../components/Cookie'
 const Starfield = () => {
   const [stars, setStars] = useState([])
   const [warp, setWarp] = useState(false)
+  const [showButton, setShowButton] = useState(true)
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768
     const baseNumStars = isMobile ? 60 : 150
 
     const createStar = (large = false) => {
-      const depth = Math.random() * 1.5 + 0.5 // 0.5 close, 2 far
+      const depth = Math.random() * 1.5 + 0.5
       const x = Math.random() * window.innerWidth
       const y = Math.random() * window.innerHeight
       return {
@@ -33,7 +34,6 @@ const Starfield = () => {
     setStars(initialStars)
 
     let animationFrameId
-
     const animate = () => {
       const centerX = window.innerWidth / 2
       const centerY = window.innerHeight / 2
@@ -44,13 +44,11 @@ const Starfield = () => {
           let dy = star.y - centerY
 
           if (warp) {
-            // Warp: move outward from center
             dx *= 1.08
             dy *= 1.08
             star.x = centerX + dx
             star.y = centerY + dy
           } else {
-            // Normal drift
             let newX = star.x + star.speedX
             let newY = star.y + star.speedY
             if (newX < 0) newX = window.innerWidth
@@ -61,7 +59,6 @@ const Starfield = () => {
             star.y = newY
           }
 
-          // Reset if too far offscreen
           if (star.x < -50 || star.x > window.innerWidth + 50 || star.y < -50 || star.y > window.innerHeight + 50) {
             const newStar = createStar(Math.random() < 0.1)
             return { ...newStar, x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight }
@@ -97,26 +94,34 @@ const Starfield = () => {
     }
 
     window.addEventListener("resize", handleResize)
-
     return () => {
       cancelAnimationFrame(animationFrameId)
       window.removeEventListener("resize", handleResize)
     }
   }, [warp])
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.scrollY < 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   const triggerWarp = () => {
     setWarp(true)
-    setTimeout(() => setWarp(false), 3000) // 3 seconds warp
+    setTimeout(() => setWarp(false), 3000)
   }
 
   return (
     <>
       <button
         onClick={triggerWarp}
-        className="fixed bottom-8 right-8 px-2 py-2 z-50 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition"
+        className={`fixed bottom-8 cursor-pointer right-8 px-2 py-2 z-50 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition-opacity duration-500 ${showButton ? 'opacity-100' : 'opacity-0'}`}
       >
         Warp!
       </button>
+
       <div className="fixed inset-0 z-10 pointer-events-none">
         {stars.map((star) => (
           <div

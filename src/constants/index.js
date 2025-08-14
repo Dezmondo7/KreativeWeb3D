@@ -223,9 +223,9 @@ const navLinks = [
       title: "A Unique Brand",
       date: "",
       responsibilities: [
-        "Trusting a developer with your brand is a big decision",
-        "It is an awesome responsibility to bridge the gap between your company and its audience",
-        "You get agency-level web design without the agency-sized price tag",
+        "Handing your brand to a developer is a big leap of trust",
+        "We take that responsibility seriously — crafting websites that connect your company to the people who matter most",
+        "And you get agency-level design without the agency-level price tag",
         
       ],
     },

@@ -212,9 +212,9 @@ const navLinks = [
       title: "The Creative Studio",
       date: "",
       responsibilities: [
-        "Reakt Web Design offers a fresh approach to building custom high performance websites",
-        "Tap into the power of AI and cutting-edge digital tools to make your brand truly stand out. Nothing is impossible.",
-        "A fan of first principles thinking — tackling challenges from the ground up to deliver smarter solutions",
+        "Reakt Web Design brings a fresh, intelligent approach to crafting custom high-performance websites",
+        "By blending AI-driven creativity with cutting-edge digital tools, we help brands stand out in a crowded online world",
+        "Guided by first-principles thinking, we solve challenges from the ground up to deliver smarter, lasting solutions",
       ],
     },
     {

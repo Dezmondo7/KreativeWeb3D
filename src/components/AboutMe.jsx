@@ -60,7 +60,7 @@ const AboutMe = () => {
             </p>
 
             <p className="text-sm text-gray-200 leading-relaxed">
-              Certified with a 98% score in front-end development via edX, I build responsive, engaging digital experiences that help businesses grow. When I’m not working on client projects, I’m exploring the latest web technologies, contributing to open-source projects, or enjoying a good cup of coffee while experimenting with new front-end tools. I believe in the power of clean code, intuitive user interfaces, and the magic that happens when creativity meets functionality.
+              Certified with a 98% score in modern front-end development via edX, I build responsive, engaging digital experiences that help businesses grow. When I’m not working on client projects, I’m exploring the latest web technologies, contributing to open-source projects, or enjoying a good cup of coffee while experimenting with new front-end tools. I believe in the power of clean code, intuitive user interfaces, and the magic that happens when creativity meets functionality.
             </p>
           </div>
 

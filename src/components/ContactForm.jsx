@@ -148,39 +148,43 @@ const ContactForm = () => {
 
               {/*Telephone */}
               <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-300 block">Contact Number </label>
-              <input            
-                type="tel"
-                {...register("telephone", {
-                  pattern: {
-                    value: /^[0-9]{7,15}$/,
-                    message: "Please enter a valid phone",
-                  },
-                })}
-                className="w-full px-4 py-4 bg-black/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-200"
-                placeholder="Enter contact number (optional)"
-              />
-              {errors.telephone && <p className="text-red-400 text-sm mt-1">{errors.telephone.message}</p>}
-              </div>
-
-              {/*Budget */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-300 block"> Estimated Budget £ *</label>
+                <label className="text-sm font-medium text-gray-300 block">Contact Number </label>
                 <input
-                  type="number"
-                  {...register("budget", { // Changed to 'budget'
-                    required: { value: true, message: "Please enter your estimated budget" },
-                    min: {
-                      value: 0,
-                      message: "Budget cannot be negative",
+                  type="tel"
+                  {...register("telephone", {
+                    pattern: {
+                      value: /^[0-9]{7,15}$/,
+                      message: "Please enter a valid phone",
                     },
-                    valueAsNumber: true,
-                    // You can add max, or specific number validation if needed
                   })}
                   className="w-full px-4 py-4 bg-black/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-200"
-                  placeholder="Enter your estimated budget"
+                  placeholder="Enter contact number (optional)"
                 />
-                {errors.budget && <p className="text-red-400 text-sm mt-1">{errors.budget.message}</p>}
+                {errors.telephone && <p className="text-red-400 text-sm mt-1">{errors.telephone.message}</p>}
+              </div>
+
+              {/* Budget */}
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-gray-300 block">
+                  Web Package *
+                </label>
+                <select
+                  {...register("budget", {
+                    required: { value: true, message: "Please select a budget tier" },
+                  })}
+                  defaultValue=""
+                  className="w-full px-4 py-4 bg-black/50 border border-gray-600/50 rounded-xl text-gray-300 placeholder-transparent focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-200"
+                >
+                  <option value="" disabled className="text-gray-300" >
+                    Select your budget tier
+                  </option>
+                  <option value="Freelance">Freelance</option>
+                  <option value="Start-up">Start-up</option>
+                  <option value="Elevated">Elevated</option>
+                </select>
+                {errors.budget && (
+                  <p className="text-red-400 text-sm mt-1">{errors.budget.message}</p>
+                )}
               </div>
 
               {/* Message */}
@@ -296,8 +300,8 @@ const ContactForm = () => {
         <div className="fixed top-4 right-4 z-100 max-w-md">
           <div
             className={`p-4 rounded-xl shadow-lg backdrop-blur-sm border ${alertInfo.type === "success"
-                ? "bg-green-500/20 border-green-500/30 text-green-200"
-                : "bg-red-500/20 border-red-500/30 text-red-200"
+              ? "bg-green-500/20 border-green-500/30 text-green-200"
+              : "bg-red-500/20 border-red-500/30 text-red-200"
               }`}
           >
             <div className="flex items-center justify-between">

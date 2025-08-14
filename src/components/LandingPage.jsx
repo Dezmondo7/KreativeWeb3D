@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from "react"
 import Cookie from '../components/Cookie'
 
-// Starfield Component with Depth Parallax
 const Starfield = () => {
   const [stars, setStars] = useState([])
+  const [warp, setWarp] = useState(false)
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768
@@ -12,42 +12,62 @@ const Starfield = () => {
 
     const createStar = (large = false) => {
       const depth = Math.random() * 1.5 + 0.5 // 0.5 close, 2 far
+      const x = Math.random() * window.innerWidth
+      const y = Math.random() * window.innerHeight
       return {
         id: Math.random(),
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
+        x,
+        y,
         size: large ? (Math.random() * 4 + 2) / depth : (Math.random() * 2 + 0.5) / depth,
-        opacity: large
-          ? Math.min(1, (Math.random() * 0.4 + 0.6) / depth)
-          : Math.min(1, (Math.random() * 0.5 + 0.3) / depth),
+        opacity: large ? Math.min(1, (Math.random() * 0.4 + 0.6) / depth) : Math.min(1, (Math.random() * 0.5 + 0.3) / depth),
         speedX: ((Math.random() - 0.5) * 0.15) / depth,
         speedY: ((Math.random() - 0.5) * 0.15) / depth,
-        depth
+        depth,
+        initialX: x,
+        initialY: y
       }
     }
 
-    let initialStars = Array.from({ length: Math.floor(baseNumStars * 0.9) }, () =>
-      createStar(false)
-    ).concat(
-      Array.from({ length: Math.floor(baseNumStars * 0.1) }, () => createStar(true))
-    )
-
+    const initialStars = Array.from({ length: Math.floor(baseNumStars * 0.9) }, () => createStar(false))
+      .concat(Array.from({ length: Math.floor(baseNumStars * 0.1) }, () => createStar(true)))
     setStars(initialStars)
 
     let animationFrameId
 
     const animate = () => {
+      const centerX = window.innerWidth / 2
+      const centerY = window.innerHeight / 2
+
       setStars((prevStars) =>
         prevStars.map((star) => {
-          let newX = star.x + star.speedX
-          let newY = star.y + star.speedY
+          let dx = star.x - centerX
+          let dy = star.y - centerY
 
-          if (newX < 0) newX = window.innerWidth
-          if (newX > window.innerWidth) newX = 0
-          if (newY < 0) newY = window.innerHeight
-          if (newY > window.innerHeight) newY = 0
+          if (warp) {
+            // Warp: move outward from center
+            dx *= 1.08
+            dy *= 1.08
+            star.x = centerX + dx
+            star.y = centerY + dy
+          } else {
+            // Normal drift
+            let newX = star.x + star.speedX
+            let newY = star.y + star.speedY
+            if (newX < 0) newX = window.innerWidth
+            if (newX > window.innerWidth) newX = 0
+            if (newY < 0) newY = window.innerHeight
+            if (newY > window.innerHeight) newY = 0
+            star.x = newX
+            star.y = newY
+          }
 
-          return { ...star, x: newX, y: newY }
+          // Reset if too far offscreen
+          if (star.x < -50 || star.x > window.innerWidth + 50 || star.y < -50 || star.y > window.innerHeight + 50) {
+            const newStar = createStar(Math.random() < 0.1)
+            return { ...newStar, x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight }
+          }
+
+          return star
         })
       )
       animationFrameId = requestAnimationFrame(animate)
@@ -82,28 +102,43 @@ const Starfield = () => {
       cancelAnimationFrame(animationFrameId)
       window.removeEventListener("resize", handleResize)
     }
-  }, [])
+  }, [warp])
+
+  const triggerWarp = () => {
+    setWarp(true)
+    setTimeout(() => setWarp(false), 3000) // 3 seconds warp
+  }
 
   return (
-    <div className="fixed inset-0 z-10 pointer-events-none">
-      {stars.map((star) => (
-        <div
-          key={star.id}
-          className="absolute rounded-full bg-white"
-          style={{
-            left: `${star.x}px`,
-            top: `${star.y}px`,
-            width: `${star.size}px`,
-            height: `${star.size}px`,
-            opacity: star.opacity,
-            filter:
-              star.size > 3
-                ? "blur(1px) drop-shadow(0 0 4px white)"
-                : "blur(0.5px)"
-          }}
-        />
-      ))}
-    </div>
+    <>
+      <button
+        onClick={triggerWarp}
+        className="fixed bottom-8 right-8 px-2 py-2 z-50 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition"
+      >
+        Warp!
+      </button>
+      <div className="fixed inset-0 z-10 pointer-events-none">
+        {stars.map((star) => (
+          <div
+            key={star.id}
+            className="absolute rounded-full bg-white"
+            style={{
+              left: `${star.x}px`,
+              top: `${star.y}px`,
+              width: `${star.size}px`,
+              height: `${star.size}px`,
+              opacity: star.opacity,
+              filter:
+                warp
+                  ? "blur(2px) drop-shadow(0 0 6px white)"
+                  : star.size > 3
+                    ? "blur(1px) drop-shadow(0 0 4px white)"
+                    : "blur(0.5px)"
+            }}
+          />
+        ))}
+      </div>
+    </>
   )
 }
 
@@ -141,9 +176,7 @@ const LandingPage = () => {
         <div className="z-20 text-center max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto bg-clip-text">
           <h2
             className="font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight"
-            style={{
-              fontSize: "clamp(1rem, 2vw + 0.5rem, 2.5rem)"
-            }}
+            style={{ fontSize: "clamp(1rem, 2vw + 0.5rem, 2.5rem)" }}
           >
             Built for the Future
           </h2>

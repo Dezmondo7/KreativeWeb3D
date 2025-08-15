@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Cookie from '../components/Cookie'
 
 const Starfield = ({ theme }) => {
@@ -102,18 +102,43 @@ const Starfield = ({ theme }) => {
     setTimeout(() => setWarp(false), 3000)
   }
 
+  
+const buttonRef = useRef(null);
+
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setVisible(false);
+      } else {
+        setVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  
+
   return (
     <>
       <div className="fixed bottom-8 w-full z-50 px-4 hidden lg:block hide-on-short">
         <div className="w-full max-w-screen-xl mx-auto flex justify-end">
           <button
+            ref={buttonRef}
             onClick={triggerWarp}
-            className="mr-10 cursor-pointer px-4 py-2 bg-gray-400 text-black font-bold rounded-lg shadow 
+            className={`mr-10 cursor-pointer px-4 py-2 bg-gray-400 text-black font-bold rounded-lg shadow 
              transition-all duration-300 relative overflow-hidden
              hover:bg-purple-700
              hover:shadow-[0_0_15px_4px_rgba(128,0,255,0.7)]
              hover:scale-105
-             after:absolute after:inset-0 after:bg-gradient-to-r after:from-white/10 after:via-purple-300/20 after:to-white/10 after:opacity-0 after:transition-opacity after:duration-300 hover:after:opacity-100"
+             after:absolute after:inset-0 after:bg-gradient-to-r after:from-white/10 after:via-purple-300/20 after:to-white/10 after:opacity-0 after:transition-opacity after:duration-300 hover:after:opacity-100 
+             ${
+          visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
           >
             Hyper Motion
           </button>

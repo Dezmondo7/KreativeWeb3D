@@ -197,13 +197,13 @@ const LandingPage = () => {
               href="#contact"
               className="px-6 py-3 bg-white text-black font-semibold rounded-lg shadow hover:shadow-xl hover:scale-105 transition-transform text-sm sm:text-base text-center"
             >
-              Get Quote
+              Launch Now
             </a>
             <a
               href="#about"
               className="px-6 py-3 border border-gray-300 text-gray-300 font-semibold rounded-lg hover:border-gray-400 hover:bg-gray-800 transition duration-200 text-sm sm:text-base text-center"
             >
-              Learn More
+              Unlock More
             </a>
           </div>
           <div className="hidden sm:flex flex-wrap justify-center gap-3 mt-8">

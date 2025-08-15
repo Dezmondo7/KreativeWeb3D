@@ -115,13 +115,18 @@ const Starfield = () => {
 
   return (
     <>
-      <button
-        onClick={triggerWarp}
-        className={`fixed bottom-8 cursor-pointer right-8 px-2 py-2 z-50 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition-opacity duration-500 ${showButton ? 'opacity-100' : 'opacity-0'}`}
-      >
-        Warp!
-      </button>
-
+      {showButton && (
+        <div className="hidden md:flex fixed bottom-8 w-full justify-center z-50 px-4">
+          <div className="w-full max-w-[1200px] flex justify-end">
+            <button
+              onClick={triggerWarp}
+              className="px-4 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition-opacity duration-500"
+            >
+              Hyper Motion!
+            </button>
+          </div>
+        </div>
+      )}
       <div className="fixed inset-0 z-10 pointer-events-none">
         {stars.map((star) => (
           <div
@@ -170,10 +175,10 @@ const LandingPage = () => {
     <>
       <div className="hidden sm:block">
         <Starfield />
-      </div>  
+      </div>
       <Cookie />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(0,255,255,0.07)_0%,transparent_70%)] pointer-events-none" />
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(128,0,255,0.15)_0%,transparent_70%)] pointer-events-none" /> 
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(128,0,255,0.15)_0%,transparent_70%)] pointer-events-none" />
       <section
         id="home"
         className="relative bg-gradient-to-br from-purple-800/40 via-black to-black pt-24 sm:pt-32 lg:pt-40 flex items-center justify-center px-4 sm:px-6 lg:px-8 min-h-screen"
@@ -190,7 +195,7 @@ const LandingPage = () => {
             {showCursor && <span className="animate-pulse text-purple-600">|</span>}
           </h1>
           <p className="text-base sm:text-lg text-gray-100 mt-6 max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2">
-            Launching or leveling up? Discover the power of modern web design & development. Freelance-crafted, interactive React websites that look sharp, run fast, and leave a lasting impression.
+            Launching or leveling up? Discover the power of modern web design & development. Freelance-crafted, interactive React coded websites that look sharp, run fast, and leave a lasting impression.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a

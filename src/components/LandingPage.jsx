@@ -116,7 +116,7 @@ const Starfield = () => {
   return (
     <>
       {showButton && (
-        <div className="fixed bottom-8 w-full z-50 px-4 hidden lg:block">
+        <div className="fixed bottom-8 w-full z-50 px-4 hidden lg:block hide-on-short">
           <div className="w-full max-w-screen-xl mx-auto flex justify-end">
             <button
               onClick={triggerWarp}

@@ -32,6 +32,13 @@
   
 }
 
+/* landing page button hyper motion */
+@media (max-height: 700px) {
+  .hide-on-short {
+    display: none;
+  }
+}
+
 .animate-wiggle {
   animation: wiggle 0.6s ease-in-out;
 }

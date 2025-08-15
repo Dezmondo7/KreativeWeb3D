@@ -116,11 +116,11 @@ const Starfield = () => {
   return (
     <>
       {showButton && (
-        <div className="hidden md:flex fixed bottom-8 w-full justify-center z-50 px-4">
-          <div className="w-full max-w-[1200px] flex justify-end">
+        <div className="fixed bottom-8 w-full z-50 px-4 hidden lg:block">
+          <div className="w-full max-w-screen-xl mx-auto flex justify-end">
             <button
               onClick={triggerWarp}
-              className="px-4 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition-opacity duration-500"
+              className="cursor-pointer px-4 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition-opacity duration-500"
             >
               Hyper Motion!
             </button>

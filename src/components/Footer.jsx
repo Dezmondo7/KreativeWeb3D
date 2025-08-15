@@ -77,7 +77,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Creating stunning, modern websites that drive results. We specialize in cutting-edge web development and
+              Creating stunning, modern websites that drive results. We specialise in cutting-edge web development and
               design solutions.
             </p>
 

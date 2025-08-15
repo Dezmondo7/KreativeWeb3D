@@ -120,9 +120,14 @@ const Starfield = () => {
           <div className="w-full max-w-screen-xl mx-auto flex justify-end">
             <button
               onClick={triggerWarp}
-              className="cursor-pointer px-4 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition-opacity duration-500"
+              className="cursor-pointer px-4 py-2 bg-gray-400 text-black font-bold rounded-lg shadow 
+             transition-all duration-300 relative overflow-hidden
+             hover:bg-purple-700
+             hover:shadow-[0_0_15px_4px_rgba(128,0,255,0.7)]
+             hover:scale-105
+             after:absolute after:inset-0 after:bg-gradient-to-r after:from-white/10 after:via-purple-300/20 after:to-white/10 after:opacity-0 after:transition-opacity after:duration-300 hover:after:opacity-100"
             >
-              Hyper Motion!
+              Hyper Motion
             </button>
           </div>
         </div>

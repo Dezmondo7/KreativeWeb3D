@@ -109,7 +109,7 @@ const buttonRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
+      if (window.scrollY > 10) {
         setVisible(false);
       } else {
         setVisible(true);

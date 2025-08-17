@@ -122,7 +122,7 @@ const NavBar = () => {
                         {/* Small logo + "Reakt" on small devices only */}
                         <img
                             src={LogoR}
-                            alt="Logo"
+                            alt="Reak Web Design Logo"
                             className="w-9 h-9 object-contain block md:hidden"
                         />
                         <span className="block md:hidden"></span>
@@ -130,7 +130,7 @@ const NavBar = () => {
                         {/* Bigger logo only on medium devices */}
                         <img
                             src={LogoR}
-                            alt="Logo"
+                            alt="Reakt Web DesignLogo"
                             className="w-9 h-9 sm:w-10 sm:h-10 object-contain hidden md:block lg:hidden"
                         />
 

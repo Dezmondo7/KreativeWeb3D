@@ -31,7 +31,7 @@ const AboutMe = () => {
     { name: "Tailwind CSS", level: "Advanced", icon: "💨" },
     { name: "Node.js", level: "Advanced", icon: <img src={NodeJS} alt="Node JS logo" className="w-6 h-6" /> },
     { name: "Git", level: "Intermediate", icon: <img src={GitLogo} alt="Git logo" className="w-6 h-6" /> },
-    { name: "Responsive Design", level: "Expert", icon: "📱" },
+    { name: "Responsive Design", level: "Expert", icon: "📱"},
     { name: "UI/UX Design", level: "Advanced", icon: "✨" },
   ];
 
@@ -44,7 +44,7 @@ const AboutMe = () => {
             <div className="relative">
               <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full p-1 shadow-2xl">
                 <div className="w-full h-full rounded-full bg-transparent overflow-hidden">
-                  <img src={avatarLogo} alt="Profile" className="w-full h-full object-cover " />
+                  <img src={avatarLogo} alt="Image of Dale React Web Developer " className="w-full h-full object-cover " />
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ const AboutMe = () => {
                 <div
                   key={skill.name}
                   ref={skill.ref ? skill.ref : null}
-                  className="relative group p-4 bg-white/5 rounded-2xl border border-white/10 overflow-hidden cursor-pointer"
+                  className=" relative group p-4 bg-white/5 rounded-2xl border border-white/10 overflow-hidden cursor-pointer"
                   style={index === 0 && firstInView ? {
                     animation: 'wiggle 0.5s ease-in-out 2'
                   } : {}}

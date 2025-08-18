@@ -2,10 +2,30 @@ import React from 'react'
 import TitleHeader from '../components/TitleHeader'
 import { testimonials } from '../constants'
 import GlowCard from '../components/GlowCard'
+import { Helmet } from 'react-helmet';
 
 const Testimonials = () => {
     return (
         <section id="testimonials" className="flex-center">
+            <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Review",
+                        "itemReviewed": {
+                            "@type": "Organization",
+                            "name": "Reakt Web Design"
+                        },
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": "5",
+                            "bestRating": "5"
+                        },
+                        "author": testimonials.map(t => ({ "@type": "Person", "name": t.name })),
+                        "reviewBody": testimonials.map(t => t.review)
+                    })}
+                </script>
+            </Helmet>
             <div className="w-full mx-auto max-w-screen-xl h-full section-padding">
                 <div className="text-center max-w-2xl mx-auto">
                     <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 mt-40 md:mt-30 lg:mt-40">

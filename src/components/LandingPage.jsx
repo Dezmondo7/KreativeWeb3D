@@ -209,7 +209,6 @@ const LandingPage = () => {
       >
         {theme === "dark" ? "☀️" : "🌙"}
       </button> */}
-
       <div className="hidden sm:block">
         <Starfield theme={theme} />
       </div>

@@ -140,7 +140,7 @@ const Starfield = ({ theme }) => {
              ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
           >
-            Hyper Motion
+            Future Motion
           </button>
         </div>
       </div>
@@ -209,6 +209,7 @@ const LandingPage = () => {
       >
         {theme === "dark" ? "☀️" : "🌙"}
       </button> */}
+
       <div className="hidden sm:block">
         <Starfield theme={theme} />
       </div>
@@ -242,7 +243,7 @@ const LandingPage = () => {
           </h1>
           <p className={`text-base sm:text-lg mt-6 max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2 ${theme === "dark" ? "text-gray-100" : "text-gray-900"
             }`}>
-            Launching or leveling up? Discover the power of modern web design & development. Freelance-crafted, interactive React coded websites that look sharp, run fast, and leave a lasting impression.
+           Launching or levelling up? Ride the AI wave with React-powered websites, hand coded, interactive, fast, and designed for results. Freelance-crafted for the future of creative website development.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a

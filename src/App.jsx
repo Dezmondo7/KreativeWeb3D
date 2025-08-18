@@ -17,6 +17,7 @@ import FAQSection from './components/FAQSection.jsx';
 import ReactSection from './components/ReactSection.jsx';
 import PricingSection from './components/pricing.jsx'
 import Work from './components/Work.jsx'
+import Creative from './components/Creative.jsx'
 
 const App = () => {
   return (
@@ -27,6 +28,9 @@ const App = () => {
     <AnimatedCounter />
     <Experience />
     <AboutMe />
+
+    <Creative />
+
     <ReactSection />
     <Work />
     {/*<Showcase />*/}

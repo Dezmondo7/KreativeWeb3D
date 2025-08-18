@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 import reactLogo from '../assets/atom.png';
+import { Helmet } from "react-helmet";
 
 const CountUp = ({ end, suffix = "", duration = 2000 }) => {
   const [count, setCount] = useState(0)

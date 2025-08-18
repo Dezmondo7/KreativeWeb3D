@@ -1,5 +1,4 @@
 import React from 'react'
-import Hero from './sections/Hero.jsx'
 import AnimatedCounter from './components/AnimatedCounter.jsx'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -17,7 +16,7 @@ import FAQSection from './components/FAQSection.jsx';
 import ReactSection from './components/ReactSection.jsx';
 import PricingSection from './components/pricing.jsx'
 import Work from './components/Work.jsx'
-import Creative from './components/Creative.jsx'
+import AiCreative from './components/AiCreative.jsx'
 
 const App = () => {
   return (
@@ -29,7 +28,7 @@ const App = () => {
     <Experience />
     <AboutMe />
 
-    <Creative />
+    <AiCreative />
 
     <ReactSection />
     <Work />

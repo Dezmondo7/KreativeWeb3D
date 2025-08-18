@@ -5,9 +5,9 @@ import App from './App.jsx';
 import { CookiesProvider } from 'react-cookie'; // ✅ Import provider
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+//  <StrictMode>
     <CookiesProvider>
       <App />
     </CookiesProvider>
-  </StrictMode>
+//  </StrictMode>
 );

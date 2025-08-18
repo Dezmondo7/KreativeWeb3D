@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import LetterR from "../assets/letter-r.png";
 import FlickFinderVideo from "../assets/FlickFinderVideo.mp4";
 import CrtImage from '../assets/CuratedImg.png'
+import { Helmet } from "react-helmet";
 
 const projects = [
   {
@@ -138,53 +139,85 @@ const PortfolioGrid = () => {
     filter === "All" ? projects : projects.filter((project) => project.category === filter);
 
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+    <>
+      <Helmet>
+        <title>React Portfolio | Creative Web & App Designs by Reakt Web Design</title>
+        <meta
+          name="description"
+          content="Explore Reakt Web Design's portfolio of React-powered websites, mobile apps, and branding projects. Minimalist, interactive, and startup-friendly designs that deliver results."
+        />
+        <meta name="robots" content="index, follow" />
 
-          <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 mt-20 md:mt-30 lg:mt-40">Our Work</h2>
-          <p className="text-gray-400 text-lg">
-            A showcase of our minimalist designs and creative solutions.
-          </p>
-        </motion.div>
+        {/* Structured Data for Projects */}
+        <script type="application/ld+json">
+          {`
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Reakt Web Design Portfolio",
+          "description": "A curated collection of React web and app projects showcasing minimalist, interactive designs for startups and entrepreneurs.",
+          "url": "https://yourwebsite.com/portfolio",
+          "itemListElement": ${JSON.stringify(
+            projects.map((project, i) => ({
+              "@type": "ListItem",
+              "position": i + 1,
+              "name": project.title,
+              "description": project.description,
+              "image": project.imageUrl || "",
+              "url": project.videoUrl ? project.videoUrl : ""
+            }))
+          )}
+        }
+        `}
+        </script>
+      </Helmet>
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
 
-        {/* Category Filter */}
-        <div className="flex justify-center space-x-4 mb-8">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setFilter(category)}
-              className={`cursor-pointer px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                filter === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
+            <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 mt-20 md:mt-30 lg:mt-40">Our Work</h2>
+            <p className="text-gray-400 text-lg">
+              A showcase of our minimalist designs and creative solutions.
+            </p>
+          </motion.div>
+
+          {/* Category Filter */}
+          <div className="flex justify-center space-x-4 mb-8">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setFilter(category)}
+                className={`cursor-pointer px-4 py-2 rounded-full text-sm font-medium transition-colors ${filter === category
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                  }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          {/* Projects Grid */}
+          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <AnimatePresence>
+              {filteredProjects.map((item) =>
+                item.videoUrl ? (
+                  <LazyVideoCard key={item.id} item={item} />
+                ) : (
+                  <LazyImageCard key={item.id} item={item} />
+                )
+              )}
+            </AnimatePresence>
+          </motion.div>
         </div>
-
-        {/* Projects Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AnimatePresence>
-            {filteredProjects.map((item) =>
-              item.videoUrl ? (
-                <LazyVideoCard key={item.id} item={item} />
-              ) : (
-                <LazyImageCard key={item.id} item={item} />
-              )
-            )}
-          </AnimatePresence>
-        </motion.div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

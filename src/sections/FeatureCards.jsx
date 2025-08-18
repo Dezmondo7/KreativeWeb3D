@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { abilities } from '../constants/index.js';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
 
 const cardVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -90,6 +91,42 @@ const FeatureCards = () => {
 
   return (
     <div className="relative w-full max-w-screen-xl mx-auto px-6 mt-40" id="services" ref={containerRef}>
+          <Helmet>
+        <title>Web Design & Development Services | Reakt Web Design</title>
+        <meta
+          name="description"
+          content="Explore Reakt Web Design's services: web design, development, branding, and app solutions. Innovative, minimalist, and startup-friendly designs."
+        />
+        <meta name="robots" content="index, follow" />
+
+        {/* Structured Data for Services */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "provider": {
+              "@type": "Organization",
+              "name": "Reakt Web Design",
+              "url": "https://yourwebsite.com"
+            },
+            "serviceType": "Web Design, Development & Branding",
+            "areaServed": "Global",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Services Offered",
+              "itemListElement": abilities.map((ability, i) => ({
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": ability.title,
+                  "description": ability.desc,
+                },
+                "position": i + 1,
+              })),
+            },
+          })}
+        </script>
+      </Helmet>
       {/* Section Title */}
       <div className="text-center max-w-2xl mx-auto">
         <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 mt-20 md:mt-30 lg:mt-40">

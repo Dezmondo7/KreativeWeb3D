@@ -39,6 +39,10 @@ app.post("/api/generate", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Backend is live! ");
+});
+
 app.listen(PORT, () =>
   console.log(`🚀 Server running on http://localhost:${PORT}`)
 );

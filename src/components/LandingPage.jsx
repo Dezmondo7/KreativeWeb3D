@@ -243,7 +243,7 @@ const LandingPage = () => {
           </h1>
           <p className={`text-base sm:text-lg mt-6 max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2 ${theme === "dark" ? "text-gray-100" : "text-gray-900"
             }`}>
-           Launching or levelling up? Ride the AI wave with React-powered websites, interactive, fast, and designed for results. Freelance-crafted, AI empowered, the future of creative website development.
+           Launching or levelling up? Ride the AI wave with React-powered websites. Interactive, fast, and designed for results. Freelance-crafted, AI empowered, try our custom AI chat and unlock your website ideas in real time.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -254,12 +254,12 @@ const LandingPage = () => {
               Launch Now
             </a>
             <a
-              href="#about"
+              href="#creative"
               className={`px-6 py-3 border font-semibold rounded-lg hover:scale-105 transition-transform text-sm sm:text-base text-center ${theme === "dark" ? "border-gray-300 text-gray-300 hover:border-gray-400 hover:bg-gray-800"
                 : "border-gray-700 text-gray-900 hover:border-gray-900 hover:bg-gray-200"
                 }`}
             >
-              Unlock More
+              Unlock AI
             </a>
           </div>
           <div className="hidden sm:flex flex-wrap justify-center gap-3 mt-8">

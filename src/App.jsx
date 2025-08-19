@@ -27,10 +27,8 @@ const App = () => {
     <AnimatedCounter />
     <Experience />
     <AboutMe />
-
-    <AiCreative />
-
     <ReactSection />
+    <AiCreative />
     <Work />
     {/*<Showcase />*/}
     <FeatureCards />

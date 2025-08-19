@@ -15,13 +15,14 @@ const AiCreative = () => {
     setResult("");
 
     try {
-      const response = await fetch("/api/generate", {
+      const response = await fetch("https://kreative-ai-backend.onrender.com/api/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
       });
 
       const data = await response.json();
+      console.log("Response from live backend:", data);
 
       if (response.ok) {
         setResult(data.result || "No result returned");

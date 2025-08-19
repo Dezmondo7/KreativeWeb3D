@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import LoadingDots from "../components/LoadingDots";
 
 const AiCreative = () => {
   const [prompt, setPrompt] = useState("");
@@ -54,15 +55,15 @@ const AiCreative = () => {
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           placeholder="Type something creative..."
-          className="p-3 border rounded-md resize-none shadow-2x1"
+          className="p-3 border rounded-md resize-none bg-white/90 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-gray-900 placeholder-gray-400"
           rows={4}
         />
         <button
           type="submit"
           disabled={loading}
-          className="bg-purple-800 text-white py-2 px-4 rounded hover:bg-purple-600 cursor-pointer disabled:opacity-50"
+          className=" text-white py-2 cursor-pointer rounded bg-gradient-to-r from-purple-800 to-purple-800 text-white font-medium shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-200"
         >
-          {loading ? "Generating..." : "Generate"}
+          {loading ? <LoadingDots /> : "✨ Generate Idea"}
         </button>
       </form>
 

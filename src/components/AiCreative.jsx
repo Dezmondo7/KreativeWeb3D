@@ -47,7 +47,7 @@ const AiCreative = () => {
             Unlock Your Web Ideas
           </h2>
           <p className="text-gray-400 text-lg mb-10">
-            Let our AI generate names, ideas and more.
+            Let our <span className="text-purple-500">AI Wizard</span> generate brand names, web addresses, colour paletes and anything else, <span className="text-blue-500 font-medium animate-pulse">just ask!</span>
           </p>
         </div>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -73,7 +73,7 @@ const AiCreative = () => {
         <textarea
           value={result}
           readOnly
-          className="mt-4 w-full p-3 border rounded-md bg-gray-100 resize-none text-black"
+          className="bg-purple-50 mt-4 w-full p-3 border rounded-md bg-gray-100 resize-none text-black"
           rows={6}
         />
       )}

@@ -16,7 +16,7 @@ const AiCreative = () => {
     setResult("");
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/generate`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/generate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
@@ -43,13 +43,13 @@ const AiCreative = () => {
 
     <div id="creative" className="max-w-xl mx-auto p-4">
       <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 mt-20 md:mt-30 lg:mt-40">
-            Unlock Your Web Ideas
-          </h2>
-          <p className="text-gray-400 text-lg mb-10">
-            Let our <span className="text-purple-500">AI Wizard</span> generate brand names, web addresses, colour paletes and anything else, <span className="text-blue-500 font-medium animate-pulse">just ask!</span>
-          </p>
-        </div>
+        <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 mt-20 md:mt-30 lg:mt-40">
+          Unlock Your Web Ideas
+        </h2>
+        <p className="text-gray-400 text-lg mb-10">
+          Let our <span className="text-purple-500">AI Wizard</span> generate brand names, web addresses, colour paletes and anything else, <span className="text-blue-500 font-medium animate-pulse">just ask!</span>
+        </p>
+      </div>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <textarea
           value={prompt}
@@ -78,7 +78,7 @@ const AiCreative = () => {
         />
       )}
     </div>
- 
+
   );
 };
 

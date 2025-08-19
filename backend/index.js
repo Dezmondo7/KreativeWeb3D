@@ -12,7 +12,7 @@ const PORT = process.env.PORT;
 // Middleware
 app.use(cors());
 app.use(express.json()); // <<<< THIS IS THE MISSING PIECE
-
+app.use(cors({ origin: "*" }));
 
 // OpenAI client
 const openai = new OpenAI({

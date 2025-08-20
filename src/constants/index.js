@@ -198,7 +198,7 @@ const navLinks = [
       date: "",
       responsibilities: [
         "Reakt Web Design brings a fresh, intelligent approach to crafting custom high-performance websites",
-        "By blending AI-driven creativity with cutting-edge digital tools, we help brands stand out in a crowded online world",
+        "By blending creativity with cutting-edge AI & digital tools, we help brands stand out in a crowded online world",
         "We put users first, every click, scroll, and interaction becomes part of a journey that gets you results.",
       ],
     },

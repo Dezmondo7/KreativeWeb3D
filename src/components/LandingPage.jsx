@@ -243,7 +243,7 @@ const LandingPage = () => {
           </h1>
           <p className={`text-base sm:text-lg mt-6 max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2 ${theme === "dark" ? "text-gray-100" : "text-gray-900"
             }`}>
-           Launching or levelling up? Ride the AI wave with React-powered websites. Interactive, fast, and designed for results. Freelance-crafted, AI empowered, try our custom AI chat and unlock your website ideas in real time.
+           Launching or leveling up? Surf the AI wave with React-powered websites. Interactive, fast, and designed for results. Freelance-crafted, AI-boosted. Unlock AI and turn your ideas into reality.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a

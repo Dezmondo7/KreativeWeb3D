@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useRef } from "react"
 import reactLogo from '../assets/atom.png';
-import { Helmet } from "react-helmet";
 
 const CountUp = ({ end, suffix = "", duration = 2000 }) => {
   const [count, setCount] = useState(0)
@@ -69,14 +68,6 @@ const CounterSection = () => {
 
   return (
     <>
-     <Helmet>
-       <title>Freelance React Developer | Scalable & Interactive Websites | Reakt Web Design</title>
-        <meta name="description" content="See the impact of Reakt Web Design: interactive, scalable, and high-performance React websites. Freelance React developer creating future-proof web experiences with measurable results." />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Reakt Web Design | Freelance React Developer" />
-        <meta property="og:description" content="Reakt Web Design builds modern, responsive websites with React. Freelance React developer crafting interactive, fast, and scalable web experiences." />
-        <meta property="og:type" content="website" />
-      </Helmet>
     <div
       id="counter"
       className="max-w-screen-xl mx-auto hidden sm:block px-4 sm:px-6 lg:px-8 py-16 xl:mt-0 mt-20 bg-black relative overflow-hidden"

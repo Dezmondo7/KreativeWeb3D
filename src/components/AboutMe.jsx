@@ -39,37 +39,29 @@ const AboutMe = () => {
   return (
     <>
       <Helmet>
-        <title>Reakt Web Design | About Me</title>
-        <meta
-          name="description"
-          content="Meet Dale, a React front-end web developer with 8+ years of IT experience. Building responsive, interactive, and visually stunning web projects for clients worldwide."
-        />
-        <meta name="robots" content="index, follow" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json">
+         <script type="application/ld+json">
           {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Dale",
-        "jobTitle": "React Front-End Developer",
-        "url": "https://yourwebsite.com",
-        "sameAs": [
-          "https://linkedin.com/in/yourprofile",
-          "https://github.com/yourprofile"
-        ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Reakt Web Design"
-        },
-        "hasOccupation": {
-          "@type": "Occupation",
-          "name": "React Developer",
-          "description": "Builds interactive, responsive, and scalable web experiences using React."
-        }
-      }
-    `}
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Dale",
+            "jobTitle": "React Front-End Developer",
+            "url": "https://reaktwebdesign.co.uk",
+            "sameAs": [
+              "https://www.linkedin.com/in/dale-yourprofile",
+              "https://github.com/dale-yourprofile"
+            ],
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Reakt Web Design"
+            },
+            "hasOccupation": {
+              "@type": "Occupation",
+              "name": "React Developer",
+              "description": "Builds interactive, responsive, and scalable web experiences using React."
+            }
+          }
+          `}
         </script>
       </Helmet>
       <div className="min-h-screen flex items-center justify-center px-4">

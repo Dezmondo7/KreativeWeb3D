@@ -57,13 +57,7 @@ const Experience = () => {
   return (
     <>
       <Helmet>
-        <title>Reakt Web Design | Experience & Portfolio</title>
-        <meta
-          name="description"
-          content="Explore the experience and portfolio of Reakt Web Design. Freelance React developer delivering interactive, scalable, and visually stunning web projects."
-        />
-        <meta name="robots" content="index, follow" />
-
+      
         {/* Structured Data */}
         <script type="application/ld+json">
           {`

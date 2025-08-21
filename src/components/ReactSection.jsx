@@ -69,13 +69,6 @@ function ReactSection() {
   return (
     <>
           <Helmet>
-        <title>Why React? | Modern Web Development with Reakt Web Design</title>
-        <meta
-          name="description"
-          content="Learn why React powers modern, fast, and interactive websites. Reakt Web Design builds SEO-friendly, secure, and scalable web solutions with React."
-        />
-        <meta name="robots" content="index, follow" />
-
         {/* Structured Data */}
         <script type="application/ld+json">
           {`

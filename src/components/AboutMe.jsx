@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import avatarLogo from '../assets/av2.png';
-import javascriptIcon from '../assets/javascript.png';
+import avatarLogo from '../assets/av.png';
 import ReactIcon from '../assets/atom.png';
 import JavaScriptLogo from '../assets/js.png';
 import HtmlLogo from '../assets/html.png';

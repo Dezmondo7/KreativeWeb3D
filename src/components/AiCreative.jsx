@@ -47,7 +47,7 @@ const AiCreative = () => {
           Unlock Your Web Ideas
         </h2>
         <p className="text-gray-400 text-lg mb-10">
-          Let our <span className="text-purple-500">AI Wizard</span> generate awesome brand names, domains and even content, it can do it all, <span className="text-blue-500 font-medium animate-pulse">just ask!</span>
+          Let our <span className="text-purple-500">AI Wizard</span> work its magic. Struggling for brand names, dynamic content or markting slogans, it can do it all in seconds, <span className="text-blue-500 font-medium animate-pulse">Ask the AI Wizard!</span>
         </p>
       </div>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -70,14 +70,28 @@ const AiCreative = () => {
       {error && <p className="mt-4 text-red-500">{error}</p>}
 
       {result && (
+        <>
         <textarea
           value={result}
           readOnly
           className="bg-purple-50 mt-4 w-full p-3 border rounded-md bg-gray-100 resize-none text-black"
           rows={6}
         />
+         <div className="text-center mt-6">
+        <button
+          onClick={() => {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="cursor-pointer inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md shadow-md transition"
+        >
+          Want AI integrated in your website? Contact Us
+        </button>
+      </div>
+    </>
+        
       )}
     </div>
+    
 
   );
 };

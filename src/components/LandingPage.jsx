@@ -243,7 +243,7 @@ const LandingPage = () => {
           </h1>
           <p className={`text-base sm:text-lg mt-6 max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2 ${theme === "dark" ? "text-gray-100" : "text-gray-900"
             }`}>
-          Level up your online presence with intelligent, AI-powered websites. Freelance-crafted, AI-enhanced. Unlock AI capabilites and transform your ideas into smart, futuristic web experiences that deliver real results.
+          Elevate your Digital presence with intelligent, AI-powered websites. Freelance-crafted, AI-enhanced. Unlock AI capabilites and transform your ideas into smart, futuristic web experiences that deliver real results.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -251,7 +251,7 @@ const LandingPage = () => {
               className={`px-6 py-3 font-semibold rounded-lg shadow hover:shadow-xl hover:scale-105 transition-transform text-sm sm:text-base text-center ${theme === "dark" ? "bg-white text-black" : "bg-gray-900 text-white"
                 }`}
             >
-              Launch Now
+              Book AI Call
             </a>
             <a
               href="#creative"
@@ -259,7 +259,7 @@ const LandingPage = () => {
                 : "border-gray-700 text-gray-900 hover:border-gray-900 hover:bg-gray-200"
                 }`}
             >
-              Unlock AI
+              Unlock AI Demo
             </a>
           </div>
           <div className="hidden sm:flex flex-wrap justify-center gap-3 mt-8">

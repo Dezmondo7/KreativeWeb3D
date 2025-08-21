@@ -152,11 +152,7 @@ const Footer = () => {
             <div className="space-y-4 mb-8">
               <div className="flex items-center text-gray-400">
                 <EmailIcon />
-                <span className="ml-3">hello@reaktweb.com</span>
-              </div>
-              <div className="flex items-center text-gray-400">
-                <PhoneIcon />
-                <span className="ml-3">07715 479127</span>
+                <span className="ml-3">dale@reaktwebdesign.co.uk</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <LocationIcon />

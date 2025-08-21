@@ -174,7 +174,7 @@ const LandingPage = () => {
   const [displayedText, setDisplayedText] = useState("")
   const [showCursor, setShowCursor] = useState(true)
   const [theme, setTheme] = useState("dark") // dark/light toggle
-  const fullText = "Powered by React"
+  const fullText = "Powered by Reakt Web"
 
 
 

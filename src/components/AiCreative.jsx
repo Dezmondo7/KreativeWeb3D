@@ -47,7 +47,7 @@ const AiCreative = () => {
           Unlock Your Web Ideas
         </h2>
         <p className="text-gray-400 text-lg mb-10">
-          Let our <span className="text-purple-500">AI Wizard</span> generate brand names, web addresses, colour paletes and anything else, <span className="text-blue-500 font-medium animate-pulse">just ask!</span>
+          Let our <span className="text-purple-500">AI Wizard</span> generate awesome brand names, domains and even content, it can do it all, <span className="text-blue-500 font-medium animate-pulse">just ask!</span>
         </p>
       </div>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">

@@ -70,10 +70,10 @@ function PricingSection() {
       annualPrice: "£1500+",
       description: "Elevate your brand to the next level with our Ultra AI front-end package.",
       features: [
-        "Complex AI Integration",
-        "Built for AI Integrations",
+        "Complex AI Integrations",
+        "Built for Future Reakt Web AI Integrations",
         "Full Multi-page website",
-        "Custom UI components and complex interactions ",
+        "Custom UI components ",
         "Domain, Hosting & Encrypted Security",
         "Enhanced SEO performance work",
         "Priority email and chat support",

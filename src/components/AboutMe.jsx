@@ -88,7 +88,7 @@ const AboutMe = () => {
               </p>
 
               <p className="text-sm text-gray-200 leading-relaxed">
-                Currently I'm developing an AI Powered application using React, Redux Toolkit, and JavaScript empowering businesses to make data driven decsisions through intuitive interfaces. I specialise in building responsive, engaging digital experiences that facilitate business growth. I believe the power of clean code, intuitive user interfaces, and the magic that happens when creativity meets functionality.
+                Currently I'm developing an AI Powered application using React, Redux Toolkit, and JavaScript empowering businesses to make data driven decsisions through intuitive interfaces. I specialise in building responsive, engaging digital experiences that facilitate business growth. I believe in the power of clean code, intuitive user interfaces, and the magic that happens when creativity meets functionality.
               </p>
             </div>
 

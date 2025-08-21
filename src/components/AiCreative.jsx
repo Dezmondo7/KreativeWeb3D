@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LoadingDots from "../components/LoadingDots";
+import wizardImg from '../assets/wizard.png'
 
 const AiCreative = () => {
   const [prompt, setPrompt] = useState("");
@@ -43,18 +44,20 @@ const AiCreative = () => {
 
     <div id="creative" className="max-w-xl mx-auto p-4">
       <div className="text-center max-w-2xl mx-auto">
-        <h2 className="text-white text-4xl md:text-5xl font-bold mb-4 mt-20 md:mt-30 lg:mt-40">
+        <img src={wizardImg} className="mt-20 md:mt-30 lg:mt-40" />
+        <h2 className="text-white text-4xl md:text-5xl font-bold mb-4">
           Unlock Your Web Ideas
         </h2>
+        
         <p className="text-gray-400 text-lg mb-10">
-          Let our <span className="text-purple-500">AI Wizard</span> work its magic. Struggling for brand names, dynamic content or markting slogans, it can do it all in seconds, <span className="text-blue-500 font-medium animate-pulse">Ask the AI Wizard!</span>
+          Let our AI Wizard work its magic. Struggling for brand names, dynamic content or markting slogans, it can do it all in seconds. <span className="text-blue-500 font-medium animate-pulse"></span>
         </p>
       </div>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <textarea
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
-          placeholder="Type something creative..."
+          placeholder="Ask the AI Wizard to create something..."
           className="p-3 border rounded-md resize-none bg-white/90 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-gray-900 placeholder-gray-400"
           rows={4}
         />

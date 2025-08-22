@@ -243,7 +243,7 @@ const LandingPage = () => {
           </h1>
           <p className={`text-base sm:text-lg mt-6 max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2 ${theme === "dark" ? "text-gray-100" : "text-gray-900"
             }`}>
-          Elevate your Digital presence with intelligent, AI-powered websites built with React. Freelance-crafted, AI-enhanced. Unlock AI capabilites and transform your ideas into smart, futuristic web experiences that deliver real results.
+          Elevate your digital presence with intelligent, AI-powered websites built with React. Freelance-crafted, AI-enhanced. Unlock our AI Wizard and transform your ideas into smart, futuristic web experiences that deliver real results.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -259,7 +259,7 @@ const LandingPage = () => {
                 : "border-gray-700 text-gray-900 hover:border-gray-900 hover:bg-gray-200"
                 }`}
             >
-              Unlock AI Demo
+              Unlock AI Wizard
             </a>
           </div>
           <div className="hidden sm:flex flex-wrap justify-center gap-3 mt-8">

@@ -83,11 +83,11 @@ const AboutMe = () => {
             {/* Paragraphs */}
             <div className="max-w-3xl mx-auto space-y-6">
               <p className="text-sm text-gray-200 leading-relaxed">
-                Hi, I’m Dale — a Front-End AI Engineer with 8+ years of IT experience. My development stack comprises of Modern Web Development Technologies and I’ve helped enterprise clients like Müller and Evri (Hermes) deliver successful technology projects, bringing business insight to every collaboration.
+                Hi, I’m Dale — a React Web Developer with 8+ years of IT experience. My development stack comprises of Modern Web Development Technologies and I’ve helped enterprise clients like Müller and Evri (Hermes) deliver successful technology projects, bringing business insight to every collaboration.
               </p>
 
               <p className="text-sm text-gray-200 leading-relaxed">
-                Currently I'm developing an AI Powered application using React, Redux Toolkit, and JavaScript empowering businesses to make data driven decsisions through intuitive interfaces. I specialise in building responsive, engaging digital experiences that facilitate business growth. I believe in the power of clean code, intuitive user interfaces, and the magic that happens when creativity meets functionality.
+                I specialise in building responsive, engaging digital experiences that facilitate business growth. When I'm not working on web projects you can find me surfing the web with a cup of coffee and trying out the latest web design tools. I believe in the power of clean code, intuitive user interfaces, and the magic that happens when creativity meets functionality.
               </p>
             </div>
 

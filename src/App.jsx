@@ -24,7 +24,7 @@ import { initGA } from "./analytics.js";
 const App = () => {
 
     useEffect(() => {
-    initGA("G-XXXXXXXXXX"); // Replace with your GA4 Measurement ID
+    initGA("G-G8PSM98E30"); // Replace with your GA4 Measurement ID
   }, []);
 
   return (

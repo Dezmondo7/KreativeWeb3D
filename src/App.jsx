@@ -18,7 +18,15 @@ import PricingSection from './components/pricing.jsx'
 import Work from './components/Work.jsx'
 import AiCreative from './components/AiCreative.jsx'
 
+import { useEffect } from "react";
+import { initGA } from "./analytics.js";
+
 const App = () => {
+
+    useEffect(() => {
+    initGA("G-XXXXXXXXXX"); // Replace with your GA4 Measurement ID
+  }, []);
+
   return (
     <>
     <NavBar />

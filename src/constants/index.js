@@ -198,7 +198,7 @@ const navLinks = [
       date: "",
       responsibilities: [
         "Reakt Web Design brings a fresh, intelligent approach to crafting custom high-performance websites",
-        "We specialise in creating beatifully crafted websites that deliver personalized experiences, smarter interactions, and measurable results.",
+        "We specialise in creating beatiful websites that deliver personalized experiences, smarter interactions, and measurable results.",
         "Every click, scroll, and interaction is designed as part of a seamless user journey—helping your brand stand out in a crowded online world.",
       ],
     },

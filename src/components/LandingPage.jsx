@@ -253,13 +253,13 @@ const LandingPage = () => {
                 }`}
               onClick={(e) => {
                 e.preventDefault(); // stop immediate jump
-                trackEvent("Home Page", "Click CTA", "Book AI Call");
+                trackEvent("Home Page", "Click CTA", "Book Free Call");
                 setTimeout(() => {
                   window.location.href = "#contact"; // navigate after tracking
                 }, 100); // give GA a moment to record
               }}
             >
-              Book AI Call
+              Book Free Call
             </a>
             <a
               href="#creative"

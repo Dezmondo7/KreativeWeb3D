@@ -210,7 +210,7 @@ const navLinks = [
       responsibilities: [
         "Handing your brand to a developer is a big leap of trust",
         "We take that responsibility seriously — crafting websites that connect your company to the people who matter most",
-        "You get agency-level design without the agency-level price tag",
+        "You get Agency level Web design and future prrof development",
         
       ],
     },

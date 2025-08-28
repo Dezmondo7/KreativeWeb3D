@@ -196,10 +196,10 @@ const LandingPage = () => {
   return (
     <>
       <Helmet>
-        <title>Reakt Web Design | Freelance React Developer | Web Designer & Developer Bolton</title>
-        <meta name="description" content="Reakt Web Design builds modern, responsive websites with React. Freelance React developer crafting interactive, fast, and scalable web experiences." />
+        <title>Reakt Web Design | Freelance Web Developer | Web Designer & Developer Bolton</title>
+        <meta name="description" content="Reakt Web Design builds modern, responsive websites with React. Freelance React web developer crafting interactive, fast, and scalable web experiences." />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Reakt Web Design | Freelance React Developer" />
+        <meta property="og:title" content="Reakt Web Design | Freelance web Development" />
         <meta property="og:description" content="Reakt Web Design builds modern, responsive websites with React. Freelance React developer crafting interactive, fast, and scalable web experiences." />
         <meta property="og:type" content="website" />
       </Helmet>

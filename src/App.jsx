@@ -44,7 +44,7 @@ const App = () => {
     {/*<Techstack /> */}
     <FAQSection />
     <Testimonials />
-     <BlogPost />
+    <BlogPost />
     <PricingSection />
     <ContactForm />
     <Footer />

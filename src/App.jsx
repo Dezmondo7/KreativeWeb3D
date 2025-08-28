@@ -17,6 +17,7 @@ import ReactSection from './components/ReactSection.jsx';
 import PricingSection from './components/pricing.jsx'
 import Work from './components/Work.jsx'
 import AiCreative from './components/AiCreative.jsx'
+import BlogPost from './sections/Blog.jsx'
 
 import { useEffect } from "react";
 import { initGA } from "./analytics.js";
@@ -43,6 +44,7 @@ const App = () => {
     {/*<Techstack /> */}
     <FAQSection />
     <Testimonials />
+     <BlogPost />
     <PricingSection />
     <ContactForm />
     <Footer />

@@ -38,7 +38,7 @@ const AboutMe = () => {
   return (
     <>
       <Helmet>
-         <script type="application/ld+json">
+        <script type="application/ld+json">
           {`
           {
             "@context": "https://schema.org",
@@ -83,11 +83,14 @@ const AboutMe = () => {
             {/* Paragraphs */}
             <div className="max-w-3xl mx-auto space-y-6">
               <p className="text-sm text-gray-200 leading-relaxed">
-               Hi, I’m Dale — Freelance React Developer and founder of Reakt Web Design. I help startups and small businesses build modern, AI-integrated websites and interactive web apps. With 8+ years in IT, I’ve supported enterprise clients like Müller and Evri (Hermes), combining technical skill with business insight </p>
+                Hi, I’m Dale - I’m a freelance React developer passionate about building modern, responsive web applications with clean UI/UX and smart, AI-powered features. I specialize in helping early-stage start-ups bring ideas to life quickly, from MVP to scalable products.
 
-              <p className="text-sm text-gray-200 leading-relaxed">
-                I design and develop web experiences that help startups engage users and grow their business. I’m passionate about clean code, intuitive interfaces, and adding a bit of creative magic to every project. When I'm not working on web projects you can find me surfing the web with a cup of coffee and trying out the latest web design tools. I believe in the power of clean code, intuitive user interfaces, and the magic that happens when creativity meets functionality.
-              </p>
+                </p>
+                <p className="text-sm text-gray-200 leading-relaxed"> I graduated from an MITx course via EdX, graduating with 98% in 2024, reflecting my dedication to staying at the forefront of web technologies. I enjoy taking ownership of projects, integrating the latest tech, and collaborating closely with founders to create products that truly stand out.
+
+                I’m open to freelance, contract, and start-up opportunities, and I thrive in environments where employees wear multiple hats and take initiative to solve problems. </p>
+
+              
             </div>
 
             {/* Skills Section */}

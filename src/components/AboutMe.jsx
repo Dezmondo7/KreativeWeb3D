@@ -83,11 +83,10 @@ const AboutMe = () => {
             {/* Paragraphs */}
             <div className="max-w-3xl mx-auto space-y-6">
               <p className="text-sm text-gray-200 leading-relaxed">
-                Hi, I’m Dale — a React Web Developer with 8+ years of IT experience. My development stack comprises of Modern Web Development Technologies and I’ve helped enterprise clients like Müller and Evri (Hermes) deliver successful technology projects, bringing business insight to every collaboration.
-              </p>
+               Hi, I’m Dale — Freelance React Developer and founder of Reakt Web Design. I help startups and small businesses build modern, AI-integrated websites and interactive web apps. With 8+ years in IT, I’ve supported enterprise clients like Müller and Evri (Hermes), combining technical skill with business insight </p>
 
               <p className="text-sm text-gray-200 leading-relaxed">
-                I specialise in building responsive, engaging digital experiences that facilitate business growth. When I'm not working on web projects you can find me surfing the web with a cup of coffee and trying out the latest web design tools. I believe in the power of clean code, intuitive user interfaces, and the magic that happens when creativity meets functionality.
+                I design and develop web experiences that help startups engage users and grow their business. I’m passionate about clean code, intuitive interfaces, and adding a bit of creative magic to every project. When I'm not working on web projects you can find me surfing the web with a cup of coffee and trying out the latest web design tools. I believe in the power of clean code, intuitive user interfaces, and the magic that happens when creativity meets functionality.
               </p>
             </div>
 

@@ -27,19 +27,24 @@ export function useHeatmapTracker(sectionId) {
     };
 
     // Track when user enters/leaves section (scroll time)
-    let enterTime = null;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          enterTime = Date.now();
-        } else if (enterTime) {
-          const timeSpent = Date.now() - enterTime;
-          console.log("Time spent:", { sectionId, timeSpent });
-          enterTime = null;
-        }
-      },
-      { threshold: 0.5 }
-    );
+let enterTime = null;
+
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting) {
+      // Only set enterTime if it’s not already set
+      if (!enterTime) enterTime = Date.now();
+    } else {
+      if (enterTime) {
+        const timeSpent = Date.now() - enterTime;
+        console.log("Time spent:", { sectionId, timeSpent });
+        enterTime = null;
+      }
+    }
+  },
+  { threshold: [0, 0.25, 0.5, 0.75, 1] } // fine-grained
+);
+    console.log("Observing section:", section); //Important to see logs
 
     section.addEventListener("mousemove", mouseHandler);
     section.addEventListener("click", clickHandler);
@@ -157,9 +162,7 @@ const Starfield = ({ theme }) => {
     setTimeout(() => setWarp(false), 3000)
   }
 
-
   const buttonRef = useRef(null);
- 
 
   //Event listener to make Future Motion button dissapear
   const [visible, setVisible] = useState(true);
@@ -235,7 +238,7 @@ const LandingPage = () => {
   useHeatmapTracker("hero");
 
 
- // Typing interval for 
+ // Typing interval for feature
   useEffect(() => {
     let index = 0
     const typingInterval = setInterval(() => {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet';
 
 const cards = [
 {
@@ -68,36 +67,6 @@ function BentoCard({ title, description, custom }) {
 function ReactSection() {
   return (
     <>
-          <Helmet>
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "React Web Development",
-            "description": "Reakt Web Design uses React to build modern, fast, and interactive websites that are secure and SEO-friendly.",
-            "url": "https://yourwebsite.com/react",
-            "author": {
-              "@type": "Person",
-              "name": "Dale",
-              "url": "https://yourwebsite.com/about"
-            },
-            "mainEntity": {
-              "@type": "ItemList",
-              "itemListElement": ${JSON.stringify(
-                cards.map((card, i) => ({
-                  "@type": "ListItem",
-                  "position": i + 1,
-                  "name": card.title,
-                  "description": card.description
-                }))
-              )}
-            }
-          }
-          `}
-        </script>
-      </Helmet>
     <section className="relative w-full py-20 px-5 bg-gradient-to-br from-black to-black-900/20">
       {/* Glow blob background */}
       <div className="absolute top-[60%] left-[25%] w-[400px] h-[500px] bg-purple-600/20 blur-[100px] rounded-full z-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />

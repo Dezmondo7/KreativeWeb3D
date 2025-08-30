@@ -37,32 +37,6 @@ const AboutMe = () => {
 
   return (
     <>
-      <Helmet>
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Dale",
-            "jobTitle": "React Front-End Developer",
-            "url": "https://reaktwebdesign.co.uk",
-            "sameAs": [
-              "https://www.linkedin.com/in/dale-yourprofile",
-              "https://github.com/dale-yourprofile"
-            ],
-            "worksFor": {
-              "@type": "Organization",
-              "name": "Reakt Web Design"
-            },
-            "hasOccupation": {
-              "@type": "Occupation",
-              "name": "React Developer",
-              "description": "Builds interactive, responsive, and scalable web experiences using React."
-            }
-          }
-          `}
-        </script>
-      </Helmet>
       <div className="min-h-screen flex items-center justify-center px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="space-y-12">

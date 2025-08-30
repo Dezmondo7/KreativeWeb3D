@@ -4,6 +4,55 @@ import Cookie from '../components/Cookie'
 import { Helmet } from "react-helmet";
 import { trackEvent } from '../analytics';
 
+
+//Heatmap tracker function
+export function useHeatmapTracker(sectionId) {
+  useEffect(() => {
+    const section = document.querySelector(`[data-content-id="${sectionId}"]`);
+    if (!section) return;
+
+    const mouseHandler = (e) => {
+      // relative position inside section
+      const rect = section.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      console.log("Mouse move:", { sectionId, x, y });
+      // Later: send to backend/db
+    };
+
+    const clickHandler = (e) => {
+      console.log("Click:", { sectionId });
+      // Later: store as click event
+    };
+
+    // Track when user enters/leaves section (scroll time)
+    let enterTime = null;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          enterTime = Date.now();
+        } else if (enterTime) {
+          const timeSpent = Date.now() - enterTime;
+          console.log("Time spent:", { sectionId, timeSpent });
+          enterTime = null;
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    section.addEventListener("mousemove", mouseHandler);
+    section.addEventListener("click", clickHandler);
+    observer.observe(section);
+
+    return () => {
+      section.removeEventListener("mousemove", mouseHandler);
+      section.removeEventListener("click", clickHandler);
+      observer.disconnect();
+    };
+  }, [sectionId]);
+}
+
 const Starfield = ({ theme }) => {
   const [stars, setStars] = useState([])
   const [warp, setWarp] = useState(false)
@@ -124,7 +173,6 @@ const Starfield = ({ theme }) => {
   }, []);
 
 
-
   return (
     <>
       <div className="fixed bottom-8 w-full z-50 px-4 hidden lg:block hide-on-short">
@@ -177,6 +225,9 @@ const LandingPage = () => {
   const [theme, setTheme] = useState("dark") // dark/light toggle
   const fullText = "Powered by Reakt Web"
 
+  // Tracks heatmap events for the hero section
+  useHeatmapTracker("hero");
+
 
 
   useEffect(() => {
@@ -202,7 +253,34 @@ const LandingPage = () => {
         <meta property="og:title" content="Reakt Web Design | Freelance web Development" />
         <meta property="og:description" content="Reakt Web Design builds modern, responsive websites with React. Freelance React developer crafting interactive, fast, and scalable web experiences." />
         <meta property="og:type" content="website" />
+      
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Reakt Web Design",
+        "jobTitle": "Freelance React Web Developer",
+        "url": "https://reaktwebdesign.co.uk",
+        "sameAs": [
+          "https://www.linkedin.com/in/dalewarburton1/",
+          "https://github.com/Dezmondo7"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Reakt Web Design"
+        },
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "React Web Developer",
+          "description": "Builds interactive, responsive, and scalable websites using React."
+        }
+      }
+    `}
+        </script>
       </Helmet>
+  
       {/* Theme Toggle Button */}
       {/*} <button
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -219,8 +297,9 @@ const LandingPage = () => {
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(128,0,255,0.15)_0%,transparent_70%)] pointer-events-none" />
 
       <section
+        data-content-id="hero"
         id="home"
-        className={`relative pt-24 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 ${theme === "dark"
+        className={`content-hero relative pt-24 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 ${theme === "dark"
           ? "bg-gradient-to-br from-purple-800/40 via-black to-black"
           : "bg-gradient-to-br from-cyan-100/10 via-cyan-100/25 to-cyan-100/50"
 

@@ -94,21 +94,6 @@ function FAQSection() {
   return (
     <section className="relative w-full sm:py-20 px-5 bg-gradient-to-br from-black to-black-900/20">
       {/* Glow / Blur background blob */}
-      <Helmet>
-        <Helmet>
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: faqData.map(faq => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: { "@type": "Answer", text: faq.answer },
-              })),
-            })}
-          </script>
-        </Helmet>
-      </Helmet>
       <div className="absolute top-[150px] left-1/2 -translate-x-1/2 w-[300px] h-[700px] bg-purple-600/20 blur-[100px] z-0 rotate-[-30deg] pointer-events-none" />
 
       {/* Header */}

@@ -53,6 +53,7 @@ export function useHeatmapTracker(sectionId) {
   }, [sectionId]);
 }
 
+//Strafield effect function
 const Starfield = ({ theme }) => {
   const [stars, setStars] = useState([])
   const [warp, setWarp] = useState(false)
@@ -119,7 +120,8 @@ const Starfield = ({ theme }) => {
     }
 
     animationFrameId = requestAnimationFrame(animate)
-
+ 
+    // window resize allows stars to continue to appear on window resize
     const handleResize = () => {
       const width = window.innerWidth
       const height = window.innerHeight
@@ -148,6 +150,8 @@ const Starfield = ({ theme }) => {
     }
   }, [warp])
 
+
+  // Future Motion button trigger
   const triggerWarp = () => {
     setWarp(true)
     setTimeout(() => setWarp(false), 3000)
@@ -155,7 +159,9 @@ const Starfield = ({ theme }) => {
 
 
   const buttonRef = useRef(null);
+ 
 
+  //Event listener to make Future Motion button dissapear
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -229,7 +235,7 @@ const LandingPage = () => {
   useHeatmapTracker("hero");
 
 
-
+ // Typing interval for 
   useEffect(() => {
     let index = 0
     const typingInterval = setInterval(() => {

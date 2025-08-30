@@ -86,7 +86,7 @@ const AboutMe = () => {
                 Hi, I’m Dale - I’m a freelance React developer passionate about building modern, responsive web applications with clean UI/UX and smart, AI-powered features. I specialize in helping early-stage start-ups bring ideas to life quickly, from MVP to scalable products.
 
                 </p>
-                <p className="text-sm text-gray-200 leading-relaxed"> In 2024, I graduated from an MITx course via EdX with an overal grade of 98%. This reflects my dedication to staying at the forefront of web technologies. I enjoy taking ownership of projects, integrating the latest tech, and collaborating closely with founders to create products that truly stand out.
+                <p className="text-sm text-gray-200 leading-relaxed"> In 2024, I graduated from an MITx course via EdX with an overall grade of 98%. This reflects my dedication to staying at the forefront of web technologies. I enjoy taking ownership of projects, integrating the latest tech, and collaborating closely with founders to create products that truly stand out.
 
                 I’m open to freelance, contract, and start-up opportunities, and I thrive in environments where employees wear multiple hats and take initiative to solve problems. </p>
 

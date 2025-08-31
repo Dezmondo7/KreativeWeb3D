@@ -28,7 +28,7 @@ export function useHeatmapTracker(sectionId) {
 
     // Track when user enters/leaves section (scroll time)
 let enterTime = null;
-
+   //IntersectionObserver API
 const observer = new IntersectionObserver(
   ([entry]) => {
     if (entry.isIntersecting) {
@@ -95,7 +95,8 @@ const Starfield = ({ theme }) => {
         depth,
       }
     }
-
+     
+    // Create stars
     const initialStars = Array.from({ length: Math.floor(baseNumStars * 0.9) }, () => createStar(false))
       .concat(Array.from({ length: Math.floor(baseNumStars * 0.1) }, () => createStar(true)))
     setStars(initialStars)
@@ -126,6 +127,7 @@ const Starfield = ({ theme }) => {
             star.y = newY
           }
 
+          //adds new star based on above
           if (star.x < -50 || star.x > window.innerWidth + 50 || star.y < -50 || star.y > window.innerHeight + 50) {
             const newStar = createStar(Math.random() < 0.1)
             return { ...newStar, x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight }

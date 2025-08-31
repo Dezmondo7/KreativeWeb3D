@@ -46,6 +46,18 @@ const observer = new IntersectionObserver(
 );
     console.log("Observing section:", section); //Important to see logs
 
+    // Seperate function to track CTA on buttons book-call & unlo page - 
+const ctaClickHandler = (e) => {
+  const ctaId = e.target.dataset.ctaId;
+  if (ctaId) {
+    console.log("CTA clicked:", { sectionId, ctaId });
+    // Later: send to backend/db
+  }
+};
+
+// Attach to section
+section.addEventListener("click", ctaClickHandler);
+
     section.addEventListener("mousemove", mouseHandler);
     section.addEventListener("click", clickHandler);
     observer.observe(section);
@@ -57,6 +69,7 @@ const observer = new IntersectionObserver(
     };
   }, [sectionId]);
 }
+
 
 //Strafield effect function
 const Starfield = ({ theme }) => {
@@ -317,7 +330,7 @@ const LandingPage = () => {
       >
         <div className="z-20 text-center max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto bg-clip-text">
           <h2
-            className={`font-bold bg-clip-text text-transparent leading-tight ${theme === "dark"
+            className={`unlock-wizard-cta-button font-bold bg-clip-text text-transparent leading-tight ${theme === "dark"
               ? "bg-gradient-to-r from-white via-purple-200 to-cyan-200"
               : "bg-gradient-to-r from-purple-400 via-pink-300 to-yellow-300"
               }`}
@@ -336,8 +349,9 @@ const LandingPage = () => {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
+              data-cta-id="book-call" // dicovery for the function
               href="#contact"
-              className={`px-6 py-3 font-semibold rounded-lg shadow hover:shadow-xl hover:scale-105 transition-transform text-sm sm:text-base text-center ${theme === "dark" ? "bg-white text-black" : "bg-gray-900 text-white"
+              className={`cta-track-unlock-wizard px-6 py-3 font-semibold rounded-lg shadow hover:shadow-xl hover:scale-105 transition-transform text-sm sm:text-base text-center ${theme === "dark" ? "bg-white text-black" : "bg-gray-900 text-white"
                 }`}
               onClick={(e) => {
                 e.preventDefault(); // stop immediate jump
@@ -350,8 +364,9 @@ const LandingPage = () => {
               Book Free Call
             </a>
             <a
+              data-cta-id="unlock-wizard"
               href="#creative"
-              className={`px-6 py-3 border font-semibold rounded-lg hover:scale-105 transition-transform text-sm sm:text-base text-center ${theme === "dark" ? "border-gray-300 text-gray-300 hover:border-gray-400 hover:bg-gray-800"
+              className={`cta-track-book-call px-6 py-3 border font-semibold rounded-lg hover:scale-105 transition-transform text-sm sm:text-base text-center ${theme === "dark" ? "border-gray-300 text-gray-300 hover:border-gray-400 hover:bg-gray-800"
                 : "border-gray-700 text-gray-900 hover:border-gray-900 hover:bg-gray-200"
                 }`}
             >

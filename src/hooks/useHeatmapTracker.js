@@ -73,7 +73,9 @@ const useHeatmapTracker = (sectionUUID, sections, sessionId) => {
 // -----------------------------
 // Log event to Supabase
 // -----------------------------
+console.log("Attempting insert:", { sectionUUID, x, y, eventType, sessionId, timeSpent, ctaId });
 async function logHeatmapEvent(
+  
   sectionUUID,
   x,
   y,

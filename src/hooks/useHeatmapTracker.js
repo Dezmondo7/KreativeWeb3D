@@ -1,102 +1,71 @@
 import { useEffect } from "react";
 import { supabase } from "../lib/supabaseClient";
 
-const useHeatmapTracker = (sectionUUID, sections, sessionId) => {
+
+
+//Heatmap tracker function
+const useHeatmapTracker = (sectionId) => {
   useEffect(() => {
-    // Do nothing if sectionUUID or sections are not ready
-    if (!sectionUUID || !sections || sections.length === 0) return;
+    const section = document.querySelector(`[data-content-id="${sectionId}"]`);
+    if (!section) return;
 
-
-    let enterTime = null; // for time_spent tracking
-
-    // -----------------------------
-    // Mousemove handler
-    // -----------------------------
     const mouseHandler = (e) => {
+      // relative position inside section
       const rect = section.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
-      logHeatmapEvent(sectionUUID, x, y, "mousemove", sessionId, "hero");
+      console.log("Mouse move:", { sectionId, x, y });
+      // Later: send to backend/db
     };
 
-    // -----------------------------
-    // Click handler
-    // -----------------------------
-    const clickHandler = () => {
-      logHeatmapEvent(sectionUUID, 0, 0, "click", sessionId, "hero");
+    const clickHandler = (e) => {
+      console.log("Click:", { sectionId });
+      // Later: store as click event
     };
 
-    // -----------------------------
-    // CTA click handler // works fine do not touch
-    // -----------------------------
-    const ctaClickHandler = (e) => {
-      const ctaId = e.target.dataset.ctaId;
-      if (!ctaId) return;
-
-      logHeatmapEvent(sectionUUID, 0, 0, "clickCTA", sessionId, "hero", 0, ctaId);
-      console.log("CTA clicked:", { sectionUUID, ctaId });
-    };
-
-    // -----------------------------
-    // IntersectionObserver for time_spent - works fine do not touch
-    // -----------------------------
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting && !enterTime) enterTime = Date.now();
-      if (!entry.isIntersecting && enterTime) {
+    // Track when user enters/leaves section (scroll time)
+let enterTime = null;
+   //IntersectionObserver API
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting) {
+      // Only set enterTime if it’s not already set
+      if (!enterTime) enterTime = Date.now();
+    } else {
+      if (enterTime) {
         const timeSpent = Date.now() - enterTime;
-        logHeatmapEvent(sectionUUID, 0, 0, "time_spent", sessionId, "hero", timeSpent);
+        console.log("Time spent:", { sectionId, timeSpent });
         enterTime = null;
       }
-    }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
+    }
+  },
+  { threshold: [0, 0.25, 0.5, 0.75, 1] } // fine-grained
+);
+    console.log("Observing section:", section); //Important to see logs
 
-    // -----------------------------
-    // Attach listeners
-    // -----------------------------
+    // Seperate function to track CTA on buttons book-call & unlo page - 
+const ctaClickHandler = (e) => {
+  const ctaId = e.target.dataset.ctaId;
+  if (ctaId) {
+    console.log("CTA clicked:", { sectionId, ctaId });
+    // Later: send to backend/db
+  }
+};
+
+// Attach to section
+section.addEventListener("click", ctaClickHandler);
+
     section.addEventListener("mousemove", mouseHandler);
     section.addEventListener("click", clickHandler);
-    section.addEventListener("click", ctaClickHandler);
     observer.observe(section);
 
-    // -----------------------------
-    // Cleanup
-    // -----------------------------
     return () => {
       section.removeEventListener("mousemove", mouseHandler);
       section.removeEventListener("click", clickHandler);
-      section.removeEventListener("click", ctaClickHandler);
       observer.disconnect();
     };
-  }, [sectionUUID, sections, sessionId]);
-};
-
-// -----------------------------
-// Log event to Supabase
-// -----------------------------
-console.log("Attempting insert:", { sectionUUID, x, y, eventType, sessionId, timeSpent, ctaId });
-async function logHeatmapEvent(
-  
-  sectionUUID,
-  x,
-  y,
-  eventType,
-  sessionId,
-  timeSpent = null,
-  ctaId = null
-) {
-  const { data, error } = await supabase.from("heatmap_events").insert([{
-    section_id: sectionUUID,
-    session_id: sessionId,
-    event_type: eventType,
-    x,
-    y,
-    time_spent: timeSpent,
-    cta_id: ctaId
-  }]);
-
-  if (error) console.error("Error logging heatmap event:", error);
-  else console.log("Event logged:", data);
+  }, [sectionId]);
 }
 
-export default useHeatmapTracker;
-
+export default useHeatmapTracker

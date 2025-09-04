@@ -5,17 +5,17 @@ import { createClient } from "@supabase/supabase-js";
 
 dotenv.config();
 
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
 // Supabase client (service role key bypasses RLS)
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_SERVICE_KEY
 );
 
-const app = express();
-const PORT = 5001;
-
-app.use(cors());
-app.use(express.json());
 
 // Log endpoint
 app.post("/log", async (req, res) => {
@@ -55,6 +55,6 @@ app.get("/", (req, res) => {
   res.send("Backend is live!");
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-});
+// 5️⃣ Start server
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));

@@ -7,13 +7,13 @@ import OpenAI from "openai";
 
 dotenv.config();
 
+const app = express();
+const PORT = process.env.PORT || 3000;
+
 // Middleware
 app.use(cors());
 app.use(express.json()); // <<<< THIS IS THE MISSING PIECE
 
-
-const app = express();
-const PORT = process.env.PORT || 3000;
 
 // OpenAI client
 const openai = new OpenAI({

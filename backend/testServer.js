@@ -17,6 +17,7 @@ const supabase = createClient(
 );
 
 
+
 // Log endpoint
 app.post("/log", async (req, res) => {
   const event = req.body;
@@ -58,3 +59,26 @@ app.get("/", (req, res) => {
 // 5️⃣ Start server
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
+
+// DashboardTable.jsx request 
+app.get("/dashboard-data", async (req, res) => {
+  console.log("📌 DashboardTable.jsx request received"); // clear indicator
+  try {
+    const { data, error } = await supabase
+      .from("heatmap_events")
+      .select("id, section_id, session_id, event_type, x, y, time_spent, cta_id, created_at")
+      .order("created_at", { ascending: false })
+      .limit(1000); // optional: limit to recent 1000 events
+
+    if (error) {
+      console.error("Error fetching dashboard data:", error);
+      return res.status(500).json({ success: false, error });
+    }
+
+    res.status(200).json({ success: true, data });
+  } catch (err) {
+    console.error("Unexpected error:", err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});

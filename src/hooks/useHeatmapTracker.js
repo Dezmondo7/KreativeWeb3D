@@ -17,7 +17,7 @@ const useHeatmapTracker = (sectionId) => {
 
       console.log("Mouse move:", { sectionId, x, y });
 
-      fetch("https://your-backend-service.onrender.com/log", {
+      fetch("https://kreativeweb3dsupabse.onrender.com/log", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

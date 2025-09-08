@@ -61,7 +61,7 @@ const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 
 
-// DashboardTable.jsx request 
+// DashboardTable.jsx request // data is not being used right now / was a prototype to ensure that the dasboard can recieve data // which it can 
 app.get("/dashboard-data", async (req, res) => {
   console.log("📌 DashboardTable.jsx request received"); // clear indicator
   try {
@@ -69,7 +69,7 @@ app.get("/dashboard-data", async (req, res) => {
       .from("heatmap_events")
       .select("id, section_id, session_id, event_type, x, y, time_spent, cta_id, created_at")
       .order("created_at", { ascending: false })
-      .limit(10); // optional: limit to recent 1000 events
+      .limit(150); // optional: limit to recent 1000 events
 
     if (error) {
       console.error("Error fetching dashboard data:", error);
@@ -82,3 +82,41 @@ app.get("/dashboard-data", async (req, res) => {
     res.status(500).json({ success: false, error: err.message });
   }
 });
+
+//Pupppeteer
+const puppeteer = require('puppeteer');
+const path = require('path');
+
+async function captureFullPage(url) {
+  const savePath = path.join(__dirname, './data/landing_page.png');
+
+  const browser = await puppeteer.launch({ headless: true });
+  const page = await browser.newPage();
+
+  await page.setViewport({ width: 1280, height: 800 });
+  await page.goto(url, { waitUntil: 'networkidle2' });
+  await page.waitForTimeout(1000); // optional for lazy-loaded content
+  await page.screenshot({ path: savePath, fullPage: true });
+
+  await browser.close();
+  console.log(`Screenshot saved: ${savePath}`);
+  return savePath;
+}
+
+module.exports = { captureFullPage };
+
+//Pupetter API route
+const express = require('express');
+const router = express.Router();
+const path = require('path');
+const { captureFullPage } = require('../services/screenshotService');
+
+router.get('/api/screenshot', async (req, res) => {
+  const url = req.query.url;
+  if (!url) return res.status(400).send('URL is required');
+
+  const imagePath = await captureFullPage(url);
+  res.sendFile(imagePath);
+});
+
+module.exports = router;

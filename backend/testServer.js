@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { createClient } from "@supabase/supabase-js";
 
+
 dotenv.config();
 
 const app = express();
@@ -83,23 +84,11 @@ app.get("/dashboard-data", async (req, res) => {
   }
 });
 
-// routes/screenshot.js
-const express = require('express');
-const router = express.Router();
-const { captureFullPage } = require('../services/screenshotService');
+// puppeteer route
+const screenshotRouter = require('./routes/screenshot');
+app.use('/api', screenshotRouter);
 
-router.get('/api/screenshot', async (req, res) => {
-  const url = req.query.url;
-  if (!url) return res.status(400).send('URL is required');
-
-  try {
-    const buffer = await captureFullPage(url);
-    res.set('Content-Type', 'image/png');
-    res.send(buffer);
-  } catch (err) {
-    console.error('❌ Screenshot failed:', err);
-    res.status(500).send('Screenshot failed');
-  }
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
 });
 
-module.exports = router;

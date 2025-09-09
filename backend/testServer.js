@@ -83,40 +83,23 @@ app.get("/dashboard-data", async (req, res) => {
   }
 });
 
-//Pupppeteer
-const puppeteer = require('puppeteer');
-const path = require('path');
-
-async function captureFullPage(url) {
-  const savePath = path.join(__dirname, './data/landing_page.png');
-
-  const browser = await puppeteer.launch({ headless: true });
-  const page = await browser.newPage();
-
-  await page.setViewport({ width: 1280, height: 800 });
-  await page.goto(url, { waitUntil: 'networkidle2' });
-  await page.waitForTimeout(1000); // optional for lazy-loaded content
-  await page.screenshot({ path: savePath, fullPage: true });
-
-  await browser.close();
-  console.log(`Screenshot saved: ${savePath}`);
-  return savePath;
-}
-
-module.exports = { captureFullPage };
-
-//Pupetter API route
+// routes/screenshot.js
 const express = require('express');
 const router = express.Router();
-const path = require('path');
 const { captureFullPage } = require('../services/screenshotService');
 
 router.get('/api/screenshot', async (req, res) => {
   const url = req.query.url;
   if (!url) return res.status(400).send('URL is required');
 
-  const imagePath = await captureFullPage(url);
-  res.sendFile(imagePath);
+  try {
+    const buffer = await captureFullPage(url);
+    res.set('Content-Type', 'image/png');
+    res.send(buffer);
+  } catch (err) {
+    console.error('❌ Screenshot failed:', err);
+    res.status(500).send('Screenshot failed');
+  }
 });
 
 module.exports = router;

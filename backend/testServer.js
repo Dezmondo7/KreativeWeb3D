@@ -84,11 +84,3 @@ app.get("/dashboard-data", async (req, res) => {
   }
 });
 
-// puppeteer route
-const screenshotRouter = require('./routes/screenshot');
-app.use('/api', screenshotRouter);
-
-app.listen(3000, () => {
-  console.log('Server running on port 3000');
-});
-

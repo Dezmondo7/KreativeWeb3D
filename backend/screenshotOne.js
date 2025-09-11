@@ -10,21 +10,21 @@ const client = new screenshotone.Client(process.env.ACCESS_KEY, process.env.SECR
 
 // set up options
 const options = screenshotone.TakeOptions.url("https://reaktwebdesign.co.uk/")
-    .delay(3)
-    .blockAds(true);
+    .delay(7)
+    .blockAds(true)
+    .blockCookieBanners(true)
+    .blockAds(true)
 
-// generate URL
-const url = client.generateTakeURL(options); // or generateSignedTakeURL(options) for signed URLs
+const generatedUrl = await client.generateTakeURL(options);
+const url = generatedUrl + `&viewport_width=1400&viewport_height=900&device_scale_factor=2`;
 console.log(url);
-// expected output: https://api.screenshotone.com/take?url=https%3A%2F%2Fexample.com&delay=3&block_ads=true&access_key=%3Caccess+key%3E
-
 // or download the screenshot
 const imageBlob = await client.take(options);
 const buffer = Buffer.from(await imageBlob.arrayBuffer());
 fs.writeFileSync("example.png", buffer);
 
 //writing an endpoint for the front-end to fetch
-// server.js (Node/Express example) // working locally for now as front end unable to send correct cors as not live
+// server.js (Node/Express example) // working locally for now as front end unable to send correct cors as not
 import express from "express";
 import path from "path";
 import cors from "cors";

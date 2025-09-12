@@ -55,7 +55,7 @@ const useHeatmapTracker = (sectionId) => {
           }
         }
       },
-      { threshold: [0, 0.25, 0.5, 0.75, 1] } // fine-grained
+      //{ threshold: [0, 0.25, 0.5, 0.75, 1] } // fine-grained
     );
     console.log("Observing section:", section); //Important to see logs
 

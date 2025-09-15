@@ -34,10 +34,11 @@ const useHeatmapTracker = (sectionId) => {
 
     };
     
-    // calling supabase and storing click data - required storing sectionId as variable and calling within function
+    // calling supabase and storing click data - required storing sectionId & ctaID as variables and calling within function
     const clickHandler = (e) => {
       const sectionId = "40ff4b33-9da8-4c29-a405-195c8bd1f58f";
       const ctaId = e.target.dataset.ctaId || "cta-default"; 
+      
       console.log("Click:", { sectionId, ctaId });
       // Later: store as click event
         fetch("https://kreativeweb3dsupabse.onrender.com/log", {
@@ -72,7 +73,7 @@ const useHeatmapTracker = (sectionId) => {
           }
         }
       },
-      //{ threshold: [0, 0.25, 0.5, 0.75, 1] } // fine-grained
+      { threshold: [0, 0.25, 0.5, 0.75, 1] } // fine-grained
     );
     console.log("Observing section:", section); //Important to see logs
 

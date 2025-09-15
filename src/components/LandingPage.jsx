@@ -287,6 +287,7 @@ const LandingPage = () => {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               data-cta-id="book-call" // dicovery for the function
+              ct_id="book-free-call"
               href="#contact"
               className={`cta-track-unlock-wizard px-6 py-3 font-semibold rounded-lg shadow hover:shadow-xl hover:scale-105 transition-transform text-sm sm:text-base text-center ${theme === "dark" ? "bg-white text-black" : "bg-gray-900 text-white"
                 }`}

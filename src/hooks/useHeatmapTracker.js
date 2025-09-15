@@ -35,8 +35,23 @@ const useHeatmapTracker = (sectionId) => {
     };
 
     const clickHandler = (e) => {
-      console.log("Click:", { sectionId });
+      const sectionId = "40ff4b33-9da8-4c29-a405-195c8bd1f58f";
+      console.log("Click:", { sectionId, });
       // Later: store as click event
+        fetch("https://kreativeweb3dsupabse.onrender.com/log", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      section_id: sectionId, // use your current sectionId variable
+      session_id: "live-session-" + Date.now(), // same session style
+      event_type: "cta_click", // new event type for CTA
+      cta_id: e.target.id || "cta-default", // optional: identify which CTA was clicked
+      timestamp: new Date().toISOString() // optional: store exact click time
+    }),
+  })
+    .then(res => res.json())
+    .then(data => console.log("Logged via server:", data))
+    .catch(err => console.error("Logging failed:", err)); 
     };
 
     // Track when user enters/leaves section (scroll time)

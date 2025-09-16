@@ -9,6 +9,13 @@ const useHeatmapTracker = (sectionId) => {
     const section = document.querySelector(`[data-content-id="${sectionId}"]`);
     if (!section) return;
 
+    //This generates a random sessionId per user per visit 
+    let sessionId = sessionStorage.getItem("session_id");
+if (!sessionId) {
+  sessionId = crypto.randomUUID(); // generates a unique session ID
+  sessionStorage.setItem("session_id", sessionId);
+}
+
     const mouseHandler = (e) => {
       // relative position inside section
       const rect = section.getBoundingClientRect();
@@ -22,7 +29,7 @@ const useHeatmapTracker = (sectionId) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           section_id: "40ff4b33-9da8-4c29-a405-195c8bd1f58f",
-          session_id: "live-session-" + Date.now(),
+          session_id: sessionId,
           event_type: "mousemove",
           x,
           y
@@ -46,7 +53,7 @@ const useHeatmapTracker = (sectionId) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       section_id: sectionId, // use your current sectionId variable
-      session_id: "live-session-" + Date.now(), // same session style
+     // session_id: sessionId, // same session style
       event_type: "cta_click", // new event type for CTA
       cta_id: ctaId, // optional: identify which CTA was clicked
       timestamp: new Date().toISOString() // optional: store exact click time
@@ -69,6 +76,23 @@ const useHeatmapTracker = (sectionId) => {
           if (enterTime) {
             const timeSpent = Date.now() - enterTime;
             console.log("Time spent:", { sectionId, timeSpent });
+            
+          
+ fetch("https://kreativeweb3dsupabse.onrender.com/log", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      section_id: "40ff4b33-9da8-4c29-a405-195c8bd1f58f", // use your current sectionId variable
+     // session_id: "live-session-" + Date.now(),
+      event_type: "Time_spent", // same session style
+      time_spent: timeSpent,
+      timestamp: new Date().toISOString() // optional: store exact click time
+    }),
+  })
+    .then(res => res.json())
+    .then(data => console.log("Logged via server:", data))
+    .catch(err => console.error("Logging failed:", err)); 
+
             enterTime = null;
           }
         }

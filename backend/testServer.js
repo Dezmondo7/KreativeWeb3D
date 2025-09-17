@@ -62,7 +62,7 @@ const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 
 
-// DashboardTable.jsx request // data is not being used right now / was a prototype to ensure that the dasboard can recieve data // which it can 
+// DashboardTable.jsx request // data is being used right now with fetch request from the front API / was a prototype to ensure that the dasboard can recieve data // which it can 
 app.get("/dashboard-data", async (req, res) => {
   console.log("📌 DashboardTable.jsx request received"); // clear indicator
   try {
@@ -70,7 +70,7 @@ app.get("/dashboard-data", async (req, res) => {
       .from("heatmap_events")
       .select("id, section_id, session_id, event_type, x, y, time_spent, cta_id, created_at")
       .order("created_at", { ascending: false })
-      .limit(150); // optional: limit to recent 1000 events
+      .limit(10000); // optional: limit to recent 1000 events
 
     if (error) {
       console.error("Error fetching dashboard data:", error);

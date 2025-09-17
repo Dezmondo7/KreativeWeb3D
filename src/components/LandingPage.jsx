@@ -273,7 +273,7 @@ const LandingPage = () => {
               }`}
             style={{ fontSize: "clamp(1rem, 2vw + 0.5rem, 2.5rem)" }}
           >
-            Futuristic AI Websites
+            Futuristic Websites
           </h2>
           <h1 className={`mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-clip-text text-transparent ${theme === "dark" ? "bg-gradient-to-r from-cyan-400 to-purple-600" : "bg-gradient-to-r from-pink-500 to-yellow-400"
             }`}>

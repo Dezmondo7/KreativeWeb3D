@@ -70,7 +70,7 @@ app.get("/dashboard-data", async (req, res) => {
       .from("heatmap_events")
       .select("id, section_id, session_id, event_type, x, y, time_spent, cta_id, created_at")
       .order("created_at", { ascending: false })
-      .limit(10000); // optional: limit to recent 1000 events
+      .limit(150); // This caps heatmpa events to rows of 150 which is great for the lie feeds and works on page refresh
 
     if (error) {
       console.error("Error fetching dashboard data:", error);

@@ -54,7 +54,7 @@ app.post("/log", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Backend is live!");
+  res.send({ success: true, data });
 });
 
 // 5️⃣ Start server

@@ -42,7 +42,7 @@ app.post("/api/generate", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Backend is live! ");
+  res.send({ success: true, data });
 });
 
 app.listen(PORT, () =>

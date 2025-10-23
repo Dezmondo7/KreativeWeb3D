@@ -70,7 +70,7 @@ app.get("/dashboard-data", async (req, res) => {
       .from("heatmap_events")
       .select("id, section_id, session_id, event_type, x, y, time_spent, cta_id, created_at")
       .order("created_at", { ascending: false })
-      .limit(1000); // This caps heatmap events to rows of 150 which is great for the live feeds and works on page refresh
+      .limit(1000); // responsible for the amount of data that is pulled to the nextJS dashboard in number of rows
 
     if (error) {
       console.error("Error fetching dashboard data:", error);

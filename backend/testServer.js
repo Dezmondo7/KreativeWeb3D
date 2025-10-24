@@ -30,7 +30,7 @@ app.post("/log", async (req, res) => {
       .from("heatmap_events")
       .insert([{
         section_id: event.section_id,
-        session_id: event.session_id || "test-session",
+        session_id: event.session_id, //removed || "test-session" as prototype does not require test insert
         event_type: event.event_type || "mousemove",
         x: event.x || 100,
         y: event.y || 150,

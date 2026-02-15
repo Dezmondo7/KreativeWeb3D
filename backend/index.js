@@ -23,6 +23,12 @@ const openai = new OpenAI({
 
 // API route
 app.post("/api/generate", async (req, res) => {
+  // Prompt Injection Input Sanitization | Validation must come first
+    const { prompt } = req.body;
+    if (!prompt || typeof prompt !== 'string' || prompt.length > 1000) {
+      return res.status(400).json({ error: "Invalid or overly long prompt." });
+    }
+    
   try {
     console.log("✅ /api/generate called with prompt:", req.body.prompt);
 

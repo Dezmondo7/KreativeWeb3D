@@ -16,6 +16,7 @@ Live Analytics Dashboard: Constructed a dedicated Next.js Dashboard that fetches
 ## Key features include:
 
 Real-Time Telemetry & Event Logging: This console output demonstrates the live synchronization of user interaction data. Client-side events are captured via a custom React hook (useHeatmapTracker), brokered through a secure Express.js. (captured screenshot below).
+
 <img width="2387" alt="Telematic logging Reakt Web Design - Google Chrome" src="https://github.com/user-attachments/assets/9b5c6709-4abe-4477-9a61-b8ff3c217c43" />
 
 Dynamic AI Engine: Developed a real-time interaction layer using the OpenAI GPT-4 API. This implementation manages complex asynchronous states, ensuring that "streamed" responses are handled efficiently without blocking the main UI thread.

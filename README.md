@@ -40,9 +40,22 @@ Styling & Layout: TailwindCSS for responsive design and modern UI components
 
 Animations & Interactivity: GSAP Animation and Framer Motion for smooth, dynamic user experiences
 
-Backend & Integrations: EmailJS for handling contact form submissions
+Technical Stack: The Secure Pipeline
+Backend & Infrastructure:
 
-AI Integration: OpenAI API (GPT-4.0) for intelligent, real-time responses
+Node.js & Express.js: Developed a custom middleware server to act as a secure proxy between the client-side UI and third-party APIs.
+
+Supabase (BaaS): Leveraged for secure database management, utilizing Row-Level Security (RLS) and JWT-based authentication to ensure data integrity.
+
+Dotenv: Implemented for secure Environment Variable management, ensuring sensitive API keys (OpenAI, Supabase Service Roles) remain isolated from the client-side environment.
+
+## Security & Observability:
+
+API Masking & Proxying: Architected a "Server-Side Broker" pattern to prevent client-side exposure of high-privilege credentials.
+
+Input Validation & Sanitization: Implemented guard clauses and type-checking on the backend to mitigate Prompt Injection and malformed data attacks.
+
+User Behavior Telemetry: Integrated a custom UBA (User Behavior Analytics) tracker to log real-time event data for security auditing.
 
 ## Screenshot
 

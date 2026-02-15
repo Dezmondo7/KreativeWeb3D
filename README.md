@@ -23,7 +23,7 @@ Engagement Architecture: Strategically implemented high-conversion Calls to Acti
 
 Interactive Micro-services & UI Discovery: Designed a "hidden feature" system using hover-state logic. Mini-card components utilize conditional rendering and transition libraries to reveal expanded content (such as the 'About Me' section), demonstrating a sophisticated approach to information density and user engagement.
 
-Service-Oriented Infrastructure: Built a modular "Contact & Packages" system, allowing for structured user inquiries. This section acts as the primary interface for user-to-server communication, demonstrating the ability to build functional, service-oriented web applications.ed.
+Service-Oriented Infrastructure: Built a modular "Contact & Packages" system, allowing for structured user inquiries. This section acts as the primary interface for user-to-server communication, demonstrating the ability to build functional, service-oriented web applications.
 
 ## Tech Stack
 

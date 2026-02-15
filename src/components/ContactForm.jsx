@@ -3,10 +3,12 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import emailjs from "@emailjs/browser"
 
-// EmailJS configuration
-const REACT_APP_SERVICE_ID = "service_fxbox86"
-const REACT_APP_TEMPLATE_ID = "template_wwjqefj"
-const REACT_APP_PUBLIC_KEY = "zDtYRtCYE5DF5euta"
+
+
+// Replace the hardcoded strings with this:
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 const ContactForm = () => {
   const {

@@ -40,8 +40,8 @@ Styling & Layout: TailwindCSS for responsive design and modern UI components
 
 Animations & Interactivity: GSAP Animation and Framer Motion for smooth, dynamic user experiences
 
-Technical Stack: The Secure Pipeline
-Backend & Infrastructure:
+### The Secure Pipeline
+### Backend & Infrastructure:
 
 Node.js & Express.js: Developed a custom middleware server to act as a secure proxy between the client-side UI and third-party APIs.
 

@@ -39,6 +39,9 @@ Backend & Integrations: EmailJS for handling contact form submissions
 
 AI Integration: OpenAI API (GPT-4.0) for intelligent, real-time responses
 
-## Deployment
+## Screenshot
 
-The application is deployed live at: www.reaktwebdesign.co.uk
+Here is a screenshot of the web application
+
+<img width="2904" height="16384" alt="localhost_5178_ (1)" src="https://github.com/user-attachments/assets/1ca019b2-1987-4923-8d11-6d27a086adca" />
+

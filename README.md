@@ -1,7 +1,7 @@
 # KreativeWeb3d
 ## Real-Time Telemetry Pipeline & Secure AI Architecture
 
-What began as an exploration into modern UI/UX design evolved into a sophisticated mini full-stack application. This project demonstrates the seamless integration of a live React frontend, a Node.js backend, and a cloud-based database (Supabase), complemented by a real-time monitoring dashboard and AI-driven user interaction.
+What began as an exploration into modern UI/UX design evolved into a sophisticated mini full-stack application with high level security architecture. This project demonstrates the seamless integration of a live React frontend, a Node.js backend, and a cloud-based database (Supabase), complemented by a real-time monitoring dashboard and AI-driven user interaction. This project showcases Defensive Cloud Architecture, implementing proxy-layer validation, RLS policies, and encrypted data persistence.
 
 ## Functionality
 

@@ -63,6 +63,8 @@ API Masking & Proxying: Architected a "Server-Side Broker" pattern to prevent cl
 
 Input Validation & Sanitization: Implemented guard clauses and type-checking on the backend to mitigate Prompt Injection and malformed data attacks.
 
+Identity & Access: Utilized PRow Level Security (RLS) and server-side Service Role keys to maintain the Principle of Least Privilege.
+
 User Behavior Telemetry: Integrated a custom UBA (User Behavior Analytics) tracker to log real-time event data for security auditing.
 
 ## Screenshot

@@ -13,6 +13,14 @@ Data Pipeline: Developed a pipeline where telemetry data is transmitted from the
 
 Live Analytics Dashboard: Constructed a dedicated Next.js Dashboard that fetches and visualizes database events in real-time, providing an "at-a-glance" view of active user movement across the landing page.
 
+## Architectural Decisions
+
+The build utilized Vite for its high-performance React build pipeline, complementing my existing tech stack. Once I began capturing frontend telemetry requirements, it became obvious that sending data directly from the client-side to the database would conflict with Row-Level Security (RLS) best practices.
+
+To mitigate the risk of an insecure connection, I architected a proxy server using Express.js. This approach kept RLS policies intact while providing a layer to validate data in transit from the frontend to the backend. I utilized Render to host the server, receiving requests and implementing data securely into Supabase.
+
+Supabase offered a robust PostgreSQL-based solution capable of handling the high-volume data ingestion (50,000+ rows) required for tracking user movements. My decision was compounded by my consultancy experience, as PostgreSQL is a well-established, open-source technology. Finally, to ensure seamless data integrity, I maintained strict variable consistency across the entire stack—from initial capture to final database persistence.
+
 ## Key features include:
 
 Real-Time Telemetry & Event Logging: This console output demonstrates the live synchronization of user interaction data. Client-side events are captured via a custom React hook (useHeatmapTracker), brokered through a secure Express.js. The events are logged and sent to a Supabase database (captured screenshot below).

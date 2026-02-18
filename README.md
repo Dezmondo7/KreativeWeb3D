@@ -53,7 +53,7 @@ Animations & Interactivity: GSAP Animation and Framer Motion for smooth, dynamic
 
 Node.js & Express.js: Developed a custom middleware server to act as a secure proxy between the client-side UI and third-party APIs.
 
-Supabase (BaaS): Leveraged for secure database management, utilizing Row-Level Security (RLS) and JWT-based authentication to ensure data integrity.
+Supabase (BaaS): Leveraged for secure database management, utilizing Row-Level Security (RLS).
 
 Dotenv: Implemented for secure Environment Variable management, ensuring sensitive API keys (OpenAI, Supabase Service Roles) remain isolated from the client-side environment.
 
@@ -63,7 +63,7 @@ API Masking & Proxying: Architected a "Server-Side Broker" pattern to prevent cl
 
 Input Validation & Sanitization: Implemented guard clauses and type-checking on the backend to mitigate Prompt Injection and malformed data attacks.
 
-Identity & Access: Utilized PRow Level Security (RLS) and server-side Service Role keys to maintain the Principle of Least Privilege.
+Identity & Access: Utilized Row Level Security (RLS) and server-side Service Role keys to maintain the Principle of Least Privilege.
 
 User Behavior Telemetry: Integrated a custom UBA (User Behavior Analytics) tracker to log real-time event data for security auditing.
 
